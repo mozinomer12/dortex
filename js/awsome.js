@@ -9,6 +9,7 @@ $(document).ready( function(e) {
 	$(".inner-selector-column ul li a").click(function(e){
 		e.preventDefault();
 		$('.inner-selector-column ul li').removeClass("active");
+		$('.inner-selector-column ul li').closest("li").addClass("next");
 		$(this).parent().addClass("active")
 	})
 })
