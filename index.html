@@ -302,6 +302,28 @@
                 </div>
             </div>
         </div>
+        <div class="row0positioning">
+            <div class="positionning0div">
+                <div class="label-title">
+                    positioning
+                </div>
+                <div class="butt-containers">
+                    <span class="left-position"></span>
+                    <span class="right-position"></span>
+                    <span class="top-position"></span>
+                    <span class="bottom-position"></span>
+                </div>
+            </div>
+            <div class="suze-manager-container">
+                <div class="label-title">
+                    size:
+                </div>
+                <div class="butotn-scontainer">
+                    <span class="minus_size"></span>
+                    <span class="plus_size"></span>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="right-sidebar">
         <div class="containing_section">
@@ -379,6 +401,17 @@
             </div>
         </div>
     </div>
+    <div class="main-image-container">
+        <span class="heaight">
+            35 mm
+        </span>
+        <div class="img">
+            <!-- <img src=""> -->
+        </div>
+        <span class="widhth">
+            35 mm
+        </span>
+    </div>
 </div>
 
 
@@ -426,8 +459,71 @@
       $(this).addClass("active");
     });
 </script>
+<!-- adding the script for positoining left right up and down -->
+<script type="text/javascript">
+    var right_pos = 0;
+    var left_pos = 0;
+    var up_pos = 0;
+    var down_pos = 0;
+    $(".right-position").click( function(e) {
+        e.preventDefault();
+        right_pos += 5;
+        if(right_pos >= 60)
+        {
+            return;
+            left_pos = 0;
+        }
+        else
+        {
+            console.log(right_pos)
+            $(".main-image-container").css({'left': + right_pos + 'px' })
+        }
+    });
+    $(".left-position").click( function(e) {
 
-
+        e.preventDefault();
+        left_pos -= 5;
+        if(left_pos <= -60)
+        {
+            return;
+            right_pos = 0;
+            left_pos = 0;
+        }
+        else
+        {
+            console.log(left_pos)
+            $(".main-image-container").css({'left': left_pos + 'px' })
+        }
+    });
+    $(".top-position").click( function(e) {
+        e.preventDefault();
+        up_pos -= 5;
+        if(up_pos <= -60)
+        {
+            return;
+            right_pos = 0;
+        }
+        else
+        {
+            console.log(up_pos)
+            $(".main-image-container").css({'top': + up_pos + 'px' })
+        }
+    });
+    $(".bottom-position").click( function(e) {
+        e.preventDefault();
+        down_pos += 5;
+        if(down_pos >= 60)
+        {
+            return;
+            right_pos = 0;
+        }
+        else
+        {
+            console.log(down_pos)
+            $(".main-image-container").css({'top': + down_pos + 'px' })
+        }
+    });
+</script>
 
 </body>
 </html>
