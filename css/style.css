@@ -742,7 +742,8 @@ span.heaight {
 .img {
     width: 397px;
     height: 182px;
-    background: url('../assets/icons/innercol/orignal.png');
+    /*background: url('../assets/icons/innercol/orignal.png');*/
+    background-color: #35c56a;
     background-size: 100% 100%;
 }
 span.widhth::after {
