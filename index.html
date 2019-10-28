@@ -99,122 +99,205 @@
                     </ul>
                 </div>
                 <div class="col-md-3 inner-selector-column">
-                    <ul>
-                        <li class="active productversion">
-                            <a href="#">
+                    <nav>
+                      <div class="nav nav-tabs inner-selector-column" id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
                                 <img src="./assets/icons/innercol/1.png">
                                 <span>
                                     product version
-                                </span>
-                            </a>
-                        </li>
-                        <li class="size-container">
-                            <a href="#">
+                                </span></a>
+                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                            
                                 <img src="./assets/icons/innercol/2.png">
                                 <span>
                                     size
                                 </span>
-                            </a>
-                        </li>
-                        <li class="inscription">
-                            <a href="#">
+                        </a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                            
                                 <img src="./assets/icons/innercol/3.png">
                                 <span>
                                     inscription
                                 </span>
-                            </a>
-                        </li>
-                        <li class="motifs">
-                            <a href="#">
+                        </a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-motifis" role="tab" aria-controls="nav-contact" aria-selected="false">
+                            
                                 <img src="./assets/icons/innercol/4.png">
                                 <span>
                                     motifs
                                 </span>
-                            </a>
-                        </li>
-                        <li class="logo">
-                            <a href="#">
+                        </a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                            
+                                
                                 <img src="./assets/icons/innercol/5.png">
                                 <span>
                                     own logo
                                 </span>
-                            </a>
-                        </li>
-                        <li class="color">
-                            <a href="#">
+                        </a>
+                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                            
                                 <img src="./assets/icons/innercol/6.png">
                                 <span>
                                     bg color
                                 </span>
-                            </a>
-                        </li>
-                    </ul>
+                        </a>
+                      </div>
+                    </nav>
                 </div>
                 <div class="col-md-6 attribute-selector">
-                    <div class="prodcutc-version-container">
-                        <ul class="product-version-items">
-                            <li class="active">
-                                <a href="#">
-                                    <img src="./assets/icons/innercol/inner1.png">
-                                    <span>
-                                        Endless tape
-                                        <img src="./assets/icons/innercol/tickicon.png">
-                                    </span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <img src="./assets/icons/innercol/inner2.png">
-                                    <span>
-                                       individual label
-                                        <img src="./assets/icons/innercol/tickicon.png">
-                                    </span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="sizee-container" id="size-container">
-                        <div class="label-height">
-                            <div class="row">
-                                <h6>label height</h6>
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                            <div class="prodcutc-version-container">
+                                <ul class="product-version-items">
+                                    <li class="active">
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/inner1.png">
+                                            <span>
+                                                Endless tape
+                                                <img src="./assets/icons/innercol/tickicon.png">
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/inner2.png">
+                                            <span>
+                                               individual label
+                                                <img src="./assets/icons/innercol/tickicon.png">
+                                            </span>
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <span class="height-value-laebl active">
-                                        15 mm
-                                    </span>
+                      </div>
+                      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="sizee-container" id="size-container">
+                                <div class="label-height">
+                                    <div class="row">
+                                        <h6 class="label-hading">label height</h6>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <span class="height-value-laebl active">
+                                                15 mm
+                                            </span>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <span class="height-value-laebl">
+                                                35 mm
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <span class="height-value-laebl">
-                                        35 mm
-                                    </span>
+                                <div class="labellength">
+                                    <div class="row">
+                                        <h6>label lenght</h6>
+                                    </div>
+                                    <div class="row">
+                                        <span>
+                                            current label length
+                                        </span>
+                                        <span class="text-right">
+                                            35mm
+                                        </span>
+                                    </div>
+                                    <div class="row">
+                                        <span>
+                                            current label length
+                                        </span>
+                                        <span>
+                                            <input type="number" name="" placeholder="40"/> mm
+                                        </span>
+                                        <span class="minimumlenth">
+                                            minimum length 35mm
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="labellength">
-                            <div class="row">
-                                <h6>label lenght</h6>
+                      </div>
+                      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="inscription-tab" id="inscription">
+                                <h6 class="label-hading">
+                                    text editor
+                                </h6>
+                                <div class="row">
+                                    <input type="text" name="" placeholder="Coding">
+                                    <button><img src="./assets/icons/innercol/setting.png"></button>
+                                </div>
+                                <div class="row">
+                                    <input type="text" name="" placeholder="pixel">
+                                    <button><img src="./assets/icons/innercol/setting.png"></button>
+                                </div>
+                                <a href="#" class="addtext">
+                                    <img src="./assets/icons/innercol/add.png">
+                                    add text
+                                </a>
                             </div>
-                            <div class="row">
-                                <span>
-                                    current label length
-                                </span>
-                                <span class="text-right">
-                                    35mm
-                                </span>
+                      </div>
+                      <div class="tab-pane fade" id="nav-motifis" role="tabpanel" aria-labelledby="nav-contact-tab">
+                            <div class="motifis-tab" id="motifis">
+                                <h6 class="label-hading">
+                                    select motifis
+                                </h6>
+                                <ul>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/1.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/2.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/3.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/4.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/5.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/6.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/7.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/8.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img src="./assets/icons/innercol/motifis/9.png">
+                                            popular motifis
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="row">
-                                <span>
-                                    current label length
-                                </span>
-                                <span>
-                                    <input type="number" name="" placeholder="40"/> mm
-                                </span>
-                                <span class="minimumlenth">
-                                    minimum length 35mm
-                                </span>
-                            </div>
-                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -315,38 +398,30 @@
 
 
 <script type="text/javascript">
-    
     // adding js for active right sidebar
 
     $('.right-sidebar .configration ul li').click( function(e) {
       e.preventDefault();
-      // alert("asd");
       $('.configration ul li').removeClass("active");
       $(this).addClass("active");
     });
-
     $('.right-sidebar .productioncontainer ul li').click( function(e) {
       e.preventDefault();
-      // alert("asd");
       $('.productioncontainer ul li').removeClass("active");
       $(this).addClass("active");
     });
-
     $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
       e.preventDefault();
-      // alert("asd");
       $('.quatatity-and-price ul li').removeClass("active");
       $(this).addClass("active");
     });
     $('.attribute-selector ul li').click( function(e) {
       e.preventDefault();
-      // alert("asd");
       $('.attribute-selector ul li').removeClass("active");
       $(this).addClass("active");
     });
     $('#size-container span').click( function(e) {
       e.preventDefault();
-      // alert("asd");
       $('#size-container span').removeClass("active");
       $(this).addClass("active");
     });

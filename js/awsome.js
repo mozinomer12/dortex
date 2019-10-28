@@ -8,9 +8,10 @@ $(document).ready( function(e) {
 	// adding class active to inner selector left side
 	$(".inner-selector-column ul li a").click(function(e){
 		e.preventDefault();
-		$('.inner-selector-column ul li').removeClass("active");
-		$('.inner-selector-column ul li').closest("li").addClass("next");
-		$(this).parent().addClass("active")
+		$('.inner-selector-column ul li').removeClass("active nex pre");
+		$(this).parent().addClass("active");
+    $(this).parent().prev().addClass("pre");
+    $(this).parent().next().addClass("nex");
 	})
 });
 
