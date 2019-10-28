@@ -12,7 +12,8 @@ $(document).ready( function(e) {
 		$('.inner-selector-column ul li').closest("li").addClass("next");
 		$(this).parent().addClass("active")
 	})
-})
+});
+
 // custom selecmenu
 
 $(".custom-select").each(function() {
@@ -50,3 +51,4 @@ $(".custom-option").on("click", function() {
   $(this).parents(".custom-select").removeClass("opened");
   $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
 });
+

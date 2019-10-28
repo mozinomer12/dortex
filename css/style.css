@@ -16,6 +16,10 @@ ol,
 	margin: 0px;
 	padding:0px;
 }
+*:focus
+{
+    outline: none;
+}
 ul
 {
 	list-style: none
@@ -126,7 +130,8 @@ a.cart_button.cloreen {
     padding: 10px 15px;
 }
 .inner-selector-column li {
-    padding: 20px 10px;
+    padding: 40px 10px;
+    background: #2d6d93;
 }
 
 .inner-selector-column a {
@@ -140,7 +145,7 @@ a.cart_button.cloreen {
     margin-top: 6px;
 }
 .inner-selector-column {
-    background: #2d6d93;
+    /*background: #2d6d93;*/
     padding: 0px;
 }
 .attribute-selector {
@@ -150,6 +155,7 @@ a.cart_button.cloreen {
 }
 .attribute-selector li {
     padding: 0px 40px;
+    margin-bottom: 22px;
 }
 .inner-selector-column li.active {
     background: #368bbd;
@@ -157,7 +163,7 @@ a.cart_button.cloreen {
 }
 .inner-selector-column li img 
 {
-    width: 41px;
+    width: auto;
     display: block;
     margin: auto;
 }
@@ -171,10 +177,8 @@ a.cart_button.cloreen {
 
 /*custoom css*/
 .center {
-  position: absolute;
-  display: inline-block;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+    display: block;
+    width: 100%;
 }
 
 /** Custom Select **/
@@ -290,26 +294,28 @@ a.cart_button.cloreen {
 .right-sidebar {
     position: absolute;
     right: 0px;
-    top: 130px;
+    top:0px;
     background: #fff;
-    width: 20%;
+    width: 30%;
     bottom: 0px;
     max-width: 455px;
     display: block;
     padding: 25px;
+    padding-left: 15px;
     height: 100%;
 }
 
 .right-sidebar h2 {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 17px;
     background: #f9f9f9;
     border-radius: 20px;
-    height: 28px;
+    height: 32px;
     display: flex;
     align-items: center;
     padding-left: 16px;
-    margin-bottom: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
 }
 
 .right-sidebar ul {
@@ -317,11 +323,14 @@ a.cart_button.cloreen {
 }
 
 .right-sidebar .configration ul li {
-    line-height: 28px;
+    line-height: 26px;
     padding-left: 16px;
+    font-size: 14px;
     position: relative;
     cursor: pointer;
     text-transform: capitalize;
+        padding-left: 30px;
+    color: #666666;
 }
 
 .right-sidebar .configration ul li.active,
@@ -373,9 +382,9 @@ a.cart_button.cloreen {
 .productioncontainer ul li.active,
 .productioncontainer ul li:hover
 {
-    background: #368bbd;
+    background: #2d6d93;
     color: #fff;
-    border: 1px solid #368bbd;
+    border: 1px solid #2d6d93;
 }
 .productioncontainer ul li {
     height: 35px;
@@ -397,9 +406,11 @@ a.cart_button.cloreen {
     text-decoration: none;
 }
 .quatatity-and-price li.active a {
-    background: #368bbd;
+    background: #2d6d93;
     color: #fff;
-    border-color: #368bbd;
+    border-color: #2d6d93;
+    justify-content: flex-start;
+    text-indent: 13px;
 }
 .quatatity-and-price li:hover a {
     background: #368bbd;
@@ -417,7 +428,7 @@ a.cart_button.cloreen {
     border-radius: 7px;
     text-decoration: none;
     color: #8a8a8a;
-    font-weight: 600;
+    font-weight: 400;
 }
 .quatatity-and-price ul li {
     flex: 0 50%;
@@ -429,4 +440,157 @@ a.cart_button.cloreen {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+}
+.productioncontainer li a {
+    color: #8a8a8a;
+    font-weight: 400;
+}
+.quatatity-and-price ul li.active::before {
+    content: "";
+    display: block;
+    border: 3px solid #ffff;
+    width: 9px;
+    height: 16px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    right: 33px;
+    margin: auto;
+    border-left: 0px;
+    border-top: 0;
+    transform: rotate(45deg);
+    display: block;
+    margin: auto;
+    top: -11px;
+}
+.quatatity-and-price ul li.active {
+    padding: 0px;
+    position: relative;
+}
+.attribute-selector img {
+    width: auto;
+    display: block;
+    margin: auto;
+}
+.main-row-container {
+    background: url(../assets/icons/innercol/main.png);
+    background-size: 100% 100%;
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*background-color: rebeccapurple;*/
+    position: relative;
+}
+.configration h2 {
+    margin-bottom: 10px;
+}
+.attribute-selector{
+    padding-top: 30px;
+    padding:30px 15px;
+}
+.attribute-selector ul li img {
+    width: 100%;
+}
+
+.attribute-selector ul li span 
+{
+    display: block;
+    background: #fff;
+    color: #316D92;
+    width: 100%;
+    font-weight: 600;
+    padding-left: 20px;
+    text-transform: capitalize;
+    padding: 2px 0px 2px 20px;
+}
+.attribute-selector ul li a
+{
+    text-decoration: none;
+}
+.attribute-selector ul li.active span img {
+    display: block;
+}
+
+.attribute-selector ul li span {
+    position: relative;
+}
+.attribute-selector ul li span img {
+    width: auto;
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    display: none;
+}
+.product-version-items
+{
+    display: none;
+}
+div#size-container h6 {
+    background: rgba(255,255,255,0.10);
+    display: block;
+    width: 100%;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border-radius: 20px;
+    text-transform: capitalize;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.label-height {
+    margin-bottom: 40px;
+}
+.height-value-laebl {
+    border: 1px solid #cccc;
+    height: 36px;
+    font-size: 14px;
+    margin: 20px 0px 0px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+span.height-value-laebl.active {
+    background: #02b314;
+    border-color: #02b314;
+}
+.label-height .col-md-6 {
+    padding: 0px 5px;
+}
+.labellength span {
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+.labellength .row span {
+    flex: 0 50%;
+}
+.labellength .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.labellength .row {
+    position: relative;
+}
+.labellength .row span.minimumlenth {
+    position: absolute;
+    bottom: -50px;
+    font-size: 14px;
+    color: #fff;
+    opacity: 0.4;
+}
+.labellength .row span input {
+    width: 34px;
+    border: none;
+    height: 35px;
+    float: left;
+}
+.labellength .row:not(:first-child) {
+    margin-bottom: 15px;
 }
