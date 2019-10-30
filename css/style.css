@@ -682,8 +682,9 @@ div#motifis ul li a {
 }
 .main-image-container {
     position: absolute;
+    transition: 0.5s all ease-in-out;
     top: 0px;
-    left:0px;
+    left: 0px;
     right: 0px;
     margin: auto;
     display: block;
@@ -693,13 +694,8 @@ div#motifis ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    /*background: red;*/
-    width: fit-content;
-    height: -o-fit-content;
-    height: -moz-fit-content;
-    width: -o-fit-content;
-    width: -moz-fit-content;
-    height: fit-content;
+    width: 270px;
+    height: 165px;
 }
 .main-image-container img {
      width: 100%; 
@@ -743,8 +739,8 @@ span.heaight {
     left: -72px;
 }
 .img {
-    width: 397px;
-    height: 182px;
+    width: 100%;
+    height: 100%;
     /*background: url('../assets/icons/innercol/orignal.png');*/
     background-color: #35c56a;
     background-size: 100% 100%;
@@ -1021,20 +1017,22 @@ span.minus_size::before {
 }
 .text-container {
     position: absolute;
-    right: 10vh;
-    bottom: 43px;
+    right: 15px;
     color: #fff;
-    font-size: 27px;
+    font-size: 23px;
     font-weight: 700;
-    max-width: 180px;
+    max-width: 80px;
     display: block;
-    width: 100%;
+    width: auto;
     height: auto;
-    padding: 20px 0px;
+    padding: 0px 0px;
+    margin: 0 auto;
 }
 .img
 {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .img img {
     width: auto;

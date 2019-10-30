@@ -177,7 +177,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col-md-6">
-                                            <span class="height-value-laebl active">
+                                            <span class="height-value-laebl height-value-laebl-default active">
                                                 15 mm
                                             </span>
                                         </div>
@@ -340,7 +340,7 @@
                     </div>
                     <div class="color-pixker">
                         <img src="./assets/icons/innercol/colorpicker.png">
-                        <input id="color" value="#54aedb">
+                        <input id="color" value="#54aedb" class="color-oicekr">
                     </div>
                 </div>
             </div>
@@ -424,7 +424,7 @@
     </div>
     <div class="main-image-container">
         <span class="heaight">
-            35 mm
+            15 mm
         </span>
         <div class="img">
             <img src="./assets/icons/company.png">
@@ -438,7 +438,7 @@
             </div>
         </div>
         <span class="widhth">
-            35 mm
+            38 mm
         </span>
     </div>
 </div>
@@ -559,64 +559,98 @@
 <!-- color addded  -->
 <script type="text/javascript">
     new KellyColorPicker({
-    place : 'picker',
-    input : 'color'
-    });
-    var method = 'quad';
-    var alpha = false;          // is alpha slider enabled
-    var drag = false;
-    var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
-    var events = new Array();
-    var userEvents = new Array();
-    var canvasHelper = document.createElement("canvas");
-    var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
-    var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
-    var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
-    var input = false;
-    var inputColor = true;     // update input color according to picker
-    var inputFormat = 'mixed'; // mixed | hex | rgba
-    var popup = new Object;    // popup block for input
-    popup.tag = false;         // Dom element if popup is enabled
-    popup.margin = 6;          // margin from input in pixels
-    var place = false;
-    var handler = this;
-    var basePadding = 2;
-    var padding;
-    var wheelBlockSize = 200;
-    var center;
-    var hsv;
-    var rgb;
-    var hex = '#000000';
-    var a = 1;
-    var wheel = new Object;
-    wheel.width = 18;
-    wheel.imageData = null; // rendered wheel image data
-    wheel.innerRadius;
-    wheel.startAngle = 0; // 150
-    wheel.outerRadius;
-    wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
-    wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
-    wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
+        place : 'picker',
+        input : 'color'
+        });
+        var method = 'quad';
+        var alpha = false;          // is alpha slider enabled
+        var drag = false;
+        var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
+        var events = new Array();
+        var userEvents = new Array();
+        var canvasHelper = document.createElement("canvas");
+        var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
+        var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
+        var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
+        var input = false;
+        var inputColor = true;     // update input color according to picker
+        var inputFormat = 'hex'; // mixed | hex | rgba
+        var popup = new Object;    // popup block for input
+        popup.tag = false;         // Dom element if popup is enabled
+        popup.margin = 6;          // margin from input in pixels
+        var place = false;
+        var handler = this;
+        var basePadding = 2;
+        var padding;
+        var wheelBlockSize = 200;
+        var center;
+        var hsv;
+        var rgb;
+        var hex = '#000000';
+        var a = 1;
+        var wheel = new Object;
+        wheel.width = 18;
+        wheel.imageData = null; // rendered wheel image data
+        wheel.innerRadius;
+        wheel.startAngle = 0; // 150
+        wheel.outerRadius;
+        wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
+        wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
+        wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
+
+
 </script>
 <!-- color addded  -->
+<!-- adding font-size -->
 <script type="text/javascript">
-    var font_size_decremenrt = 1;
+    var font_size_decremenrt = 27;
     $(".deccrease-font-size").click( function(e) {
         e.preventDefault();
-        var size = $(".heading-text-container").css('font-size');
-        if( font_size_decremenrt < 10)
+        if( font_size_decremenrt > 10)
         {
-            $('.heading-text-container').css({'font-size' : "-=5"});
+            $('.text-container').css({'font-size' : "-=5"});
+            font_size_decremenrt -= 5;
+            console.log(font_size_decremenrt);
         }
     });
     $(".inccrease-font-size").click( function(e) {
         e.preventDefault();
-        var size = $(".heading-text-container").css('font-size');
-        if( font_size_decremenrt < 10)
+        var size = $(".text-container").css('font-size');
+        if( font_size_decremenrt < 47)
         {
-            $('.heading-text-container').css({'font-size' : "+=5"});
+            $('.text-container').css({'font-size' : "+=5"});
+            font_size_decremenrt += 4;
+            console.log(font_size_decremenrt);
         }
-    })
+    });
+
+        $("#color").on("change paste keyup select", function()  {
+            var ss = $(this).css("background");
+            console.log(ss)
+            // $(".img").css({'background-color' : $(this).css("background")})
+        });
+
 </script>
+<!-- adding font-size -->
+<!-- adding size 35m -->
+    <script type="text/javascript">
+        $(".height-value-laebl").click( function(e) {
+            e.preventDefault();
+            $(this).addClass("active");
+            $(".main-image-container").css({'width' : '300px'});
+            $(".main-image-container").css({'height' : '220px'});
+            $(".heaight").text("35mm");
+            $(".widhth").text("55mm");
+        });
+        $(".height-value-laebl-default").click( function(e) {
+            e.preventDefault();
+            $(this).addClass("active");
+            $(".main-image-container").css({'width' : '270px'});
+            $(".main-image-container").css({'height' : '165px'});
+            $(".heaight").text("15mm")
+            $(".widhth").text("38mm");
+        });
+    </script>
+<!-- adding size 35m -->
 </body>
 </html>
