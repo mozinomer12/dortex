@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap');
 html
 {
 	margin-top: 22px;
@@ -686,6 +687,7 @@ div#motifis ul li a {
     right: 0px;
     margin: auto;
     display: block;
+    user-select: none;
     text-align: center;
     bottom: 0px;
     display: flex;
@@ -837,6 +839,8 @@ span.left-position::before {
 .positionning0div {
     padding-left: 40px;
     display: flex;
+    width: 100%;
+    height: 100%;
     align-items: center;
 }
 .row0positioning {
@@ -1040,4 +1044,95 @@ span.minus_size::before {
     top: 0px;
     bottom: 0px;
     margin: auto;
+}
+.asd {
+    width: 100%;
+    display: flex;
+    display: none;
+    align-items: center;
+}
+.inscription_upperlayer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.font-family-container {
+    font-family: 'Playfair Display', serif;
+    text-transform: capitalize;
+    font-size: 14px;
+    text-align: left;
+    width: 12%;
+    border-right: 1px solid #cccc;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+span.deccrease-font-size {
+    position: absolute;
+    left: 20px;
+    color: #fff;
+    background: #316d92;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 700;
+}
+.font-size-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10%;
+    border-right: 1px solid #ccc;
+    height: 100%;
+    position: relative;
+}
+span.inccrease-font-size {
+    position: absolute;
+    right: 20px;
+    color: #fff;
+    background: #316d92;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    font-weight: 700;
+}
+span.font-size span:last-child {
+    font-size: 18px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+span.font-size span:first-child {
+    font-size: 11px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+.color-pixker img {
+    width: auto;
+    display: block;
+    margin: auto;
+}
+input#color {
+    width: 42px;
+    height: 7px;
+    font-size: 0px;
+    border: none;
+    border-radius: 10px;
+}
+.color-pixker {
+    padding: 0px 40px;
+}
+.popup-kelly-color {
+    top: 197px !important;
+    /* top: auto !important; */
 }

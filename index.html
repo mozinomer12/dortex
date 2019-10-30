@@ -302,23 +302,46 @@
         </div>
         <div class="row0positioning">
             <div class="positionning0div">
-                <div class="label-title">
-                    positioning
+                <div class="asd">
+                    <div class="label-title">
+                        positioning
+                    </div>
+                    <div class="butt-containers">
+                        <span class="left-position"></span>
+                        <span class="right-position"></span>
+                        <span class="top-position"></span>
+                        <span class="bottom-position"></span>
+                    </div>
+                    <div class="suze-manager-container">
+                        <div class="label-title">
+                            size:
+                        </div>
+                        <div class="butotn-scontainer">
+                            <span class="minus_size"></span>
+                            <span class="plus_size"></span>
+                        </div>
+                    </div>
                 </div>
-                <div class="butt-containers">
-                    <span class="left-position"></span>
-                    <span class="right-position"></span>
-                    <span class="top-position"></span>
-                    <span class="bottom-position"></span>
-                </div>
-            </div>
-            <div class="suze-manager-container">
-                <div class="label-title">
-                    size:
-                </div>
-                <div class="butotn-scontainer">
-                    <span class="minus_size"></span>
-                    <span class="plus_size"></span>
+                <div class="inscription_upperlayer">
+                    <div class="font-family-container">
+                        coding pixel
+                    </div>
+                    <div class="font-size-container">
+                        <span class="deccrease-font-size">
+                            -
+                        </span>
+                        <span class="font-size">
+                            <span>A</span>
+                            <span>A</span>
+                        </span>
+                        <span class="inccrease-font-size">
+                            +
+                        </span>
+                    </div>
+                    <div class="color-pixker">
+                        <img src="./assets/icons/innercol/colorpicker.png">
+                        <input id="color" value="#54aedb">
+                    </div>
                 </div>
             </div>
         </div>
@@ -420,7 +443,7 @@
     </div>
 </div>
 
-
+<script src="./assets/color/html5kellycolorpicker.min.js"></script>
 <script type="text/javascript">
     // adding js for active right sidebar
         $('.right-sidebar .configration ul li').click( function(e) {
@@ -533,5 +556,67 @@
         });
     </script>
 <!-- adding a script for inputing a text -->
+<!-- color addded  -->
+<script type="text/javascript">
+    new KellyColorPicker({
+    place : 'picker',
+    input : 'color'
+    });
+    var method = 'quad';
+    var alpha = false;          // is alpha slider enabled
+    var drag = false;
+    var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
+    var events = new Array();
+    var userEvents = new Array();
+    var canvasHelper = document.createElement("canvas");
+    var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
+    var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
+    var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
+    var input = false;
+    var inputColor = true;     // update input color according to picker
+    var inputFormat = 'mixed'; // mixed | hex | rgba
+    var popup = new Object;    // popup block for input
+    popup.tag = false;         // Dom element if popup is enabled
+    popup.margin = 6;          // margin from input in pixels
+    var place = false;
+    var handler = this;
+    var basePadding = 2;
+    var padding;
+    var wheelBlockSize = 200;
+    var center;
+    var hsv;
+    var rgb;
+    var hex = '#000000';
+    var a = 1;
+    var wheel = new Object;
+    wheel.width = 18;
+    wheel.imageData = null; // rendered wheel image data
+    wheel.innerRadius;
+    wheel.startAngle = 0; // 150
+    wheel.outerRadius;
+    wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
+    wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
+    wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
+</script>
+<!-- color addded  -->
+<script type="text/javascript">
+    var font_size_decremenrt = 1;
+    $(".deccrease-font-size").click( function(e) {
+        e.preventDefault();
+        var size = $(".heading-text-container").css('font-size');
+        if( font_size_decremenrt < 10)
+        {
+            $('.heading-text-container').css({'font-size' : "-=5"});
+        }
+    });
+    $(".inccrease-font-size").click( function(e) {
+        e.preventDefault();
+        var size = $(".heading-text-container").css('font-size');
+        if( font_size_decremenrt < 10)
+        {
+            $('.heading-text-container').css({'font-size' : "+=5"});
+        }
+    })
+</script>
 </body>
 </html>
