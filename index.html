@@ -48,8 +48,6 @@
 
 
 
-
-
 <div class="main-row-container">
     <div class="custom-row">
         <div class="column-first">
@@ -222,7 +220,7 @@
                                     text editor
                                 </h6>
                                 <div class="row">
-                                    <input type="text" name="" placeholder="Coding">
+                                    <input type="text" name="" placeholder="Coding" class="text-coding-container">
                                     <button><img src="./assets/icons/innercol/setting.png"></button>
                                 </div>
                                 <div class="row">
@@ -407,6 +405,14 @@
         </span>
         <div class="img">
             <img src="">
+            <div class="text-container">
+                <span class="heading-text-container">
+                    Coding
+                </span>
+                <span class="sub-heading-text-container">
+                    Pixel
+                </span>
+            </div>
         </div>
         <span class="widhth">
             35 mm
@@ -415,49 +421,42 @@
 </div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script type="text/javascript">
     // adding js for active right sidebar
-
-    $('.right-sidebar .configration ul li').click( function(e) {
-      e.preventDefault();
-      $('.configration ul li').removeClass("active");
-      $(this).addClass("active");
-    });
-    $('.right-sidebar .productioncontainer ul li').click( function(e) {
-      e.preventDefault();
-      $('.productioncontainer ul li').removeClass("active");
-      $(this).addClass("active");
-    });
-    $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
-      e.preventDefault();
-      $('.quatatity-and-price ul li').removeClass("active");
-      $(this).addClass("active");
-    });
-    $('.attribute-selector ul li').click( function(e) {
-      e.preventDefault();
-      $('.attribute-selector ul li').removeClass("active");
-      $(this).addClass("active");
-    });
-    $('#size-container span').click( function(e) {
-      e.preventDefault();
-      $('#size-container span').removeClass("active");
-      $(this).addClass("active");
-    });
+        $('.right-sidebar .configration ul li').click( function(e) {
+          e.preventDefault();
+          $('.configration ul li').removeClass("active");
+          $(this).addClass("active");
+        });
+        $('.right-sidebar .productioncontainer ul li').click( function(e) {
+          e.preventDefault();
+          $('.productioncontainer ul li').removeClass("active");
+          $(this).addClass("active");
+        });
+        $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
+          e.preventDefault();
+          $('.quatatity-and-price ul li').removeClass("active");
+          $(this).addClass("active");
+        });
+        $('.attribute-selector ul li').click( function(e) {
+          e.preventDefault();
+          $('.attribute-selector ul li').removeClass("active");
+          $(this).addClass("active");
+        });
+        $('#size-container span').click( function(e) {
+          e.preventDefault();
+          $('#size-container span').removeClass("active");
+          $(this).addClass("active");
+        });
+        $(".nav-item.nav-link").click( function(){
+            // console.log("asd");
+            $(".nav-item.nav-link").removeClass("before-active after-active");
+            $(".nav-item.nav-link.active").prev().addClass("after-active");
+            $(".nav-item.nav-link.active").next().next().addClass("before-active");
+            // $(".nav-item.nav-link").addClass("asd");
+            // $(".nav-item.nav-link.asd.active").next().next().addClass("before");
+        })
+    // adding js for active right sidebar
 </script>
 <!-- adding the script for positoining left right up and down -->
 <script type="text/javascript">
@@ -524,6 +523,12 @@
         }
     });
 </script>
-
+<!-- adding a script for inputing a text -->
+<script type="text/javascript">
+    $(".text-coding-container").on("input", function(){
+        // Print entered value in a div box
+        $(".sub-heading-text-container").text($(this).val());
+    });
+</script>
 </body>
 </html>
