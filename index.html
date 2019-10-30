@@ -111,7 +111,7 @@
                                     size
                                 </span>
                         </a>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a class="nav-item nav-link inscrptio-bat" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
                             
                                 <img src="./assets/icons/innercol/3.png">
                                 <span>
@@ -302,7 +302,7 @@
         </div>
         <div class="row0positioning">
             <div class="positionning0div">
-                <div class="asd">
+                <div class="asd tabs-hidden">
                     <div class="label-title">
                         positioning
                     </div>
@@ -322,7 +322,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="inscription_upperlayer">
+                <div class="inscription_upperlayer tabs-hidden">
                     <div class="font-family-container">
                         coding pixel
                     </div>
@@ -471,14 +471,6 @@
           $('#size-container span').removeClass("active");
           $(this).addClass("active");
         });
-        $(".nav-item.nav-link").click( function(){
-            // console.log("asd");
-            $(".nav-item.nav-link").removeClass("before-active after-active");
-            $(".nav-item.nav-link.active").prev().addClass("after-active");
-            $(".nav-item.nav-link.active").next().next().addClass("before-active");
-            // $(".nav-item.nav-link").addClass("asd");
-            // $(".nav-item.nav-link.asd.active").next().next().addClass("before");
-        })
     // adding js for active right sidebar
 </script>
 <!-- adding the script for positoining left right up and down -->
@@ -652,5 +644,13 @@
         });
     </script>
 <!-- adding size 35m -->
+<!-- actvivating tabs upper on same call -->
+<script type="text/javascript">
+    $(".inscrptio-bat").click( function(){
+            console.log("wrr gaye")
+            $(".inscription_upperlayer").css({'display' : 'flex'});
+    })
+</script>
+<!-- actvivating tabs upper on same call -->
 </body>
 </html>
