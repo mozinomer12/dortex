@@ -1058,6 +1058,9 @@ span.minus_size::before {
 .tabs-hidden {
     display: none;
 }
+#product_version_id{
+    display: flex;
+}
 .font-family-container {
     font-family: 'Playfair Display', serif;
     text-transform: capitalize;

@@ -99,33 +99,39 @@
                 <div class="col-md-3 inner-selector-column">
                     <nav>
                       <div class="nav nav-tabs inner-selector-column" id="nav-tab" role="tablist">
-                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                        <a data-src="product_version_id" class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" 
+                            href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
                                 <img src="./assets/icons/innercol/1.png">
                                 <span>
                                     product version
-                                </span></a>
-                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                </span>
+                        </a>
+                        <a data-src="size_id" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" 
+                            href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
                             
                                 <img src="./assets/icons/innercol/2.png">
                                 <span>
                                     size
                                 </span>
                         </a>
-                        <a class="nav-item nav-link inscrptio-bat" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a class="nav-item nav-link inscrptio-bat" id="nav-contact-tab" data-src="inscription_id" data-toggle="tab" 
+                            href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
                             
                                 <img src="./assets/icons/innercol/3.png">
                                 <span>
                                     inscription
                                 </span>
                         </a>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-motifis" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a  data-src="motifis_id" class="nav-item nav-link" id="nav-contact-tab1" data-toggle="tab" 
+                            href="#nav-motifis" role="tab" aria-controls="nav-contact" aria-selected="false">
                             
                                 <img src="./assets/icons/innercol/4.png">
                                 <span>
                                     motifs
                                 </span>
                         </a>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a  data-src="logo_id" class="nav-item nav-link" id="nav-contact-tab2" data-toggle="tab" 
+                            href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
                             
                                 
                                 <img src="./assets/icons/innercol/5.png">
@@ -133,7 +139,8 @@
                                     own logo
                                 </span>
                         </a>
-                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a  data-src="color_id" class="nav-item nav-link" id="nav-contact-tab3" data-toggle="tab" 
+                            href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
                             
                                 <img src="./assets/icons/innercol/6.png">
                                 <span>
@@ -302,7 +309,7 @@
         </div>
         <div class="row0positioning">
             <div class="positionning0div">
-                <div class="asd tabs-hidden">
+                <div id="product_version_id" class="asd tabs-hidden" id="inscription_id">
                     <div class="label-title">
                         positioning
                     </div>
@@ -322,7 +329,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="inscription_upperlayer tabs-hidden">
+                <div class="inscription_upperlayer tabs-hidden" id="inscription_id">
                     <div class="font-family-container">
                         coding pixel
                     </div>
@@ -474,70 +481,71 @@
     // adding js for active right sidebar
 </script>
 <!-- adding the script for positoining left right up and down -->
-<script type="text/javascript">
-    var right_pos = 0;
-    var left_pos = 0;
-    var up_pos = 0;
-    var down_pos = 0;
-    $(".right-position").click( function(e) {
-        e.preventDefault();
-        right_pos += 5;
-        if(right_pos >= 60)
-        {
-            return;
-            left_pos = 0;
-        }
-        else
-        {
-            console.log(right_pos)
-            $(".main-image-container").css({'left': + right_pos + 'px' })
-        }
-    });
-    $(".left-position").click( function(e) {
+    <script type="text/javascript">
+        var right_pos = 0;
+        var left_pos = 0;
+        var up_pos = 0;
+        var down_pos = 0;
+        $(".right-position").click( function(e) {
+            e.preventDefault();
+            right_pos += 5;
+            if(right_pos >= 60)
+            {
+                return;
+                left_pos = 0;
+            }
+            else
+            {
+                console.log(right_pos)
+                $(".main-image-container").css({'left': + right_pos + 'px' })
+            }
+        });
+        $(".left-position").click( function(e) {
 
-        e.preventDefault();
-        left_pos -= 5;
-        if(left_pos <= -60)
-        {
-            return;
-            right_pos = 0;
-            left_pos = 0;
-        }
-        else
-        {
-            console.log(left_pos)
-            $(".main-image-container").css({'left': left_pos + 'px' })
-        }
-    });
-    $(".top-position").click( function(e) {
-        e.preventDefault();
-        up_pos -= 5;
-        if(up_pos <= -60)
-        {
-            return;
-            right_pos = 0;
-        }
-        else
-        {
-            console.log(up_pos)
-            $(".main-image-container").css({'top': + up_pos + 'px' })
-        }
-    });
-    $(".bottom-position").click( function(e) {
-        e.preventDefault();
-        down_pos += 5;
-        if(down_pos >= 60)
-        {
-            return;
-            right_pos = 0;
-        }
-        else
-        {
-            console.log(down_pos)
-            $(".main-image-container").css({'top': + down_pos + 'px' })
-        }
-    });
-</script>
+            e.preventDefault();
+            left_pos -= 5;
+            if(left_pos <= -60)
+            {
+                return;
+                right_pos = 0;
+                left_pos = 0;
+            }
+            else
+            {
+                console.log(left_pos)
+                $(".main-image-container").css({'left': left_pos + 'px' })
+            }
+        });
+        $(".top-position").click( function(e) {
+            e.preventDefault();
+            up_pos -= 5;
+            if(up_pos <= -60)
+            {
+                return;
+                right_pos = 0;
+            }
+            else
+            {
+                console.log(up_pos)
+                $(".main-image-container").css({'top': + up_pos + 'px' })
+            }
+        });
+        $(".bottom-position").click( function(e) {
+            e.preventDefault();
+            down_pos += 5;
+            if(down_pos >= 60)
+            {
+                return;
+                right_pos = 0;
+            }
+            else
+            {
+                console.log(down_pos)
+                $(".main-image-container").css({'top': + down_pos + 'px' })
+            }
+        });
+    </script>
+<!-- adding the script for positoining left right up and down -->
 <!-- adding a script for inputing a text -->
     <script type="text/javascript">
         $(".text-coding-container").on("input", function(){
@@ -549,80 +557,78 @@
     </script>
 <!-- adding a script for inputing a text -->
 <!-- color addded  -->
-<script type="text/javascript">
-    new KellyColorPicker({
-        place : 'picker',
-        input : 'color'
-        });
-        var method = 'quad';
-        var alpha = false;          // is alpha slider enabled
-        var drag = false;
-        var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
-        var events = new Array();
-        var userEvents = new Array();
-        var canvasHelper = document.createElement("canvas");
-        var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
-        var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
-        var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
-        var input = false;
-        var inputColor = true;     // update input color according to picker
-        var inputFormat = 'hex'; // mixed | hex | rgba
-        var popup = new Object;    // popup block for input
-        popup.tag = false;         // Dom element if popup is enabled
-        popup.margin = 6;          // margin from input in pixels
-        var place = false;
-        var handler = this;
-        var basePadding = 2;
-        var padding;
-        var wheelBlockSize = 200;
-        var center;
-        var hsv;
-        var rgb;
-        var hex = '#000000';
-        var a = 1;
-        var wheel = new Object;
-        wheel.width = 18;
-        wheel.imageData = null; // rendered wheel image data
-        wheel.innerRadius;
-        wheel.startAngle = 0; // 150
-        wheel.outerRadius;
-        wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
-        wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
-        wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
-
-
-</script>
+    <script type="text/javascript">
+        new KellyColorPicker({
+            place : 'picker',
+            input : 'color'
+            });
+            var method = 'quad';
+            var alpha = false;          // is alpha slider enabled
+            var drag = false;
+            var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
+            var events = new Array();
+            var userEvents = new Array();
+            var canvasHelper = document.createElement("canvas");
+            var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
+            var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
+            var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
+            var input = false;
+            var inputColor = true;     // update input color according to picker
+            var inputFormat = 'hex'; // mixed | hex | rgba
+            var popup = new Object;    // popup block for input
+            popup.tag = false;         // Dom element if popup is enabled
+            popup.margin = 6;          // margin from input in pixels
+            var place = false;
+            var handler = this;
+            var basePadding = 2;
+            var padding;
+            var wheelBlockSize = 200;
+            var center;
+            var hsv;
+            var rgb;
+            var hex = '#000000';
+            var a = 1;
+            var wheel = new Object;
+            wheel.width = 18;
+            wheel.imageData = null; // rendered wheel image data
+            wheel.innerRadius;
+            wheel.startAngle = 0; // 150
+            wheel.outerRadius;
+            wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
+            wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
+            wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
+    </script>
 <!-- color addded  -->
 <!-- adding font-size -->
-<script type="text/javascript">
-    var font_size_decremenrt = 27;
-    $(".deccrease-font-size").click( function(e) {
-        e.preventDefault();
-        if( font_size_decremenrt > 10)
-        {
-            $('.text-container').css({'font-size' : "-=5"});
-            font_size_decremenrt -= 5;
-            console.log(font_size_decremenrt);
-        }
-    });
-    $(".inccrease-font-size").click( function(e) {
-        e.preventDefault();
-        var size = $(".text-container").css('font-size');
-        if( font_size_decremenrt < 47)
-        {
-            $('.text-container').css({'font-size' : "+=5"});
-            font_size_decremenrt += 4;
-            console.log(font_size_decremenrt);
-        }
-    });
-
-        $("#color").on("change paste keyup select", function()  {
-            var ss = $(this).css("background");
-            console.log(ss)
-            // $(".img").css({'background-color' : $(this).css("background")})
+    <script type="text/javascript">
+        var font_size_decremenrt = 27;
+        $(".deccrease-font-size").click( function(e) {
+            e.preventDefault();
+            if( font_size_decremenrt > 10)
+            {
+                $('.text-container').css({'font-size' : "-=5"});
+                font_size_decremenrt -= 5;
+                console.log(font_size_decremenrt);
+            }
+        });
+        $(".inccrease-font-size").click( function(e) {
+            e.preventDefault();
+            var size = $(".text-container").css('font-size');
+            if( font_size_decremenrt < 47)
+            {
+                $('.text-container').css({'font-size' : "+=5"});
+                font_size_decremenrt += 4;
+                console.log(font_size_decremenrt);
+            }
         });
 
-</script>
+            $("#color").on("change paste keyup select", function()  {
+                var ss = $(this).css("background");
+                console.log(ss)
+                // $(".img").css({'background-color' : $(this).css("background")})
+            });
+
+    </script>
 <!-- adding font-size -->
 <!-- adding size 35m -->
     <script type="text/javascript">
@@ -645,12 +651,14 @@
     </script>
 <!-- adding size 35m -->
 <!-- actvivating tabs upper on same call -->
-<script type="text/javascript">
-    $(".inscrptio-bat").click( function(){
-            console.log("wrr gaye")
-            $(".inscription_upperlayer").css({'display' : 'flex'});
-    })
-</script>
+    <script type="text/javascript">
+        $(".inner-selector-column nav a").click( function(){
+            var id_for_bartop = $(this).attr("data-src");
+            // console.log($(this).data("src"));
+            $(".tabs-hidden").hide();
+            $('#'+id_for_bartop).css({'display' :  'flex'});
+        })
+    </script>
 <!-- actvivating tabs upper on same call -->
 </body>
 </html>
