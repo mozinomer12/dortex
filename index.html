@@ -224,7 +224,7 @@
                                     <button><img src="./assets/icons/innercol/setting.png"></button>
                                 </div>
                                 <div class="row">
-                                    <input type="text" name="" placeholder="pixel">
+                                    <input type="text" name="" placeholder="pixel" class="text-pixel-container">
                                     <button><img src="./assets/icons/innercol/setting.png"></button>
                                 </div>
                                 <a href="#" class="addtext">
@@ -404,7 +404,7 @@
             35 mm
         </span>
         <div class="img">
-            <img src="">
+            <img src="./assets/icons/company.png">
             <div class="text-container">
                 <span class="heading-text-container">
                     Coding
@@ -524,11 +524,14 @@
     });
 </script>
 <!-- adding a script for inputing a text -->
-<script type="text/javascript">
-    $(".text-coding-container").on("input", function(){
-        // Print entered value in a div box
-        $(".sub-heading-text-container").text($(this).val());
-    });
-</script>
+    <script type="text/javascript">
+        $(".text-coding-container").on("input", function(){
+            $(".heading-text-container").text($(this).val());
+        });
+        $(".text-pixel-container").on("input", function(){
+            $(".sub-heading-text-container").text($(this).val());
+        });
+    </script>
+<!-- adding a script for inputing a text -->
 </body>
 </html>

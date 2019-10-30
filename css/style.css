@@ -1022,8 +1022,22 @@ span.minus_size::before {
     color: #fff;
     font-size: 27px;
     font-weight: 700;
+    max-width: 180px;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 20px 0px;
 }
 .img
 {
     position: relative;
+}
+.img img {
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 40px;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
 }
