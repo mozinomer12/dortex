@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -377,7 +376,7 @@
                                     </span>
                                     <div class="upload-btn-wrapper">
                                         <button class="btn_upload">Upload a file</button>
-                                        <input type="file" name="myfile" value="" accept=".pdf,.ps,.psd,.eps,.ai,.wmf,.EMF, .XCF"  />
+                                        <input type="file" name="myfile" value="" accept="jpg,.pdf,.ps,.psd,.eps,.ai,.wmf,.EMF, .XCF"  />
                                     </div>
                                     <div class="row text_logo_container">
                                         <p>
@@ -600,13 +599,25 @@
     </script>
     <!-- adding the script for positoining left right up and down -->
         <script type="text/javascript">
+            var right_pos = 1;
+            var left_pos = 1;
             $(".right-position").click( function(e) {
                 e.preventDefault();
-                $(".img img").css({'left' : '+=5px'})
+                if(right_pos <= 5)
+                {
+                    $(".img img").css({'left' : '+=5px'});
+                    right_pos += 1;
+                    console.log(right_pos);
+                }
             });
             $(".left-position").click( function(e) {
                 e.preventDefault();
-                $(".img img").css({'left' : '-=5px'})
+                if(left_pos <= 5)
+                {
+                    $(".img img").css({'left' : '-=5px'})
+                    left_pos += 1;
+                    console.log(right_pos);
+                }
             });
             $(".top-position").click( function(e) {
                 e.preventDefault();
@@ -697,6 +708,7 @@
                 var font_family = $(this).css("font-family")
                 console.log(font_family);
                 $('.text-container').css({'font-family' : font_family})
+                $('.font-family-container').css({'font-family' : font_family})
             });
 
 
@@ -759,7 +771,7 @@
         <!-- motifis delete -->
             <script type="text/javascript">
                 $(".delete_button").click( function(e) {
-                    $(".img img").attr({'src' : ''});
+                    $(".img img").attr({'src' : './assets/icons/company.png'});
                 })
             </script>
         <!-- motifis delete -->

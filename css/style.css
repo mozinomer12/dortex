@@ -694,8 +694,8 @@ div#motifis ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 270px;
-    height: 165px;
+    width: 360px;
+    height: 183px;
     background: #35c56a;
 }
 .main-image-container img {
@@ -1299,7 +1299,7 @@ div#motifis {
     width: auto;
     margin-right: 10px;
 }
-.column-first >.row > [class*='col-'] {
+.column-first >.row{
     min-height: 88vh;
     z-index: 2;
 }
