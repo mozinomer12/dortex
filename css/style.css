@@ -140,6 +140,7 @@ a.cart_button.cloreen {
 .inner-selector-column {
     background: #368bbd;
     padding: 0px;
+    flex: 0 20%;
 }
 .attribute-selector {
     padding: 0px;
@@ -660,7 +661,7 @@ div#motifis ul li a {
 .inner-selector-column nav .nav-link
 {
     border: none;
-    padding: 40px 0px;
+    padding: 24px 0px;
     width: 100%;
     text-align: center;
     background: #316D92;
@@ -843,7 +844,7 @@ span.left-position::before {
 .row0positioning {
     position: absolute;
     top: 0px;
-    left: 30%;
+    left: 28.6%;
     right: 0;
     background: #fff;
     /* z-index: 99999; */
@@ -851,6 +852,10 @@ span.left-position::before {
     align-items: center;
     height: 70px;
     box-shadow: 0px 0px 43px -24px;
+}
+.column-first div
+{
+    height: 100%;
 }
 span.right-position {
     position: absolute;
@@ -1209,4 +1214,61 @@ a.addtext.more-motifis {
 }
 div#motifis {
     width: 100%;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.btn_upload {
+    padding: 8px 20px;
+    border-radius: 8px;
+    border: 1px solid #cccc;
+    background: transparent;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0.8px;
+    margin: auto;
+    width: 100%;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.logo-image-container img {
+    width: 27%;
+}
+.logo-image-container {
+    height: 120px;
+    border: 1px solid #c5c5c578;
+    width: 100%;
+    background: #316D92;
+    display: flex;
+    align-items: center;
+    margin: 15px 0px 12px;
+}
+.text_logo_container p {
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 100;
+    letter-spacing: 0.5px;
+}
+.text_logo_container p:first-child {
+    color: #FFD427;
+    font-size: 13px;
+    margin: 12px 0px;
+}
+.logo_preview {
+    font-size: 12px;
+    text-transform: capitalize;
+    font-weight: 100;
+    letter-spacing: 0.4px;
 }
