@@ -332,6 +332,30 @@
                 <div class="inscription_upperlayer tabs-hidden" id="inscription_id">
                     <div class="font-family-container">
                         coding pixel
+                        <div class="fonts-family">
+                            <ul>
+                                <li>
+                                    <span>
+                                        openSans
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        openSans
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        openSans
+                                    </span>
+                                </li>
+                                <li>
+                                    <span>
+                                        openSans
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="font-size-container">
                         <span class="deccrease-font-size">
@@ -482,67 +506,27 @@
 </script>
 <!-- adding the script for positoining left right up and down -->
     <script type="text/javascript">
-        var right_pos = 0;
-        var left_pos = 0;
-        var up_pos = 0;
-        var down_pos = 0;
         $(".right-position").click( function(e) {
             e.preventDefault();
-            right_pos += 5;
-            if(right_pos >= 60)
-            {
-                return;
-                left_pos = 0;
-            }
-            else
-            {
-                console.log(right_pos)
-                $(".main-image-container").css({'left': + right_pos + 'px' })
-            }
+            $(".img img").css({'left' : '+=5px'})
         });
         $(".left-position").click( function(e) {
-
             e.preventDefault();
-            left_pos -= 5;
-            if(left_pos <= -60)
-            {
-                return;
-                right_pos = 0;
-                left_pos = 0;
-            }
-            else
-            {
-                console.log(left_pos)
-                $(".main-image-container").css({'left': left_pos + 'px' })
-            }
+            $(".img img").css({'left' : '-=5px'})
         });
         $(".top-position").click( function(e) {
             e.preventDefault();
-            up_pos -= 5;
-            if(up_pos <= -60)
-            {
-                return;
-                right_pos = 0;
-            }
-            else
-            {
-                console.log(up_pos)
-                $(".main-image-container").css({'top': + up_pos + 'px' })
-            }
+            $(".img img").css({'top' : '+=5px'})
         });
         $(".bottom-position").click( function(e) {
             e.preventDefault();
-            down_pos += 5;
-            if(down_pos >= 60)
-            {
-                return;
-                right_pos = 0;
-            }
-            else
-            {
-                console.log(down_pos)
-                $(".main-image-container").css({'top': + down_pos + 'px' })
-            }
+            $(".img img").css({'top' : '-=5px'})
+        });
+        $('.plus_size').click( function(){
+            $(".img img").css({'width' : '+=10px'})
+        });
+        $('.minus_size').click( function(){
+            $(".img img").css({'width' : '-=10px'})
         });
     </script>
 <!-- adding the script for positoining left right up and down -->
@@ -662,3 +646,52 @@
 <!-- actvivating tabs upper on same call -->
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
