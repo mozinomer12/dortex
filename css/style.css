@@ -1201,3 +1201,9 @@ input#color {
 {
     transition: rotate(-135px)
 }
+a.addtext.more-motifis {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
