@@ -644,6 +644,7 @@ div#motifis ul li {
 div#motifis ul li a img {
     width: auto;
     float: left;
+    max-width: 60px;
     margin: 0px;
     margin-right: 20px;
 }
@@ -1309,4 +1310,7 @@ div#motifis {
 .inner-selector-column nav {
     background: #316d92;
     height: 100%;
+}
+.polpular-motifis-tab-for-more-icons img {
+    width: auto;
 }
