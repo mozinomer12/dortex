@@ -19,8 +19,7 @@ a:hover
 body,
 .row,
 ul,
-ol,
-.row
+ol
 {
 	margin: 0px;
 	padding:0px;
@@ -148,7 +147,7 @@ a.cart_button.cloreen {
     color: #fff;
 }
 .attribute-selector li {
-    padding: 0px 40px;
+    padding: 0px 10px;
     margin-bottom: 22px;
 }
 .inner-selector-column li.active {
@@ -699,6 +698,7 @@ div#motifis ul li a {
     justify-content: center;
     width: 270px;
     height: 165px;
+    background: #35c56a;
 }
 .main-image-container img {
      width: 100%; 
@@ -744,8 +744,6 @@ span.heaight {
 .img {
     width: 100%;
     height: 100%;
-    /*background: url('../assets/icons/innercol/orignal.png');*/
-    background-color: #35c56a;
     background-size: 100% 100%;
 }
 span.widhth::after {
@@ -1079,6 +1077,7 @@ span.minus_size::before {
 span.deccrease-font-size {
     position: absolute;
     left: 20px;
+    cursor: pointer;
     color: #fff;
     background: #316d92;
     border-radius: 50%;
@@ -1109,6 +1108,7 @@ span.inccrease-font-size {
     height: 15px;
     display: flex;
     align-items: center;
+    cursor: pointer;
     justify-content: center;
     font-size: 21px;
     font-weight: 700;
@@ -1158,27 +1158,21 @@ input#color {
     right: 0px;
     margin: auto;
     padding: 10px;
-    visibility: hidden;
-    opacity: 0;
+    display: none;
 }
 
-.font-family-container:hover  .fonts-family 
-{
-    opacity: 1;
-    visibility: visible;
-}
 .font-family-container
 {
     position: relative;
 }
-.fonts-family ul li:first-chlid {
+.fonts-family ul li:first-child {
     font-family: 'Roboto', sans-serif;
 }
-.fonts-family ul li:last-chlid 
+.fonts-family ul li:last-child 
 {
     font-family: 'Staatliches', cursive;
 }
-.fonts-family ul li:nth-chlid (2)
+.fonts-family ul li:nth-child(2)
 {
     font-family: 'Liu Jian Mao Cao', cursive;
 }
@@ -1194,16 +1188,25 @@ input#color {
     position: absolute;
     right: 20px;
     top: -4px;
+    transition: 0.4s all ease-in-out;
     bottom: 0px;
     margin: auto;
-}
-.font-family-container:hover::after
-{
-    transition: rotate(-135px)
 }
 a.addtext.more-motifis {
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.font-family-container.icon-roate::after {
+    transform: rotate(224deg);
+    transition: 0.4s all ease-in-out;
+    top: 5px;
+}
+.font-family-container {
+    transition: 0.4s all ease-in-out;
+    cursor: pointer;
+}
+div#motifis {
+    width: 100%;
 }

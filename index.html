@@ -46,8 +46,6 @@
     </div>
 </div>
 
-
-
 <div class="main-row-container">
     <div class="custom-row">
         <div class="column-first">
@@ -131,7 +129,7 @@
                                 </span>
                         </a>
                         <a  data-src="logo_id" class="nav-item nav-link" id="nav-contact-tab2" data-toggle="tab" 
-                            href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                            href="#logo_id" role="tab" aria-controls="nav-contact" aria-selected="false">
                             
                                 
                                 <img src="./assets/icons/innercol/5.png">
@@ -365,6 +363,14 @@
                                 </div> -->
                             </div>
                       </div>
+                      <div class="tab-pane fade" id="logo_id" role="tabpanel" aria-labelledby="nav-contact-tab2">
+                            <div class="motifis-tab" id="motifis">
+                                <h6 class="label-hading">
+                                    Logo
+                                </h6>
+                                asd
+                            </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -536,186 +542,190 @@
     </div>
 </div>
 
-<script src="./assets/color/html5kellycolorpicker.min.js"></script>
-<script type="text/javascript">
-    // adding js for active right sidebar
-        $('.right-sidebar .configration ul li').click( function(e) {
-          e.preventDefault();
-          $('.configration ul li').removeClass("active");
-          $(this).addClass("active");
-        });
-        $('.right-sidebar .productioncontainer ul li').click( function(e) {
-          e.preventDefault();
-          $('.productioncontainer ul li').removeClass("active");
-          $(this).addClass("active");
-        });
-        $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
-          e.preventDefault();
-          $('.quatatity-and-price ul li').removeClass("active");
-          $(this).addClass("active");
-        });
-        $('.attribute-selector ul li').click( function(e) {
-          e.preventDefault();
-          $('.attribute-selector ul li').removeClass("active");
-          $(this).addClass("active");
-        });
-        $('#size-container span').click( function(e) {
-          e.preventDefault();
-          $('#size-container span').removeClass("active");
-          $(this).addClass("active");
-        });
-    // adding js for active right sidebar
-</script>
-<!-- adding the script for positoining left right up and down -->
-    <script type="text/javascript">
-        $(".right-position").click( function(e) {
-            e.preventDefault();
-            $(".img img").css({'left' : '+=5px'})
-        });
-        $(".left-position").click( function(e) {
-            e.preventDefault();
-            $(".img img").css({'left' : '-=5px'})
-        });
-        $(".top-position").click( function(e) {
-            e.preventDefault();
-            $(".img img").css({'top' : '+=5px'})
-        });
-        $(".bottom-position").click( function(e) {
-            e.preventDefault();
-            $(".img img").css({'top' : '-=5px'})
-        });
-        $('.plus_size').click( function(){
-            $(".img img").css({'width' : '+=10px'})
-        });
-        $('.minus_size').click( function(){
-            $(".img img").css({'width' : '-=10px'})
-        });
-    </script>
-<!-- adding the script for positoining left right up and down -->
-<!-- adding a script for inputing a text -->
-    <script type="text/javascript">
-        $(".text-coding-container").on("input", function(){
-            $(".heading-text-container").text($(this).val());
-        });
-        $(".text-pixel-container").on("input", function(){
-            $(".sub-heading-text-container").text($(this).val());
-        });
-    </script>
-<!-- adding a script for inputing a text -->
-<!-- color addded  -->
-    <script type="text/javascript">
-        new KellyColorPicker({
-            place : 'picker',
-            input : 'color'
-            });
-            var method = 'quad';
-            var alpha = false;          // is alpha slider enabled
-            var drag = false;
-            var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
-            var events = new Array();
-            var userEvents = new Array();
-            var canvasHelper = document.createElement("canvas");
-            var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
-            var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
-            var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
-            var input = false;
-            var inputColor = true;     // update input color according to picker
-            var inputFormat = 'hex'; // mixed | hex | rgba
-            var popup = new Object;    // popup block for input
-            popup.tag = false;         // Dom element if popup is enabled
-            popup.margin = 6;          // margin from input in pixels
-            var place = false;
-            var handler = this;
-            var basePadding = 2;
-            var padding;
-            var wheelBlockSize = 200;
-            var center;
-            var hsv;
-            var rgb;
-            var hex = '#000000';
-            var a = 1;
-            var wheel = new Object;
-            wheel.width = 18;
-            wheel.imageData = null; // rendered wheel image data
-            wheel.innerRadius;
-            wheel.startAngle = 0; // 150
-            wheel.outerRadius;
-            wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
-            wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
-            wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
-    </script>
-<!-- color addded  -->
-<!-- adding font-size -->
-    <script type="text/javascript">
-        var font_size_decremenrt = 27;
-        $(".deccrease-font-size").click( function(e) {
-            e.preventDefault();
-            if( font_size_decremenrt > 10)
-            {
-                $('.text-container').css({'font-size' : "-=5"});
-                font_size_decremenrt -= 5;
-                console.log(font_size_decremenrt);
-            }
-        });
-        $(".inccrease-font-size").click( function(e) {
-            e.preventDefault();
-            var size = $(".text-container").css('font-size');
-            if( font_size_decremenrt < 47)
-            {
-                $('.text-container').css({'font-size' : "+=5"});
-                font_size_decremenrt += 4;
-                console.log(font_size_decremenrt);
-            }
-        });
 
-            $("#color").on("change paste keyup select", function()  {
-                var ss = $(this).css("background");
-                console.log(ss)
-                // $(".img").css({'background-color' : $(this).css("background")})
+<!-- scripts -->
+    <script src="./assets/color/html5kellycolorpicker.min.js"></script>
+    <script type="text/javascript">
+        // adding js for active right sidebar
+            $('.right-sidebar .configration ul li').click( function(e) {
+              e.preventDefault();
+              $('.configration ul li').removeClass("active");
+              $(this).addClass("active");
+            });
+            $('.right-sidebar .productioncontainer ul li').click( function(e) {
+              e.preventDefault();
+              $('.productioncontainer ul li').removeClass("active");
+              $(this).addClass("active");
+            });
+            $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
+              e.preventDefault();
+              $('.quatatity-and-price ul li').removeClass("active");
+              $(this).addClass("active");
+            });
+            $('.attribute-selector ul li').click( function(e) {
+              e.preventDefault();
+              $('.attribute-selector ul li').removeClass("active");
+              $(this).addClass("active");
+            });
+            $('#size-container span').click( function(e) {
+              e.preventDefault();
+              $('#size-container span').removeClass("active");
+              $(this).addClass("active");
+            });
+        // adding js for active right sidebar
+    </script>
+    <!-- adding the script for positoining left right up and down -->
+        <script type="text/javascript">
+            $(".right-position").click( function(e) {
+                e.preventDefault();
+                $(".img img").css({'left' : '+=5px'})
+            });
+            $(".left-position").click( function(e) {
+                e.preventDefault();
+                $(".img img").css({'left' : '-=5px'})
+            });
+            $(".top-position").click( function(e) {
+                e.preventDefault();
+                $(".img img").css({'top' : '+=5px'})
+            });
+            $(".bottom-position").click( function(e) {
+                e.preventDefault();
+                $(".img img").css({'top' : '-=5px'})
+            });
+            $('.plus_size').click( function(){
+                $(".img img").css({'width' : '+=10px'})
+            });
+            $('.minus_size').click( function(){
+                $(".img img").css({'width' : '-=10px'})
+            });
+        </script>
+    <!-- adding the script for positoining left right up and down -->
+    <!-- adding a script for inputing a text -->
+        <script type="text/javascript">
+            $(".text-coding-container").on("input", function(){
+                $(".heading-text-container").text($(this).val());
+            });
+            $(".text-pixel-container").on("input", function(){
+                $(".sub-heading-text-container").text($(this).val());
+            });
+        </script>
+    <!-- adding a script for inputing a text -->
+    <!-- color addded  -->
+        <script type="text/javascript">
+            new KellyColorPicker({
+                place : 'picker',
+                input : 'color'
+                });
+                var method = 'quad';
+                var alpha = false;          // is alpha slider enabled
+                var drag = false;
+                var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
+                var events = new Array();
+                var userEvents = new Array();
+                var canvasHelper = document.createElement("canvas");
+                var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
+                var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
+                var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
+                var input = false;
+                var inputColor = true;     // update input color according to picker
+                var inputFormat = 'hex'; // mixed | hex | rgba
+                var popup = new Object;    // popup block for input
+                popup.tag = false;         // Dom element if popup is enabled
+                popup.margin = 6;          // margin from input in pixels
+                var place = false;
+                var handler = this;
+                var basePadding = 2;
+                var padding;
+                var wheelBlockSize = 200;
+                var center;
+                var hsv;
+                var rgb;
+                var hex = '#000000';
+                var a = 1;
+                var wheel = new Object;
+                wheel.width = 18;
+                wheel.imageData = null; // rendered wheel image data
+                wheel.innerRadius;
+                wheel.startAngle = 0; // 150
+                wheel.outerRadius;
+                wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
+                wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
+                wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
+        </script>
+    <!-- color addded  -->
+    <!-- adding font-size and font-family -->
+        <script type="text/javascript">
+            $(".deccrease-font-size").click( function(e) {
+                e.preventDefault();
+                $('.text-container').css({'font-size' : "-=2px"});
+            });
+            $(".inccrease-font-size").click( function(e) {
+                e.preventDefault();
+                $(".text-container").css({'font-size' : '+=2px'});
+            });
+            $(".fonts-family li").click( function(e){
+                var font_family = $(this).css("font-family")
+                console.log(font_family);
+                $('.text-container').css({'font-family' : font_family})
             });
 
-    </script>
-<!-- adding font-size -->
-<!-- adding size 35m -->
-    <script type="text/javascript">
-        $(".height-value-laebl").click( function(e) {
-            e.preventDefault();
-            $(this).addClass("active");
-            $(".main-image-container").css({'width' : '300px'});
-            $(".main-image-container").css({'height' : '220px'});
-            $(".heaight").text("35mm");
-            $(".widhth").text("55mm");
-        });
-        $(".height-value-laebl-default").click( function(e) {
-            e.preventDefault();
-            $(this).addClass("active");
-            $(".main-image-container").css({'width' : '270px'});
-            $(".main-image-container").css({'height' : '165px'});
-            $(".heaight").text("15mm")
-            $(".widhth").text("38mm");
-        });
-    </script>
-<!-- adding size 35m -->
-<!-- actvivating tabs upper on same call -->
-    <script type="text/javascript">
-        $(".inner-selector-column nav a").click( function(){
-            var id_for_bartop = $(this).attr("data-src");
-            // console.log($(this).data("src"));
-            $(".tabs-hidden").hide();
-            $('#'+id_for_bartop).css({'display' :  'flex'});
-        })
-    </script>
-<!-- actvivating tabs upper on same call -->
-<!-- adding motifis icons to the mainpsot -->
-<script type="text/javascript">
-    $("#motifis a").click( function(e) {
-        e.preventDefault();
-        var motifis_images = $(this).find("img").data("src");
-        // console.log(motifis_images);
-        $(".img img").attr({'src' : motifis_images})
-    });
-</script>
-<!-- adding motifis icons to the mainpsot -->
+
+            $(".color-oicekr").on( 'change', function(e) {
+                var bg_image = $(this).css("background");
+                console.log("asd");
+                console.log(bg_image);
+            })
+        </script>
+    <!-- adding font-size and font-family-->
+    <!-- adding size 35m -->
+        <script type="text/javascript">
+            $(".height-value-laebl").click( function(e) {
+                e.preventDefault();
+                $(this).addClass("active");
+                $(".main-image-container").css({'width' : '370px'});
+                $(".main-image-container").css({'height' : '165px'});
+                $(".heaight").text("35mm");
+                $(".widhth").text("55mm");
+            });
+            $(".height-value-laebl-default").click( function(e) {
+                e.preventDefault();
+                $(this).addClass("active");
+                $(".main-image-container").css({'width' : '270px'});
+                $(".main-image-container").css({'height' : '165px'});
+                $(".heaight").text("15mm")
+                $(".widhth").text("38mm");
+            });
+        </script>
+    <!-- adding size 35m -->
+    <!-- actvivating tabs upper on same call -->
+        <script type="text/javascript">
+            $(".inner-selector-column nav a").click( function(){
+                var id_for_bartop = $(this).attr("data-src");
+                // console.log($(this).data("src"));
+                $(".tabs-hidden").hide();
+                $('#'+id_for_bartop).css({'display' :  'flex'});
+            })
+        </script>
+    <!-- actvivating tabs upper on same call -->
+    <!-- adding dropdown scripts -->
+        <script type="text/javascript">
+            $(".font-family-container").click( function(){
+                $(".fonts-family").slideToggle();
+                $(this).toggleClass("icon-roate")
+            });
+        </script>
+    <!-- adding dropdown scripts -->
+    <!-- adding motifis icons to the mainpsot -->
+        <script type="text/javascript">
+            $("#motifis a").click( function(e) {
+                e.preventDefault();
+                var motifis_images = $(this).find("img").data("src");
+                // console.log(motifis_images);
+                $(".img img").attr({'src' : motifis_images})
+            });
+        </script>
+    <!-- adding motifis icons to the mainpsot -->
+<!-- scripts -->
 </body>
 </html>
 
