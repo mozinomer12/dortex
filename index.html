@@ -601,31 +601,44 @@
         <script type="text/javascript">
             var right_pos = 1;
             var left_pos = 1;
+            var top_pos = 1;
+            var bottom_pos = 1;
             $(".right-position").click( function(e) {
                 e.preventDefault();
-                if(right_pos <= 5)
+                if(right_pos <= 10)
                 {
                     $(".img img").css({'left' : '+=5px'});
                     right_pos += 1;
-                    console.log(right_pos);
+                    left_pos = 0;
+                    // console.log(right_pos);
                 }
             });
             $(".left-position").click( function(e) {
                 e.preventDefault();
-                if(left_pos <= 5)
+                if(left_pos <= 10)
                 {
                     $(".img img").css({'left' : '-=5px'})
                     left_pos += 1;
-                    console.log(right_pos);
+                    right_pos = 0;
+                    // console.log(right_pos);
+                }
+            });
+            $(".bottom-position").click( function(e) {
+                e.preventDefault();
+                if (bottom_pos <= 10) {
+                    $(".img img").css({'top' : '+=5px'});
+                    top_pos = 0;
+                    bottom_pos += 1;
+                    console.log(bottom_pos);
                 }
             });
             $(".top-position").click( function(e) {
                 e.preventDefault();
-                $(".img img").css({'top' : '+=5px'})
-            });
-            $(".bottom-position").click( function(e) {
-                e.preventDefault();
-                $(".img img").css({'top' : '-=5px'})
+                if (top_pos <= 10) {
+                    $(".img img").css({'top' : '-=5px'});
+                    top_pos += 1;
+                    bottom_pos = 0;
+                }
             });
             $('.plus_size').click( function(){
                 $(".img img").css({'width' : '+=10px'})
