@@ -210,7 +210,7 @@
                                             current label length
                                         </span>
                                         <span>
-                                            <input type="number" name="" placeholder="40"/> mm
+                                            <input type="number" name="" placeholder="40" id="size_input_custom" /> mm
                                         </span>
                                         <span class="minimumlenth">
                                             minimum length 35mm
@@ -416,6 +416,9 @@
                             <span class="minus_size"></span>
                             <span class="plus_size"></span>
                         </div>
+                    </div>
+                    <div class="delete_button">
+                        <img src="./assets/icons/innercol/bin.png">Delete
                     </div>
                 </div>
                 <div class="inscription_upperlayer tabs-hidden" id="inscription_id">
@@ -629,6 +632,12 @@
             $(".text-pixel-container").on("input", function(){
                 $(".sub-heading-text-container").text($(this).val());
             });
+            $(".size_input_custom").on("change", function(){
+                var input_val = $(this).val();
+                // var currenet_width = $(".main-image-container").css("width");
+                console.log(input_val);
+                // console.log(currenet_width)
+            });
         </script>
     <!-- adding a script for inputing a text -->
     <!-- color addded  -->
@@ -746,6 +755,15 @@
             });
         </script>
     <!-- adding motifis icons to the mainpsot -->
+    <!-- delete buttons -->
+        <!-- motifis delete -->
+            <script type="text/javascript">
+                $(".delete_button").click( function(e) {
+                    $(".img img").attr({'src' : ''});
+                })
+            </script>
+        <!-- motifis delete -->
+    <!-- delete buttons -->
 <!-- scripts -->
 </body>
 </html>

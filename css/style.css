@@ -2,11 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao&display=swap');
-html
-{
-	margin-top: 22px;
-	/*background: #000;*/
-}
 img
 {
 	width: 100%;
@@ -141,6 +136,7 @@ a.cart_button.cloreen {
     background: #368bbd;
     padding: 0px;
     flex: 0 20%;
+    border: none;
 }
 .attribute-selector {
     padding: 0px;
@@ -294,6 +290,7 @@ a.cart_button.cloreen {
     bottom: 0px;
     max-width: 455px;
     display: block;
+    z-index: 2;
     padding: 25px;
     padding-left: 15px;
     height: 100%;
@@ -844,18 +841,17 @@ span.left-position::before {
 .row0positioning {
     position: absolute;
     top: 0px;
-    left: 28.6%;
     right: 0;
     background: #fff;
-    /* z-index: 99999; */
     display: flex;
     align-items: center;
     height: 70px;
     box-shadow: 0px 0px 43px -24px;
-}
-.column-first div
-{
-    height: 100%;
+    width: 49%;
+    margin: auto;
+    left: 110px;
+    right: 0px;
+    z-index: 1;
 }
 span.right-position {
     position: absolute;
@@ -995,6 +991,9 @@ span.minus_size {
 .suze-manager-container {
     display: flex;
     align-items: center;
+    border-left: 1px solid #cccc;
+    height: 100%;
+    padding-left: 22px;
 }
 span.minus_size::before {
     content: "";
@@ -1022,17 +1021,25 @@ span.minus_size::before {
     background: #2d6d93;
 }
 .text-container {
-    position: absolute;
-    right: 15px;
+    position: relative;
+    right: 21px;
     color: #fff;
     font-size: 23px;
     font-weight: 700;
     max-width: 80px;
     display: block;
-    width: auto;
+    width: 50%;
     height: auto;
     padding: 0px 0px;
     margin: 0 auto;
+    float: right;
+    height: 100%;
+    margin: 0;
+    margin-right: 0px;
+    margin-left: auto;
+    display: table;
+    align-items: center;
+    margin-top: calc(76%/2);
 }
 .img
 {
@@ -1054,6 +1061,7 @@ span.minus_size::before {
     display: flex;
     display: none;
     align-items: center;
+    height: 100%;
 }
 .inscription_upperlayer {
     display: flex;
@@ -1098,7 +1106,7 @@ span.deccrease-font-size {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 10%;
+    width: 17%;
     border-right: 1px solid #ccc;
     height: 100%;
     position: relative;
@@ -1169,6 +1177,7 @@ input#color {
 .font-family-container
 {
     position: relative;
+    width: 17%;
 }
 .fonts-family ul li:first-child {
     font-family: 'Roboto', sans-serif;
@@ -1271,4 +1280,30 @@ div#motifis {
     text-transform: capitalize;
     font-weight: 100;
     letter-spacing: 0.4px;
+}
+.delete_button {
+    background: #e33c45;
+    display: flex;
+    align-items: center;
+    padding: 6px 21px 6px 16px;
+    border-radius: 10px;
+    justify-content: flex-start;
+    color: #fff;
+    float: right;
+    position: absolute;
+    right: 70px;
+    user-select: none;
+    cursor: pointer;
+}
+.delete_button img {
+    width: auto;
+    margin-right: 10px;
+}
+.column-first >.row > [class*='col-'] {
+    min-height: 88vh;
+    z-index: 2;
+}
+.inner-selector-column nav {
+    background: #316d92;
+    height: 100%;
 }
