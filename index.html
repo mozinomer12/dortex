@@ -45,7 +45,7 @@
     </div>
 </div>
 
-<div class="main-row-container">
+<div class="main-row-container 1container">
     <div class="custom-row">
         <div class="column-first">
             <div class="polpular-motifis-tab-for-more-icons">
@@ -958,13 +958,29 @@
     <!-- color addded  -->
     <!-- adding font-size and font-family -->
         <script type="text/javascript">
+            var click_font_size = 1;
+            var click_font_size_plus = 1;
             $(".deccrease-font-size").click( function(e) {
                 e.preventDefault();
-                $('.text-container').css({'font-size' : "-=2px"});
+                if (click_font_size <= 5) {
+                    $('.text-container').css({'font-size' : "-=2px"});
+                    click_font_size ++;
+                    console.log(click_font_size);
+                    click_font_size_plus --;
+                }
+                else
+                {
+                    return;
+                }
             });
             $(".inccrease-font-size").click( function(e) {
                 e.preventDefault();
-                $(".text-container").css({'font-size' : '+=2px'});
+                if (click_font_size_plus <= 5 ) {
+                    $(".text-container").css({'font-size' : '+=2px'});
+                    console.log(click_font_size_plus);
+                    click_font_size_plus ++;
+                    click_font_size --;
+                }
             });
             $(".fonts-family li").click( function(e){
                 var font_family = $(this).css("font-family")
