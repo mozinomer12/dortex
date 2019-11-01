@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Roboto:500&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
@@ -5,6 +6,10 @@
 img
 {
 	width: 100%;
+}
+*
+{
+    font-family: 'Open Sans', sans-serif;
 }
 a:hover
 {
@@ -1126,7 +1131,7 @@ span.minus_size::before {
     height: 15px;
     cursor: pointer;
     font-weight: 700;
-    line-height: 0.7;
+    line-height: 0.9;
     text-align: center;
 }
 .font-size span:last-child {
@@ -1175,6 +1180,7 @@ input#color {
     margin: auto;
     padding: 10px;
     display: none;
+    width: 127%;
 }
 
 .font-family-container
@@ -1406,4 +1412,31 @@ span.more-motifis-close-icons::after {
 .popular-motifis-container-more-icon
 {
     display: none;
+}
+.inner-selector-column nav .nav-link.active::after {
+    /* width: 100%; */
+    height: 19px;
+    position: absolute;
+    z-index: 99;
+    display: block;
+    content: "";
+    border: 7px solid #368bbd;
+    top: calc(100% - 3px);
+    bottom: -17px;
+    border-left: 0;
+    border-bottom: 0px;
+    border-top-right-radius: 17px;
+    right: -7px;
+    left: 0px;
+}
+.inner-selector-column nav .nav-link:last-child::after {
+    display: none;
+}
+.inner-selector-column nav .nav-link
+{
+    position: relative;
+}
+.previous-nav-item
+{
+    border-bottom-right-radius: 11px;
 }

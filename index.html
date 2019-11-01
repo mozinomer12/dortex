@@ -505,7 +505,7 @@
                                 </div>
                                 <div class="labellength">
                                     <div class="row">
-                                        <h6>label lenght</h6>
+                                        <h6 class="label-hading">label lenght</h6>
                                     </div>
                                     <div class="row">
                                         <span>
@@ -1066,6 +1066,14 @@
             </script>
         <!-- motifis delete -->
     <!-- delete buttons -->
+    <!-- adding prev class to nav item -->
+        <script type="text/javascript">
+            $("#nav-tab a").click( function(){
+                $('#nav-tab a').removeClass("previous-nav-item")
+                $(this).prev().addClass("previous-nav-item")
+            })
+        </script>
+    <!-- adding prev class to nav item -->
 <!-- scripts -->
 </body>
 </html>
