@@ -170,7 +170,7 @@
                 <div class="popular-motifis-container-more-icon" id="care-motifis-more-icon">
                     <div class="row">
                         <div class="label-hading">
-                            <h3>Popular Motifis</h3>
+                            <h3>Care Motifis</h3>
                         </div>
                         <div class="image-container-more-motifis">
                             <img src="./assets/icons/innercol/motifis/more-icons/1.png" width="auto">
@@ -207,36 +207,6 @@
                         </div>
                         <div class="image-container-more-motifis">
                             <img src="./assets/icons/innercol/motifis/more-icons/3.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/4.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/5.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/6.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/7.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/8.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/9.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/1.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/2.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/3.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/4.png" width="auto">
                         </div>
                         <div class="image-container-more-motifis">
                             <img src="./assets/icons/innercol/motifis/more-icons/5.png" width="auto">
@@ -288,22 +258,7 @@
                 <div class="popular-motifis-container-more-icon" id="frames-motifis-more-icon">
                     <div class="row">
                         <div class="label-hading">
-                            <h3>Popular Motifis</h3>
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/1.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/2.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/3.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/4.png" width="auto">
-                        </div>
-                        <div class="image-container-more-motifis">
-                            <img src="./assets/icons/innercol/motifis/more-icons/5.png" width="auto">
+                            <h3>Frame Motifis</h3>
                         </div>
                         <div class="image-container-more-motifis">
                             <img src="./assets/icons/innercol/motifis/more-icons/6.png" width="auto">
@@ -611,7 +566,7 @@
                                             care motifis
                                         </a>
                                     </li>
-                                    <li dat-id="frames-motifis-more-icon">
+                                    <li data-id="frames-motifis-more-icon">
                                         <a href="#">
                                             <img src="./assets/icons/innercol/motifis/3.png" data-src="./assets/icons/innercol/motifis/3.png">
                                             frames motifis
@@ -670,7 +625,7 @@
                                     </span>
                                     <div class="upload-btn-wrapper">
                                         <button class="btn_upload">Upload a file</button>
-                                        <input type="file" name="myfile" value="" accept="jpg,.pdf,.ps,.psd,.eps,.ai,.wmf,.EMF, .XCF"  />
+                                        <input type="file" name="myfile" value="" accept=".png, .jpg, .jpeg"/>
                                     </div>
                                     <div class="row text_logo_container">
                                         <p>
@@ -1066,11 +1021,23 @@
     <!-- adding dropdown scripts -->
     <!-- adding motifis icons to the mainpsot -->
         <script type="text/javascript">
-            $("#motifis a").click( function(e) {
+            $(".image-container-more-motifis img").click( function(e) {
                 e.preventDefault();
-                var motifis_images = $(this).find("img").data("src");
-                // console.log(motifis_images);
-                $(".img img").attr({'src' : motifis_images})
+                var motifis_images = $(this).attr("src");
+                console.log(motifis_images);
+                $(".img img").attr({'src' : motifis_images});
+                $(".polpular-motifis-tab-for-more-icons").fadeOut();
+            });
+            $("#motifis li").click( function(e) {
+                e.preventDefault();
+               var tab_id_more_icons = $(this).data("id");
+               console.log(tab_id_more_icons);
+                $(".popular-motifis-container-more-icon").css({'display' : 'none'});
+                $('#'+tab_id_more_icons).css({'display' : 'block'});
+                $(".polpular-motifis-tab-for-more-icons").fadeIn();
+            });
+            $(".more-motifis-close-icons").click( function(e) {
+                $(this).parent().parent().fadeOut();
             });
         </script>
     <!-- adding motifis icons to the mainpsot -->

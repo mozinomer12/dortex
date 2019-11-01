@@ -1091,20 +1091,20 @@ span.minus_size::before {
     align-items: center;
     justify-content: flex-start;
 }
-span.deccrease-font-size {
+.deccrease-font-size {
     position: absolute;
     left: 20px;
     cursor: pointer;
     color: #fff;
     background: #316d92;
     border-radius: 50%;
+    user-select: none;
     width: 15px;
     height: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-size: 21px;
     font-weight: 700;
+    line-height: 0.5;
+    text-align: center;
 }
 .font-size-container {
     display: flex;
@@ -1115,22 +1115,21 @@ span.deccrease-font-size {
     height: 100%;
     position: relative;
 }
-span.inccrease-font-size {
+.inccrease-font-size {
     position: absolute;
     right: 20px;
     color: #fff;
     background: #316d92;
     border-radius: 50%;
     width: 15px;
+    user-select: none;
     height: 15px;
-    display: flex;
-    align-items: center;
     cursor: pointer;
-    justify-content: center;
-    font-size: 21px;
     font-weight: 700;
+    line-height: 0.7;
+    text-align: center;
 }
-span.font-size span:last-child {
+.font-size span:last-child {
     font-size: 18px;
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -1337,6 +1336,7 @@ div#motifis {
     height: 100%;
     padding: 40px 20px;
     color: #fff;
+    display: none;
     text-transform: uppercase;
 }
 .image-container-more-motifis
@@ -1402,4 +1402,8 @@ span.more-motifis-close-icons::after {
     border-top: 0;
     border-bottom: 0;
     transform: rotate(42deg);
+}
+.popular-motifis-container-more-icon
+{
+    display: none;
 }
