@@ -446,8 +446,8 @@
                                     own logo
                                 </span>
                         </a>
-                        <a  data-src="color_id" class="nav-item nav-link" id="nav-contact-tab3" data-toggle="tab" 
-                            href="#color_id" role="tab" aria-controls="nav-contact" aria-selected="false">
+                        <a  data-src="color_id_1" class="nav-item nav-link" id="nav-contact-tab3" data-toggle="tab" 
+                            href="#color_id" role="tab" aria-controls="nav-voloo" aria-selected="false">
                             
                                 <img src="./assets/icons/innercol/6.png">
                                 <span>
@@ -620,7 +620,7 @@
                                         logo preview
                                     </span>
                                     <span class="logo-image-container">
-                                        <img src="./assets/icons/company.png">
+                                        <img class="uploaded" src="./assets/icons/company.png">
                                     </span>
                                     <div class="upload-btn-wrapper">
                                         <button class="btn_upload">Upload a file</button>
@@ -637,6 +637,88 @@
                                         </p>
                                     </div>
                                 </div>
+                            </div>
+                      </div>
+                      <div class="tab-pane fade" id="color_id" role="tabpane2" aria-labelledby="nav-contact-tab3">
+                            <div class="colro_id-tab" id="colro_id">
+                                <h6 class="label-hading">
+                                    Background Color
+                                </h6>
+                               <div class="row row-color-container">
+                                <h6 class="heading-bg-color"> select your background color</h6>
+                                   <div class="col">
+                                       <span class="color-bg color1"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color2"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color3"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color5"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color4"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color6"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color7"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color8"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color10"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color9"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color11"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color12"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color10"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color13"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color14"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color15"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color16"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color17"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color18"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color19"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color20"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color21"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color22"></span>
+                                   </div>
+                                   <div class="col">
+                                       <span class="color-bg color23"></span>
+                                   </div>
+                               </div>
                             </div>
                       </div>
                     </div>
@@ -815,299 +897,16 @@
 
 
 <!-- scripts -->
-    <script src="./assets/color/html5kellycolorpicker.min.js"></script>
-    <script type="text/javascript">
-        // adding js for active right sidebar
-            $('.right-sidebar .configration ul li').click( function(e) {
-              e.preventDefault();
-              $('.configration ul li').removeClass("active");
-              $(this).addClass("active");
-            });
-            $('.right-sidebar .productioncontainer ul li').click( function(e) {
-              e.preventDefault();
-              $('.productioncontainer ul li').removeClass("active");
-              $(this).addClass("active");
-            });
-            $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
-              e.preventDefault();
-              $('.quatatity-and-price ul li').removeClass("active");
-              $(this).addClass("active");
-            });
-            $('.attribute-selector ul li').click( function(e) {
-              e.preventDefault();
-              $('.attribute-selector ul li').removeClass("active");
-              $(this).addClass("active");
-            });
-            $('#size-container span').click( function(e) {
-              e.preventDefault();
-              $('#size-container span').removeClass("active");
-              $(this).addClass("active");
-            });
-        // adding js for active right sidebar
-    </script>
-    <!-- adding the script for positoining left right up and down -->
-        <script type="text/javascript">
-            var right_pos = 1;
-            var left_pos = 1;
-            var top_pos = 1;
-            var bottom_pos = 1;
-            $(".right-position").click( function(e) {
-                e.preventDefault();
-                if(right_pos <= 10)
-                {
-                    $(".img img").css({'left' : '+=5px'});
-                    right_pos += 1;
-                    left_pos = 0;
-                    // console.log(right_pos);
-                }
-            });
-            $(".left-position").click( function(e) {
-                e.preventDefault();
-                if(left_pos <= 10)
-                {
-                    $(".img img").css({'left' : '-=5px'})
-                    left_pos += 1;
-                    right_pos = 0;
-                    // console.log(right_pos);
-                }
-            });
-            $(".bottom-position").click( function(e) {
-                e.preventDefault();
-                if (bottom_pos <= 10) {
-                    $(".img img").css({'top' : '+=5px'});
-                    top_pos = 0;
-                    bottom_pos += 1;
-                    console.log(bottom_pos);
-                }
-            });
-            $(".top-position").click( function(e) {
-                e.preventDefault();
-                if (top_pos <= 10) {
-                    $(".img img").css({'top' : '-=5px'});
-                    top_pos += 1;
-                    bottom_pos = 0;
-                }
-            });
-            $('.plus_size').click( function(){
-                $(".img img").css({'width' : '+=10px'})
-            });
-            $('.minus_size').click( function(){
-                $(".img img").css({'width' : '-=10px'})
-            });
-        </script>
-    <!-- adding the script for positoining left right up and down -->
-    <!-- adding a script for inputing a text -->
-        <script type="text/javascript">
-            $(".text-coding-container").on("input", function(){
-                $(".heading-text-container").text($(this).val());
-            });
-            $(".text-pixel-container").on("input", function(){
-                $(".sub-heading-text-container").text($(this).val());
-            });
-        var currenet_width = 360;
-        $("#size_input_custom").change(function() {
-            var input_val = $(this).val();
-            let a = parseInt(currenet_width);
-            let b = parseInt(input_val);
-            let new_width = a + b;
-            let c = parseInt(new_width);
-            console.log(a + ' current width with conversion');
-            console.log(b + ' input value with conversion');
-            console.log(c + ' new width with conversion');
-            $(".main-image-container").css('width', c + 'px');
-        });
-        </script>
-    <!-- adding a script for inputing a text -->
-    <!-- adding a script for appending input field -->
-        <script type="text/javascript">
-            var text_field =  4;
-            $(".addtext").click( function(e) {
-                e.preventDefault();
-                if (text_field < 6) {
-                    $(".inscription-tab").append('<div id="myid" class="row"><input type="text" name="" placeholder="Add Text" class="text-pixel-container"><span class="remove"> - </span></div>');
-                    text_field += 1;
-                }
-            });
-            $(".remove").click( function(e) {
-                // e.preventDefault();
-                console.log("i was removed so was parent");
-                // $(this).parent().remove();
-                // text_field -= 1;
-            });
-        </script>
-    <!-- adding a script for appending input field -->
-    <!-- color addded  -->
-        <script type="text/javascript">
-            new KellyColorPicker({
-                place : 'picker',
-                input : 'color'
-                });
-                var method = 'quad';
-                var alpha = false;          // is alpha slider enabled
-                var drag = false;
-                var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
-                var events = new Array();
-                var userEvents = new Array();
-                var canvasHelper = document.createElement("canvas");
-                var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
-                var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
-                var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
-                var input = false;
-                var inputColor = true;     // update input color according to picker
-                var inputFormat = 'hex'; // mixed | hex | rgba
-                var popup = new Object;    // popup block for input
-                popup.tag = false;         // Dom element if popup is enabled
-                popup.margin = 6;          // margin from input in pixels
-                var place = false;
-                var handler = this;
-                var basePadding = 2;
-                var padding;
-                var wheelBlockSize = 200;
-                var center;
-                var hsv;
-                var rgb;
-                var hex = '#000000';
-                var a = 1;
-                var wheel = new Object;
-                wheel.width = 18;
-                wheel.imageData = null; // rendered wheel image data
-                wheel.innerRadius;
-                wheel.startAngle = 0; // 150
-                wheel.outerRadius;
-                wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
-                wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
-                wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
-        </script>
-    <!-- color addded  -->
-    <!-- motifits background color and text color change  -->
-        <script type="text/javascript">
-            $("#color").on('change', 'input', function() {
-                console.log($(this).css("background-color"));
-            })
-        </script>
-    <!-- motifits background color and text color change  -->
-    <!-- adding font-size and font-family -->
-        <script type="text/javascript">
-            var click_font_size = 1;
-            var click_font_size_plus = 1;
-            $(".deccrease-font-size").click( function(e) {
-                e.preventDefault();
-                if (click_font_size <= 5) {
-                    $('.text-container').css({'font-size' : "-=2px"});
-                    click_font_size ++;
-                    console.log(click_font_size);
-                    click_font_size_plus --;
-                }
-                else
-                {
-                    return;
-                }
-            });
-            $(".inccrease-font-size").click( function(e) {
-                e.preventDefault();
-                if (click_font_size_plus <= 5 ) {
-                    $(".text-container").css({'font-size' : '+=2px'});
-                    console.log(click_font_size_plus);
-                    click_font_size_plus ++;
-                    click_font_size --;
-                }
-            });
-            $(".fonts-family li").click( function(e){
-                var font_family = $(this).css("font-family")
-                console.log(font_family);
-                $('.text-container').css({'font-family' : font_family})
-                $('.font-family-container').css({'font-family' : font_family})
-            });
-
-
-            $(".color-oicekr").on( 'change', function(e) {
-                var bg_image = $(this).css("background");
-                console.log("asd");
-                console.log(bg_image);
-            })
-        </script>
-    <!-- adding font-size and font-family-->
-    <!-- adding size 35m -->
-        <script type="text/javascript">
-            $(".height-value-laebl").click( function(e) {
-                e.preventDefault();
-                $(this).addClass("active");
-                $(".main-image-container").css({'width' : '370px'});
-                $(".main-image-container").css({'height' : '165px'});
-                $(".heaight").text("35mm");
-                $(".widhth").text("55mm");
-            });
-            $(".height-value-laebl-default").click( function(e) {
-                e.preventDefault();
-                $(this).addClass("active");
-                $(".main-image-container").css({'width' : '270px'});
-                $(".main-image-container").css({'height' : '165px'});
-                $(".heaight").text("15mm")
-                $(".widhth").text("38mm");
-            });
-        </script>
-    <!-- adding size 35m -->
-    <!-- actvivating tabs upper on same call -->
-        <script type="text/javascript">
-            $(".inner-selector-column nav a").click( function(){
-                var id_for_bartop = $(this).attr("data-src");
-                // console.log($(this).data("src"));
-                $(".tabs-hidden").hide();
-                $('#'+id_for_bartop).css({'display' :  'flex'});
-            })
-        </script>
-    <!-- actvivating tabs upper on same call -->
-    <!-- adding dropdown scripts -->
-        <script type="text/javascript">
-            $(".font-family-container").click( function(){
-                $(".fonts-family").slideToggle();
-                $(this).toggleClass("icon-roate")
-            });
-        </script>
-    <!-- adding dropdown scripts -->
-    <!-- adding motifis icons to the mainpsot -->
-        <script type="text/javascript">
-            $(".image-container-more-motifis img").click( function(e) {
-                e.preventDefault();
-                var motifis_images = $(this).attr("src");
-                console.log(motifis_images);
-                $(".img img").attr({'src' : motifis_images});
-                $(".polpular-motifis-tab-for-more-icons").fadeOut();
-            });
-            $("#motifis li").click( function(e) {
-                e.preventDefault();
-               var tab_id_more_icons = $(this).data("id");
-               console.log(tab_id_more_icons);
-                $(".popular-motifis-container-more-icon").css({'display' : 'none'});
-                $('#'+tab_id_more_icons).css({'display' : 'block'});
-                $(".polpular-motifis-tab-for-more-icons").fadeIn();
-            });
-            $(".more-motifis-close-icons").click( function(e) {
-                $(this).parent().parent().fadeOut();
-            });
-        </script>
-    <!-- adding motifis icons to the mainpsot -->
-    <!-- delete buttons -->
-        <!-- motifis delete -->
-            <script type="text/javascript">
-                $(".delete_button").click( function(e) {
-                    $(".img img").attr({'src' : './assets/icons/company.png'});
-                })
-            </script>
-        <!-- motifis delete -->
-    <!-- delete buttons -->
-    <!-- adding prev class to nav item -->
-        <script type="text/javascript">
-            $("#nav-tab a").click( function(){
-                $('#nav-tab a').removeClass("previous-nav-item")
-                $(this).prev().addClass("previous-nav-item")
-            })
-        </script>
-    <!-- adding prev class to nav item -->
+    
+    <!-- making a canvas for the div to make it an image -->
+        
+    <!-- making a canvas for the div to make it an image -->
+            
 <!-- scripts -->
-</body>
 
-    <script type="text/javascript" src="./js/awsome.js"></script>
+</body>
+<script src="./assets/color/html5kellycolorpicker.min.js"></script>
+<script type="text/javascript" src="./js/awsome.js"></script>
 </html>
 
 
