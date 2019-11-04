@@ -711,7 +711,6 @@ div#motifis ul li a {
     justify-content: center;
     width: 360px;
     height: 183px;
-    background: #35c56a;
     max-width: 600px;
 }
 .main-image-container img {
@@ -1060,6 +1059,7 @@ span.minus_size::before {
     position: relative;
     display: flex;
     align-items: center;
+    background: #35c56a;
     justify-content: center;
 }
 .img img {
