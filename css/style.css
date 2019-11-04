@@ -588,6 +588,11 @@ span.height-value-laebl.active {
     height: 35px;
     float: left;
 }
+.labellength .row span
+{
+    display: flex;
+    align-items: center;
+}
 .labellength .row:not(:first-child) {
     margin-bottom: 15px;
 }
@@ -603,6 +608,7 @@ div#inscription button {
     width: 39px;
     background: #316D92;
     border: none;
+    color: #fff;
 }
 div#inscription input 
 {
@@ -1440,4 +1446,33 @@ span.more-motifis-close-icons::after {
 .previous-nav-item
 {
     border-bottom-right-radius: 11px;
+}
+.remove {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 35px;
+    width: 39px;
+    background: #316D92;
+    border: none;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+}
+.font-size {
+    user-select: none;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+input[type=number]
+{
+    text-align: center;
+    margin-right: 10px;
 }

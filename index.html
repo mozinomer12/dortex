@@ -541,11 +541,11 @@
                                     <input type="text" name="" placeholder="pixel" class="text-pixel-container">
                                     <button><img src="./assets/icons/innercol/setting.png"></button>
                                 </div>
+                            </div>
                                 <a href="#" class="addtext">
                                     <img src="./assets/icons/innercol/add.png">
                                     add text
                                 </a>
-                            </div>
                       </div>
                       <div class="tab-pane fade" id="nav-motifis" role="tabpanel" aria-labelledby="nav-contact-tab">
                             <div class="motifis-tab" id="motifis">
@@ -624,7 +624,7 @@
                                     </span>
                                     <div class="upload-btn-wrapper">
                                         <button class="btn_upload">Upload a file</button>
-                                        <input type="file" name="myfile" value="" accept=".png, .jpg, .jpeg"/>
+                                            <input type="file" name="myfile" id="upload" value="" accept=".png, .jpg, .jpeg" />
                                     </div>
                                     <div class="row text_logo_container">
                                         <p>
@@ -904,12 +904,6 @@
             $(".text-pixel-container").on("input", function(){
                 $(".sub-heading-text-container").text($(this).val());
             });
-            $(".size_input_custom").on("change", function(){
-                var input_val = $(this).val();
-                // var currenet_width = $(".main-image-container").css("width");
-                console.log(input_val);
-                // console.log(currenet_width)
-            });
         var currenet_width = 360;
         $("#size_input_custom").change(function() {
             var input_val = $(this).val();
@@ -924,6 +918,24 @@
         });
         </script>
     <!-- adding a script for inputing a text -->
+    <!-- adding a script for appending input field -->
+        <script type="text/javascript">
+            var text_field =  4;
+            $(".addtext").click( function(e) {
+                e.preventDefault();
+                if (text_field < 6) {
+                    $(".inscription-tab").append('<div id="myid" class="row"><input type="text" name="" placeholder="Add Text" class="text-pixel-container"><span class="remove"> - </span></div>');
+                    text_field += 1;
+                }
+            });
+            $(".remove").click( function(e) {
+                // e.preventDefault();
+                console.log("i was removed so was parent");
+                // $(this).parent().remove();
+                // text_field -= 1;
+            });
+        </script>
+    <!-- adding a script for appending input field -->
     <!-- color addded  -->
         <script type="text/javascript">
             new KellyColorPicker({
