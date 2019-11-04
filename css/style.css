@@ -1625,3 +1625,44 @@ input#color1 {
     display: block;
     margin-bottom: 20px;
 }
+.modal-image-trigger {
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    left: 0px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0px;
+    display: none;
+}
+.image-container-modal-poppu {
+    text-align: center;
+    /*background: red;*/
+    width: fit-content;
+    width: -o-fit-content;
+    height: -o-fit-content;
+    width: -moz-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: auto;
+    position: relative;
+}
+.close-icon-modal {
+    position: absolute;
+    right: -10px;
+    top: -10px;
+    border: 1px solid #cccc;
+    border-radius: 50%;
+    background: red;
+    color: #000;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 0.9;
+    background: #ffff;
+}

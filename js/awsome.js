@@ -399,19 +399,24 @@ $(document).ready(function(e) {
 
 // main div to canvas
     $(function() { 
-        $("#btnSave").click(function() { 
+        $(".img").click(function() { 
+            $(".modal-image-trigger").fadeIn().css({'display' : 'flex'});
             html2canvas($(".img"), {
                 onrendered: function(canvas) {
                     theCanvas = canvas;
                     document.body.appendChild(canvas);
 
                     // Convert and download as image 
-                    Canvas2Image.saveAsPNG(canvas); 
+                    // Canvas2Image.saveAsPNG(canvas); 
                     $(".image-container-modal-poppu").append(canvas);
                     // Clean up 
-                    //document.body.removeChild(canvas);
+                    document.body.removeChild(canvas);
                 }
             });
+            $(".close-icon-modal").click( function(e){
+                e.preventDefault();
+                $(this).parent().parent().parent().fadeOut();
+            })
         });
     });
 // main div to canvas
