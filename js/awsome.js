@@ -153,11 +153,13 @@ $(document).ready(function(e) {
         });
         $('.plus_size').click( function(e){
             e.preventDefault();
-            $(".img img").css({'width' : '+=10%'});
+            $(".img img").css({'min-width' : '+=10px'});
+            $(".img img").css({'max-width' : '+=10px'});
             console.log($(".img img").css("width"));
         });
         $('.minus_size').click( function(){
-            $(".img img").css({'width' : '-=10px'});    
+            $(".img img").css({'max-width' : '-=10px'});    
+            $(".img img").css({'min-width' : '-=10px'});    
             console.log($(".img img").css("width"));
         });
 // adding the script for positoining left right up and down -->
@@ -372,9 +374,25 @@ $(document).ready(function(e) {
 // adding prev class to nav item -->
 
 // adding background-color to main div
-
-
+    new KellyColorPicker({place : 'picker1', input : 'color1', size : 150});
     $(".color-bg").click( function(e){
         $(".main-image-container").css({'background-color' : $(this).css("background-color")});
     });
+    
+    var observers = new MutationObserver(function(mutation) {
+        mutation.forEach(function(mutationw) {
+            if (mutationw.attributeName === 'style') {
+                let a = $('#color1').css("background-color");
+                $('.main-image-container').css('background-color', '' + a);
+            }
+        });
+    });
+    // Notify me of style changes
+    var observerConfig = {
+        attributes: true,
+        attributeFilter: ["style"]
+    };
+    var targetNode = $('#color1');
+    var target = targetNode[0];
+    observers.observe(target, observerConfig);
 // adding background-color to main div

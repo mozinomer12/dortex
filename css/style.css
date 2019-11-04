@@ -1067,7 +1067,8 @@ span.minus_size::before {
     height: auto;
     position: relative;
     margin-right: 20px;
-    /*max-width: 210px;*/
+    min-width: 130px;
+    max-width: 130px;
 }
 .asd {
     width: 100%;
@@ -1503,6 +1504,7 @@ div#colro_id {
 .row-color-container {
     margin: 0px;
     width: 80%;
+    margin: auto;
 }
 .color1
 {
@@ -1611,4 +1613,15 @@ div#colro_id {
     width: 100%;
     margin-bottom: 30px;
     text-transform: capitalize;
+}
+canvas#picker1 {
+    margin: auto;
+    display: block;
+    margin-bottom: 30px;
+}
+input#color1 {
+    margin-bottom: 40px;
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
 }
