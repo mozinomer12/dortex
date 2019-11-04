@@ -7,7 +7,6 @@
     <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
-    <script type="text/javascript" src="./js/awsome.js"></script>
 </head>
 <body class="body-class">
 
@@ -911,6 +910,18 @@
                 console.log(input_val);
                 // console.log(currenet_width)
             });
+        var currenet_width = 360;
+        $("#size_input_custom").change(function() {
+            var input_val = $(this).val();
+            let a = parseInt(currenet_width);
+            let b = parseInt(input_val);
+            let new_width = a + b;
+            let c = parseInt(new_width);
+            console.log(a + ' current width with conversion');
+            console.log(b + ' input value with conversion');
+            console.log(c + ' new width with conversion');
+            $(".main-image-container").css('width', c + 'px');
+        });
         </script>
     <!-- adding a script for inputing a text -->
     <!-- color addded  -->
@@ -956,6 +967,13 @@
                 wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
         </script>
     <!-- color addded  -->
+    <!-- motifits background color and text color change  -->
+        <script type="text/javascript">
+            $("#color").on('change', 'input', function() {
+                console.log($(this).css("background-color"));
+            })
+        </script>
+    <!-- motifits background color and text color change  -->
     <!-- adding font-size and font-family -->
         <script type="text/javascript">
             var click_font_size = 1;
@@ -1076,6 +1094,8 @@
     <!-- adding prev class to nav item -->
 <!-- scripts -->
 </body>
+
+    <script type="text/javascript" src="./js/awsome.js"></script>
 </html>
 
 

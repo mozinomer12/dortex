@@ -178,29 +178,29 @@ a.cart_button.cloreen {
 
 /** Custom Select **/
 .custom-select-wrapper {
-  position: relative;
-  display: inline-block;
-  user-select: none;
+position: relative;
+    display: inline-block;
+    user-select: none;
+    width: 95%;
 }
 .custom-select-wrapper select {
     display: none;
 }
 .custom-select {
     position: relative;
-    display: inline-block;
+    display: flex;
+    padding: 0px 20px;
+    align-items: center;
 }
 .custom-select-trigger {
-  position: relative;
-  display: block;
-  width: 130px;
-  padding: 0 84px 0 22px;
-  font-size: 22px;
-  font-weight: 300;
-  color: #fff;
-  line-height: 60px;
-  background: #5c9cd8;
-  border-radius: 4px;
-  cursor: pointer;
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 300;
+    color: #000;
+    border-radius: 4px;
+    cursor: pointer;
 }
 .custom-select-trigger:after {
     position: absolute;
@@ -561,8 +561,11 @@ span.height-value-laebl.active {
     text-transform: capitalize;
     font-weight: 100;
 }
-.labellength .row span {
-    flex: 0 50%;
+.labellength .row span:nth-child(1) 
+{
+    flex: 0 70%;
+    display: flex;
+    align-items: center;
 }
 .labellength .row {
     display: flex;
@@ -703,6 +706,7 @@ div#motifis ul li a {
     width: 360px;
     height: 183px;
     background: #35c56a;
+    max-width: 600px;
 }
 .main-image-container img {
      width: 100%; 
@@ -1035,24 +1039,21 @@ span.minus_size::before {
     font-weight: 700;
     max-width: 80px;
     display: block;
-    width: 50%;
     height: auto;
     padding: 0px 0px;
     margin: 0 auto;
-    float: right;
-    height: 100%;
     margin: 0;
     margin-right: 0px;
     margin-left: auto;
     display: table;
     align-items: center;
-    margin-top: calc(76%/2);
 }
 .img
 {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 .img img {
     width: 110px;
