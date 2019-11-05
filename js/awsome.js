@@ -2108,8 +2108,6 @@ $(document).ready(function(e) {
     }();
 // canavas to image 
 
-
-
 // converting hexa decimal to Rgb
     // function hexToRgb(hex) {
     //   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
@@ -2135,7 +2133,7 @@ $(document).ready(function(e) {
                   } : null;
                 }
                 // alert(hexToRgb("#0033ff").b);
-                // console.log(hexToRgb("#0033ff").b);
+                console.log(hexToRgb("#0033ff").r);
             }
         });
     });
