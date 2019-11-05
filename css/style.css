@@ -1620,10 +1620,15 @@ canvas#picker1 {
     margin-bottom: 30px;
 }
 input#color1 {
-    margin-bottom: 40px;
     margin: auto;
     display: block;
     margin-bottom: 20px;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+}
+.rgba_color .col {
+    padding: 0px;
 }
 .modal-image-trigger {
     position: fixed;
@@ -1651,7 +1656,8 @@ input#color1 {
     margin: auto;
     position: relative;
 }
-.close-icon-modal {
+.close-icon-modal 
+{
     position: absolute;
     right: -10px;
     top: -10px;
@@ -1666,12 +1672,19 @@ input#color1 {
     line-height: 0.9;
     background: #ffff;
 }
-.rgba_color span {
+.rgba_color span 
+{
     display: block;
-    width: 30px;
-    height: 30px;
     border: 1px solid #ccc;
     background: #fff;
-    width: 100%;
+    width: 70%;
     margin-bottom: 40px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 0px auto 40px;
+}
+.close-icon-modal:focus
+{
+    outline: none;
 }

@@ -405,9 +405,9 @@ $(document).ready(function(e) {
                 onrendered: function(canvas) {
                     theCanvas = canvas;
                     document.body.appendChild(canvas);
-
-                    // Convert and download as image 
-                    // Canvas2Image.saveAsPNG(canvas); 
+                    
+                    // Canvas2Image.saveAsPNG(canvas);
+                    $(".image-container-modal-poppu canvas").remove();
                     $(".image-container-modal-poppu").append(canvas);
                     // Clean up 
                     // document.body.removeChild(canvas);
@@ -1925,80 +1925,32 @@ $(document).ready(function(e) {
 
         /**
          * create bitmap image
-         * 按照规则生成图片响应头和响应体
          */
         var genBitmapImage = function (oData) {
-
-            //
-            // BITMAPFILEHEADER: http://msdn.microsoft.com/en-us/library/windows/desktop/dd183374(v=vs.85).aspx
-            // BITMAPINFOHEADER: http://msdn.microsoft.com/en-us/library/dd183376.aspx
-            //
 
             var biWidth  = oData.width;
             var biHeight    = oData.height;
             var biSizeImage = biWidth * biHeight * 3;
             var bfSize  = biSizeImage + 54; // total header size = 54 bytes
 
-            //
-            //  typedef struct tagBITMAPFILEHEADER {
-            //      WORD bfType;
-            //      DWORD bfSize;
-            //      WORD bfReserved1;
-            //      WORD bfReserved2;
-            //      DWORD bfOffBits;
-            //  } BITMAPFILEHEADER;
-            //
             var BITMAPFILEHEADER = [
-                // WORD bfType -- The file type signature; must be "BM"
                 0x42, 0x4D,
-                // DWORD bfSize -- The size, in bytes, of the bitmap file
                 bfSize & 0xff, bfSize >> 8 & 0xff, bfSize >> 16 & 0xff, bfSize >> 24 & 0xff,
-                // WORD bfReserved1 -- Reserved; must be zero
                 0, 0,
-                // WORD bfReserved2 -- Reserved; must be zero
                 0, 0,
-                // DWORD bfOffBits -- The offset, in bytes, from the beginning of the BITMAPFILEHEADER structure to the bitmap bits.
                 54, 0, 0, 0
             ];
-
-            //
-            //  typedef struct tagBITMAPINFOHEADER {
-            //      DWORD biSize;
-            //      LONG  biWidth;
-            //      LONG  biHeight;
-            //      WORD  biPlanes;
-            //      WORD  biBitCount;
-            //      DWORD biCompression;
-            //      DWORD biSizeImage;
-            //      LONG  biXPelsPerMeter;
-            //      LONG  biYPelsPerMeter;
-            //      DWORD biClrUsed;
-            //      DWORD biClrImportant;
-            //  } BITMAPINFOHEADER, *PBITMAPINFOHEADER;
-            //
             var BITMAPINFOHEADER = [
-                // DWORD biSize -- The number of bytes required by the structure
                 40, 0, 0, 0,
-                // LONG biWidth -- The width of the bitmap, in pixels
                 biWidth & 0xff, biWidth >> 8 & 0xff, biWidth >> 16 & 0xff, biWidth >> 24 & 0xff,
-                // LONG biHeight -- The height of the bitmap, in pixels
                 biHeight & 0xff, biHeight >> 8  & 0xff, biHeight >> 16 & 0xff, biHeight >> 24 & 0xff,
-                // WORD biPlanes -- The number of planes for the target device. This value must be set to 1
                 1, 0,
-                // WORD biBitCount -- The number of bits-per-pixel, 24 bits-per-pixel -- the bitmap
-                // has a maximum of 2^24 colors (16777216, Truecolor)
                 24, 0,
-                // DWORD biCompression -- The type of compression, BI_RGB (code 0) -- uncompressed
                 0, 0, 0, 0,
-                // DWORD biSizeImage -- The size, in bytes, of the image. This may be set to zero for BI_RGB bitmaps
                 biSizeImage & 0xff, biSizeImage >> 8 & 0xff, biSizeImage >> 16 & 0xff, biSizeImage >> 24 & 0xff,
-                // LONG biXPelsPerMeter, unused
                 0,0,0,0,
-                // LONG biYPelsPerMeter, unused
                 0,0,0,0,
-                // DWORD biClrUsed, the number of color indexes of palette, unused
                 0,0,0,0,
-                // DWORD biClrImportant, unused
                 0,0,0,0
             ];
 
