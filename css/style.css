@@ -1486,6 +1486,10 @@ div#colro_id {
 {
     transform: scale(1.4);
 }
+.color-bg.active
+{
+    border: 1px solid #000;
+}
 .color-bg {
     display: block;
     border: 1px solid transparent;

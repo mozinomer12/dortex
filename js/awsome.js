@@ -2059,7 +2059,11 @@ $(document).ready(function(e) {
 
     }();
 // canavas to image 
-
+// adding active to current bacgkground color
+$('.color-bg').click( function(e){
+    $(".row-color-container .col .color-bg").removeClass("active")
+    $(this).addClass("active");
+})
 // converting hexa decimal to Rgb
     // function hexToRgb(hex) {
     //   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
