@@ -988,12 +988,12 @@ span.minus_size {
     margin-left: 20px;
 }
 .butotn-scontainer span {
-    width: 46px;
+width: 50px;
     height: 50px;
     display: block;
-    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.12), 0 0px 20px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.09), 0 0px 20px 0 rgba(0, 0, 0, 0.09);
     margin-right: 20px;
-    border-radius: 14px;
+    border-radius: 10px;
     position: relative;
     display: flex;
     align-items: center;
@@ -1665,4 +1665,13 @@ input#color1 {
     text-align: center;
     line-height: 0.9;
     background: #ffff;
+}
+.rgba_color span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    background: #fff;
+    width: 100%;
+    margin-bottom: 40px;
 }
