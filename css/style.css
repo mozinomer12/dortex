@@ -384,7 +384,6 @@ position: relative;
     border: 1px solid #2d6d93;
 }
 .productioncontainer ul li {
-    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -394,7 +393,7 @@ position: relative;
     margin: 0px 0px 10px 10px;
     border-radius: 4px;
     display: inline-block;
-    line-height: 29px;
+    padding: 4px 20px;
 }
 .productioncontainer ul li.active a, 
 .productioncontainer ul li:hover a 
@@ -563,7 +562,7 @@ span.height-value-laebl.active {
 }
 .labellength .row span:nth-child(1) 
 {
-    flex: 0 70%;
+    flex: 0 65%;
     display: flex;
     align-items: center;
 }
@@ -583,15 +582,33 @@ span.height-value-laebl.active {
     opacity: 0.4;
 }
 .labellength .row span input {
-    width: 34px;
+    width: 100%;
     border: none;
-    height: 35px;
+    height: 29px;
     float: left;
+    background: none;
+    border: 1px solid #cccccc;
+    color: #ffff;
+    border-radius: 4px;
+}
+.labellength .row span input::placeholder 
+{
+    color: #fff;
+}
+.labellength .row span input:focus::placeholder 
+{
+    display: none;
 }
 .labellength .row span
 {
     display: flex;
     align-items: center;
+}
+.labellength .row span:nth-child(2) {
+    flex: 0 30%;
+    text-align: right !important;
+    display: flex;
+    justify-content: flex-end;
 }
 .labellength .row:not(:first-child) {
     margin-bottom: 15px;
@@ -1193,14 +1210,14 @@ input#color {
     position: relative;
     width: 17%;
 }
-.fonts-family ul li:first-child {
+.fonts-family ul li:first-child span {
     font-family: 'Roboto', sans-serif;
 }
-.fonts-family ul li:last-child 
+.fonts-family ul li:last-child span 
 {
     font-family: 'Staatliches', cursive;
 }
-.fonts-family ul li:nth-child(2)
+.fonts-family ul li:nth-child(2) span
 {
     font-family: 'Liu Jian Mao Cao', cursive;
 }
@@ -1691,4 +1708,7 @@ input#color1 {
 .close-icon-modal:focus
 {
     outline: none;
+}
+.hidden_text_field{
+    display: none;
 }

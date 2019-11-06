@@ -171,17 +171,29 @@ $(document).ready(function(e) {
     $(".text-pixel-container").on("input", function(){
         $(".sub-heading-text-container").text($(this).val());
     });
+    $(".text-pixel-container1").on("input", function(){
+        $(".sub-heading1-text-container").text($(this).val());
+    });
+    $(".text-pixel-container2").on("input", function(){
+        $(".sub-heading2-text-container").text($(this).val());
+    });
     var currenet_width = 360;
     $("#size_input_custom").change(function() {
         var input_val = $(this).val();
-        let a = parseInt(currenet_width);
-        let b = parseInt(input_val);
-        let new_width = a + b;
-        let c = parseInt(new_width);
-        console.log(a + ' current width with conversion');
-        console.log(b + ' input value with conversion');
-        console.log(c + ' new width with conversion');
-        $(".main-image-container").css('width', c + 'px');
+        if (input_val < 35 || input_val > 150) {
+            return
+        } else{
+            let a = parseInt(currenet_width);
+            let b = (parseInt(input_val));
+            let new_width = a + b;
+            let c = parseInt(new_width);
+            console.log(a + ' current width with conversion');
+            console.log(b + ' input value with conversion');
+            console.log(c + ' new width with conversion');
+            $(".main-image-container").css('width', c + 'px');
+            $(".current_leghtn-value").text(c);
+            $(".widhth").text(c);
+        }
     });
 // adding a script for inputing a text -->
 
@@ -190,10 +202,21 @@ $(document).ready(function(e) {
         var text_field =  4;
         $(".addtext").click( function(e) {
             e.preventDefault();
-            if (text_field < 6) {
-                $(".inscription-tab").append('<div id="myid" class="row"><input type="text" name="" placeholder="Add Text" class="text-pixel-container"><span class="remove"> - </span></div>');
+            // if (text_field < 6) {
+            //     $(".inscription-tab").append('<div id="myid" class="row"><input type="text" name="" placeholder="Add Text" class="text-pixel-container"><span class="remove"> - </span></div>');
+            //     text_field += 1;
+            // }
+            if (text_field <= 4) {
+                $(".hidden_text_field1").css({'display' : 'block'});
                 text_field += 1;
+                console.log(text_field);
             }
+            else if (text_field <= 5) {
+                $(".hidden_text_field2").css({'display' : 'block'});
+                text_field += 1;
+                console.log(text_field);
+            }
+
         });
         $(".remove").click( function(e) {
             // e.preventDefault();
@@ -280,9 +303,9 @@ $(document).ready(function(e) {
             }
         });
         $(".fonts-family li").click( function(e){
-            var font_family = $(this).css("font-family")
+            var font_family = $(this).find("span").css("font-family")
             console.log(font_family);
-            $('.text-container').css({'font-family' : font_family})
+            $('.text-container span').css({'font-family' : font_family})
             $('.font-family-container').css({'font-family' : font_family})
         });
 
@@ -2064,6 +2087,18 @@ $('.color-bg').click( function(e){
     $(".row-color-container .col .color-bg").removeClass("active")
     $(this).addClass("active");
 })
+
+// displaying the current value
+    // $(".widhth").on( 'change', function(){
+    //     console.log($(this).text());
+    // })
+    $(".widhth").on('DOMSubtreeModified', function () {
+       var current_length_value =  $(this).html();
+       $(".current_leghtn-value").text(current_length_value);
+    });
+
+
+
 // converting hexa decimal to Rgb
     // function hexToRgb(hex) {
     //   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
