@@ -1,11 +1,9 @@
 $(document).ready(function(e) {
-    // adding class active to main selector left side
     $(".main-selector-column ul li a").click(function(e) {
             e.preventDefault();
             $('.main-selector-column ul li').removeClass("active");
             $(this).parent().addClass("active")
         })
-        // adding class active to inner selector left side
     $(".inner-selector-column ul li a").click(function(e) {
         e.preventDefault();
         $('.inner-selector-column ul li').removeClass("active nex pre");
@@ -15,7 +13,6 @@ $(document).ready(function(e) {
     })
 });
 
-// custom selecmenu
 
     $(".custom-select").each(function() {
         var classes = $(this).attr("class"),
@@ -52,16 +49,12 @@ $(document).ready(function(e) {
         $(this).parents(".custom-select").removeClass("opened");
         $(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
     });
-// custom selecmenu
 
-// uploading image into preview and in staging area
     $('#upload').change(function(event) {
         $(".uploaded").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
         $(".img img").fadeIn("fast").attr('src', URL.createObjectURL(event.target.files[0]));
     });
-// uploading image into preview and in staging area
 
-// changing color of text in staging area
     var observer = new MutationObserver(function(mutations) {
         mutations.forEach(function(mutation) {
             if (mutation.attributeName === 'style') {
@@ -70,7 +63,6 @@ $(document).ready(function(e) {
             }
         });
     });
-    // Notify me of style changes
     var observerConfig = {
         attributes: true,
         attributeFilter: ["style"]
@@ -78,9 +70,7 @@ $(document).ready(function(e) {
     var targetNode = $('.color-oicekr');
     var target = targetNode[0];
     observer.observe(target, observerConfig);
-// changing color of text in staging area
 
-// adding js for active right sidebar
     $('.right-sidebar .configration ul li').click( function(e) {
       e.preventDefault();
       $('.configration ul li').removeClass("active");
@@ -106,9 +96,7 @@ $(document).ready(function(e) {
       $('#size-container span').removeClass("active");
       $(this).addClass("active");
     });
-// adding js for active right sidebar
 
-// adding the script for positoining left right up and down -->
     
         var right_pos = 1;
         var left_pos = 1;
@@ -121,7 +109,6 @@ $(document).ready(function(e) {
                 $(".img img").css({'left' : '+=5px'});
                 right_pos += 1;
                 left_pos = 0;
-                // console.log(right_pos);
             }
         });
         $(".left-position").click( function(e) {
@@ -131,7 +118,6 @@ $(document).ready(function(e) {
                 $(".img img").css({'left' : '-=5px'})
                 left_pos += 1;
                 right_pos = 0;
-                // console.log(right_pos);
             }
         });
         $(".bottom-position").click( function(e) {
@@ -162,9 +148,7 @@ $(document).ready(function(e) {
             $(".img img").css({'min-width' : '-=10px'});    
             console.log($(".img img").css("width"));
         });
-// adding the script for positoining left right up and down -->
 
-// adding a script for inputing a text -->
     $(".text-coding-container").on("input", function(){
         $(".heading-text-container").text($(this).val());
     });
@@ -195,17 +179,11 @@ $(document).ready(function(e) {
             $(".widhth").text(c);
         }
     });
-// adding a script for inputing a text -->
 
-// adding a script for appending input field -->
     
         var text_field =  4;
         $(".addtext").click( function(e) {
             e.preventDefault();
-            // if (text_field < 6) {
-            //     $(".inscription-tab").append('<div id="myid" class="row"><input type="text" name="" placeholder="Add Text" class="text-pixel-container"><span class="remove"> - </span></div>');
-            //     text_field += 1;
-            // }
             if (text_field <= 4) {
                 $(".hidden_text_field1").css({'display' : 'block'});
                 text_field += 1;
@@ -219,35 +197,20 @@ $(document).ready(function(e) {
 
         });
         $(".remove").click( function(e) {
-            // e.preventDefault();
             console.log("i was removed so was parent");
-            // $(this).parent().remove();
-            // text_field -= 1;
         });
-// adding a script for appending input field -->
 
-// color addded  -->
     
         new KellyColorPicker({
             place : 'picker',
             input : 'color'
             });
             var method = 'quad';
-            var alpha = false;          // is alpha slider enabled
             var drag = false;
-            var cursorAnimReady = true; // sets by requestAnimationFrame to limit FPS on events like mousemove etc. when draging
             var events = new Array();
             var userEvents = new Array();
             var canvasHelper = document.createElement("canvas");
-            var canvasHelperCtx = false; // used if needed to copy image data throw ctx.drawImage for save alpha channel
-            var rendered = false;        // is colorpicecker rendered (without side alpha bar and cursors, rendered image stores in canvasHelperData
-            var canvasHelperData = null; // rendered interface without cursors and without alpha slider [wheelBlockSize x wheelBlockSize]
             var input = false;
-            var inputColor = true;     // update input color according to picker
-            var inputFormat = 'hex'; // mixed | hex | rgba
-            var popup = new Object;    // popup block for input
-            popup.tag = false;         // Dom element if popup is enabled
-            popup.margin = 6;          // margin from input in pixels
             var place = false;
             var handler = this;
             var basePadding = 2;
@@ -260,23 +223,16 @@ $(document).ready(function(e) {
             var a = 1;
             var wheel = new Object;
             wheel.width = 18;
-            wheel.imageData = null; // rendered wheel image data
             wheel.innerRadius;
-            wheel.startAngle = 0; // 150
             wheel.outerRadius;
             wheel.outerStrokeStyle = 'rgba(0,0,0,0.2)';
             wheel.innerStrokeStyle = 'rgba(0,0,0,0.2)';
-            wheel.pos; // center point; wheel cursor \ hsv quad \ hsv triangle positioned relative that point
-// color addded  -->
 
-// motifits background color and text color change  -->
     
         $("#color").on('change', 'input', function() {
             console.log($(this).css("background-color"));
         })
-// motifits background color and text color change  -->
 
-// adding font-size and font-family -->
     
         var click_font_size = 1;
         var click_font_size_plus = 1;
@@ -315,47 +271,39 @@ $(document).ready(function(e) {
             console.log("asd");
             console.log(bg_image);
         })
-// adding font-size and font-family-->
 
-// adding size 35m -->
     
         $(".height-value-laebl").click( function(e) {
             e.preventDefault();
             $(this).addClass("active");
-            $(".main-image-container").css({'width' : '370px'});
-            $(".main-image-container").css({'height' : '165px'});
+            var length_addded_mm = parseFloat($(this).text().replace('m','')) * 3.7795275591;
+            $(".main-image-container").css({'width' : '184px'});
+            $(".main-image-container").css({'height' : '163px'});
             $(".heaight").text("35mm");
-            $(".widhth").text("55mm");
+            $(".widhth").text("35mm");
         });
         $(".height-value-laebl-default").click( function(e) {
             e.preventDefault();
             $(this).addClass("active");
-            $(".main-image-container").css({'width' : '270px'});
-            $(".main-image-container").css({'height' : '165px'});
+            $(".main-image-container").css({'width' : '184px'});
+            $(".main-image-container").css({'height' : '92px'});
             $(".heaight").text("15mm")
-            $(".widhth").text("38mm");
+            $(".widhth").text("35mm");
         });
-// adding size 35m -->
 
-// actvivating tabs upper on same call -->
     
         $(".inner-selector-column nav a").click( function(){
             var id_for_bartop = $(this).attr("data-src");
-            // console.log($(this).data("src"));
             $(".tabs-hidden").hide();
             $('#'+id_for_bartop).css({'display' :  'flex'});
         })
-// actvivating tabs upper on same call -->
 
-// adding dropdown scripts -->
     
         $(".font-family-container").click( function(){
             $(".fonts-family").slideToggle();
             $(this).toggleClass("icon-roate")
         });
-// adding dropdown scripts -->
 
-// adding motifis icons to the mainpsot -->
     
         $(".image-container-more-motifis img").click( function(e) {
             e.preventDefault();
@@ -376,27 +324,19 @@ $(document).ready(function(e) {
         $(".more-motifis-close-icons").click( function(e) {
             $(this).parent().parent().fadeOut();
         });
-// adding motifis icons to the mainpsot -->
 
-// delete buttons -->
-   // motifis delete -->
         
             $(".delete_button").click( function(e) {
                 $(".img img").hide();
                 $(".uploaded").attr({'src' : './assets/icons/company.png'});
             });
-   // motifis delete -->
-// delete buttons -->
 
-// adding prev class to nav item -->
     
         $("#nav-tab a").click( function(){
             $('#nav-tab a').removeClass("previous-nav-item")
             $(this).prev().addClass("previous-nav-item")
         })
-// adding prev class to nav item -->
 
-// adding background-color to main div
     new KellyColorPicker({place : 'picker1', input : 'color1', size : 150});
     $(".color-bg").click( function(e){
         $(".img").css({'background-color' : $(this).css("background-color")});
@@ -410,7 +350,6 @@ $(document).ready(function(e) {
             }
         });
     });
-    // Notify me of style changes
     var observerConfig = {
         attributes: true,
         attributeFilter: ["style"]
@@ -418,22 +357,17 @@ $(document).ready(function(e) {
     var targetNode = $('#color1');
     var target = targetNode[0];
     observers.observe(target, observerConfig);
-// adding background-color to main div
 
-// main div to canvas
     $(function() { 
         $(".img").click(function() { 
             $(".modal-image-trigger").fadeIn().css({'display' : 'flex'});
-            html2canvas($(".img"), {
+            html2canvas($(".main-image-container"), {
                 onrendered: function(canvas) {
                     theCanvas = canvas;
                     document.body.appendChild(canvas);
                     
-                    // Canvas2Image.saveAsPNG(canvas);
                     $(".image-container-modal-poppu canvas").remove();
                     $(".image-container-modal-poppu").append(canvas);
-                    // Clean up 
-                    // document.body.removeChild(canvas);
                 }
             });
             $(".close-icon-modal").click( function(e){
@@ -442,9 +376,7 @@ $(document).ready(function(e) {
             })
         });
     });
-// main div to canvas
 
-// html to canvas
     (function(t, e, n) {
         "use strict";
 
@@ -1865,13 +1797,10 @@ $(document).ready(function(e) {
                 }
             }
     })(window, document);
-// html to canvas
 
-// canavas to image 
 
     var Canvas2Image = function () {
 
-        // check if support sth.
         var $support = function () {
             var canvas = document.createElement('canvas'),
                 ctx = canvas.getContext('2d');
@@ -1954,7 +1883,6 @@ $(document).ready(function(e) {
             var biWidth  = oData.width;
             var biHeight    = oData.height;
             var biSizeImage = biWidth * biHeight * 3;
-            var bfSize  = biSizeImage + 54; // total header size = 54 bytes
 
             var BITMAPFILEHEADER = [
                 0x42, 0x4D,
@@ -2081,17 +2009,11 @@ $(document).ready(function(e) {
         };
 
     }();
-// canavas to image 
-// adding active to current bacgkground color
 $('.color-bg').click( function(e){
     $(".row-color-container .col .color-bg").removeClass("active")
     $(this).addClass("active");
 })
 
-// displaying the current value
-    // $(".widhth").on( 'change', function(){
-    //     console.log($(this).text());
-    // })
     $(".widhth").on('DOMSubtreeModified', function () {
        var current_length_value =  $(this).html();
        $(".current_leghtn-value").text(current_length_value);
@@ -2099,22 +2021,11 @@ $('.color-bg').click( function(e){
 
 
 
-// converting hexa decimal to Rgb
-    // function hexToRgb(hex) {
-    //   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    //   return result ? {
-    //     r: parseInt(result[1], 16),
-    //     g: parseInt(result[2], 16),
-    //     b: parseInt(result[3], 16)
-    //   } : null;
-    // }
-    // alert(hexToRgb("#0033ff").b);
 
     var observer2 = new MutationObserver(function(mutations2) {
         mutations2.forEach(function(mutation2) {
             if (mutation2.attributeName === 'style') {
                 let a = $('#color1').css("background-color");
-                // console.log(a);
                 function hexToRgb(a) {
                   var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
                   return result ? {
@@ -2123,12 +2034,10 @@ $('.color-bg').click( function(e){
                     b: parseInt(result[3], 16)
                   } : null;
                 }
-                // alert(hexToRgb("#0033ff").b);
                 console.log(hexToRgb("#0033ff").r);
             }
         });
     });
-    // Notify me of style changes
     var observerConfig2 = {
         attributes: true,
         attributeFilter: ["style"]
