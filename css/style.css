@@ -1719,3 +1719,21 @@ input#color1 {
     display: flex;
     flex-wrap: wrap;
 }
+.attribute-selector ul li {
+    position: relative;
+}
+.attribute-selector ul li.active::before {
+    display: block;
+    content: "";
+    width: 16px;
+    height: 31px;
+    /* background: red; */
+    border: 1px solid #35c56a;
+    position: absolute;
+    right: 10px;
+    bottom: 4px;
+    border-top: 0;
+    border-left: 0;
+    border-width: 7px;
+    transform: rotate(45deg);
+}

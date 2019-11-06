@@ -356,7 +356,7 @@ $(document).ready(function(e) {
     };
     var targetNode = $('#color1');
     var target = targetNode[0];
-    observers.observe(target, observerConfig);
+    // observers.observe(target, observerConfig);
 
     $(function() { 
         $(".img").click(function() { 
@@ -2022,26 +2022,38 @@ $('.color-bg').click( function(e){
 
 
 
-    var observer2 = new MutationObserver(function(mutations2) {
-        mutations2.forEach(function(mutation2) {
-            if (mutation2.attributeName === 'style') {
-                let a = $('#color1').css("background-color");
-                function hexToRgb(a) {
-                  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-                  return result ? {
-                    r: parseInt(result[1], 16),
-                    g: parseInt(result[2], 16),
-                    b: parseInt(result[3], 16)
-                  } : null;
-                }
-                console.log(hexToRgb("#0033ff").r);
-            }
-        });
-    });
-    var observerConfig2 = {
-        attributes: true,
-        attributeFilter: ["style"]
-    };
-    var targetNode2 = $('#color1');
-    var target2 = targetNode2[0];
-    observer2.observe(target2, observerConfig2);
+    // var observer2 = new MutationObserver(function(mutations2) {
+    //     mutations2.forEach(function(mutation2) {
+    //         if (mutation2.attributeName === 'style') {
+    //             let a = $('#color1').css("background-color");
+    //             function hexToRgb(a) {
+    //               var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+    //               return result ? {
+    //                 r: parseInt(result[1], 16),
+    //                 g: parseInt(result[2], 16),
+    //                 b: parseInt(result[3], 16)
+    //               } : null;
+    //             }
+    //             console.log(hexToRgb("#0033ff").r);
+    //         }
+    //     });
+    // });
+    // var observerConfig2 = {
+    //     attributes: true,
+    //     attributeFilter: ["style"]
+    // };
+    // var targetNode2 = $('#color1');
+    // var target2 = targetNode2[0];
+    // observer2.observe(target2, observerConfig2);
+
+
+
+
+
+// adding the svg with the color
+$(".product-shapes-items li img").click( function(e) {
+    e.preventDefault();
+    var svg_src = $(this).attr("src");
+    console.log('.' + svg_src);
+    $(".img").css({'-webkit-mask-image' : '' + svg_src});
+})
