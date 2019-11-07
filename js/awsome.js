@@ -106,7 +106,7 @@ $(document).ready(function(e) {
             e.preventDefault();
             if(right_pos <= 10)
             {
-                $(".img img").css({'left' : '+=5px'});
+                $(".img img").css({'margin-left' : '+=5px'});
                 right_pos += 1;
                 left_pos = 0;
             }
@@ -115,7 +115,7 @@ $(document).ready(function(e) {
             e.preventDefault();
             if(left_pos <= 10)
             {
-                $(".img img").css({'left' : '-=5px'})
+                $(".img img").css({'margin-left' : '-=5px'})
                 left_pos += 1;
                 right_pos = 0;
             }
@@ -2057,4 +2057,5 @@ $(".product-shapes-items li img").click( function(e) {
     console.log('.' + svg_src);
     $(".img").css({'-webkit-mask-image' : 'url(' + '' + svg_src + ')'});
     $(".img").css({'-webkit-mask-size' : '100% 100%'});
+    $(".img").css({'background-color' : '#B17E54'});
 })

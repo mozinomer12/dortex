@@ -1722,7 +1722,7 @@ input#color1 {
 .attribute-selector ul li {
     position: relative;
 }
-.attribute-selector ul li.active::before {
+.product-shapes-items ul li.active::before {
     display: block;
     content: "";
     width: 16px;
@@ -1736,4 +1736,8 @@ input#color1 {
     border-left: 0;
     border-width: 7px;
     transform: rotate(45deg);
+}
+.img-shapes
+{
+    border-radius: 10px;
 }
