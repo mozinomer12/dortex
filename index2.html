@@ -413,6 +413,14 @@
                                     Shapes
                                 </span>
                         </a>
+                        <a data-src="size_id" class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" 
+                            href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                            
+                                <img src="./assets/icons/innercol/2.png">
+                                <span>
+                                    size
+                                </span>
+                        </a>
                         <a  data-src="motifis_id" class="nav-item nav-link" id="nav-contact-tab1" data-toggle="tab" 
                             href="#nav-motifis" role="tab" aria-controls="nav-contact" aria-selected="false">
                             
@@ -420,15 +428,7 @@
                                 <span>
                                     motifs
                                 </span>
-                        </a>
-                        <a  data-src="color_id_1" class="nav-item nav-link" id="nav-contact-tab3" data-toggle="tab" 
-                            href="#color_id" role="tab" aria-controls="nav-voloo" aria-selected="false">
-                            
-                                <img src="./assets/icons/innercol/6.png">
-                                <span>
-                                    bg color
-                                </span>
-                        </a>    
+                        </a> 
                       </div>
                     </nav>
                 </div>
@@ -440,19 +440,54 @@
                                     Library of shapes
                                 </h6>
                                 <ul class="product-shapes-items">
-                                    <li>
+                                    <li class="svg-container-main1">
                                         <img src="./assets/icons/innercol/shapes/1.svg" data-src="./assets/icons/innercol/shapes/1.svg">
                                     </li>
-                                    <li>
+                                    <li class="svg-container-main2">
                                         <img src="./assets/icons/innercol/shapes/4.svg" data-src="./assets/icons/innercol/shapes/2.svg">
                                     </li>
-                                    <li>
+                                    <li class="svg-container-main3">
                                         <img src="./assets/icons/innercol/shapes/2.svg" data-src="./assets/icons/innercol/shapes/3.svg">
                                     </li>
-                                    <li>
+                                    <li class="svg-container-main4">
                                         <img src="./assets/icons/innercol/shapes/3.svg" data-src="./assets/icons/innercol/shapes/4.svg">
                                     </li>
                                 </ul>
+                            </div>
+                      </div>
+                      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <div class="sizee-container" id="size-container">
+                                <div class="label-height">
+                                    <div class="row">
+                                        <h6 class="label-hading">label height</h6>
+                                    </div>
+                                    <div class="row range-slider">
+                                        <main>
+                                          <form oninput="output.value = Math.round(range.valueAsNumber / 1000)">
+                                                <div class="range">
+                                                  <input name="range" min="20" type="range" min="0" max="100000">
+                                                  <div class="range-output">
+                                                    <output class="output" name="output" for="range">
+                                                      50
+                                                    </output>
+                                                  </div>
+                                                </div>
+                                                <div class="rnage-slider-error-masg">
+                                                    sorry minimum height can be 11mm and max height can be 100mm
+                                                </div>
+                                            </form>
+                                        </main>
+                                    </div>
+                                </div>
+                                <div class="labellength">
+                                    <div class="row">
+                                        <h6 class="label-hading">label lenght</h6>
+                                    </div>
+                                    <div class="row ranage-slider-length">
+                                        <div class="value">0</div>
+                                        <input type="range" min="0" max="10" step="1" value="0">
+                                    </div>
+                                </div>
                             </div>
                       </div>
                       <div class="tab-pane fade" id="nav-motifis" role="tabpanel" aria-labelledby="nav-contact-tab">
@@ -516,101 +551,6 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
-                      </div>
-                      <div class="tab-pane fade" id="color_id" role="tabpane2" aria-labelledby="nav-contact-tab3">
-                            <div class="colro_id-tab" id="colro_id">
-                                <h6 class="label-hading">
-                                    Background Color
-                                </h6>
-                                <canvas id="picker1"></canvas>
-                                <input id="color1" value="#54aedb">
-                                <div class="row rgba_color">
-                                    <div class="col">
-                                        <span class="r"></span>
-                                    </div>
-                                    <div class="col">
-                                        <span class="g"></span>
-                                    </div>
-                                    <div class="col">
-                                        <span class="b"></span>
-                                    </div>
-                                </div>
-                               <div class="row row-color-container">
-                                    <h6 class="heading-bg-color"> select your background color</h6>
-                                   <div class="col">
-                                       <span class="color-bg color1"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color2"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color3"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color5"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color4"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color6"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color7"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color8"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color10"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color9"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color11"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color12"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color10"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color13"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color14"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color15"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color16"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color17"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color18"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color19"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color20"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color21"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color22"></span>
-                                   </div>
-                                   <div class="col">
-                                       <span class="color-bg color23"></span>
-                                   </div>
-                               </div>
                             </div>
                       </div>
                     </div>
