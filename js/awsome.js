@@ -2049,18 +2049,6 @@ $('.color-bg').click( function(e){
 
 
 
-
-// adding the svg with the color
-// $(".product-shapes-items li img").click( function(e) {
-//     e.preventDefault();
-//     var svg_src = $(this).attr("src");
-//     console.log('.' + svg_src);
-//     $(".img").css({'-webkit-mask-image' : 'url(' + '' + svg_src + ')'});
-//     $(".img").css({'-webkit-mask-size' : '100% 100%'});
-//     $(".img").css({'background-color' : '#B17E54'});
-// })
-
-
 // range slider
 const END = 'change';
 const START = 'ontouchstart' in document ? 'touchstart' : 'mousedown';
@@ -2334,7 +2322,51 @@ $(".output").on('DOMSubtreeModified', function () {
     $(".heaight").text(put_range_slider + 'mm');
   } else{
     console.log('asidas');
-    $('.rnage-slider-error-masg').fadeIn();
+    $('.range-slider .rnage-slider-error-masg').fadeIn();
   }
 
 });
+
+// addong the range slider ofr length
+
+
+$('.range-sliders input[type="range"]').on('input', function() {
+
+  var control = $(this),
+    controlMin = control.attr('min'),
+    controlMax = control.attr('max'),
+    controlVal = control.val(),
+    controlThumbWidth = control.data('thumbwidth');
+
+  var range = controlMax - controlMin;
+  
+  var position = ((controlVal - controlMin) / range) * 100;
+  var positionOffset = Math.round(controlThumbWidth * position / 100) - (controlThumbWidth / 2);
+  var output = control.next('output');
+  
+  output
+    .css('left', 'calc(' + position + '% - ' + '2' + 'px)')
+    .text(controlVal);
+
+});
+$(".range-output-length").on('DOMSubtreeModified', function () {
+  var put_range_slider1 = ($(this).text());
+      if (put_range_slider1 >= 30) {
+        $('.rnage-slider-error-masg').fadeOut();
+        $(".main-image-container").css({'width' : '' + put_range_slider1 + 'mm'});
+        $(".widhth").text(put_range_slider1 + 'mm');
+        console.log(put_range_slider1);
+      } 
+});
+
+
+//adding the svg with the color
+$(".product-shapes-items li img").click( function(e) {
+    e.preventDefault();
+    var svg_src = $(this).attr("src");
+    console.log('.' + svg_src);
+    $(".img").css({'-webkit-mask-image' : 'url(' + '' + svg_src + ')'});
+    $(".img").css({'-webkit-mask-size' : '100% 100%'});
+    $(".img").css({'background-color' : '#B17E54'});
+});
+
