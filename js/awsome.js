@@ -2055,5 +2055,6 @@ $(".product-shapes-items li img").click( function(e) {
     e.preventDefault();
     var svg_src = $(this).attr("src");
     console.log('.' + svg_src);
-    $(".img").css({'-webkit-mask-image' : '' + svg_src});
+    $(".img").css({'-webkit-mask-image' : 'url(' + '' + svg_src + ')'});
+    $(".img").css({'-webkit-mask-size' : '100% 100%'});
 })
