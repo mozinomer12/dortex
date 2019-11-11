@@ -416,8 +416,7 @@ position: relative;
     background: #2d6d93;
     color: #fff;
     border-color: #2d6d93;
-    justify-content: flex-start;
-    text-indent: 13px;
+    justify-content: center;
 }
 .quatatity-and-price li:hover a {
     background: #368bbd;
@@ -2244,6 +2243,7 @@ span.drop_down_angle
 .options-container
 {
     width: 100%;
+    float: left;
     display: block;
 }
 .styled-checkbox:checked + label:before {
@@ -2308,6 +2308,12 @@ span.drop_down_angle
     width: 100%;
     padding: 0px 10px;
 }
+.Thickness-container {
+    width: 100%;
+    float: left;
+}
+
+
 /*media queries starting*/
 
 @media screen and (max-width: 1240px)
