@@ -9,12 +9,13 @@ $(document).ready(function(e) {
         $('.inner-selector-column ul li').removeClass("active nex pre");
         $(this).parent().addClass("active");
         $(this).parent().prev().addClass("pre");
-        $(this).parent().next().addClass("nex");
+        $(this).parent().next().addClass("nex"); 
     })
 });
 
 $(".containing_section h2").click( function(e){
     $(this).parent().find('ul').slideToggle();
+    $(this).find('span').toggleClass("drop_down_angle");
 })
 
     $(".custom-select").each(function() {
@@ -168,14 +169,14 @@ $(".containing_section h2").click( function(e){
         } else{
             let a = parseInt(currenet_width);
             let b = (parseInt(input_val));
-            let new_width = a + b;
+            let new_width = b;
             let c = parseInt(new_width);
-            console.log(a + ' current width with conversion');
-            console.log(b + ' input value with conversion');
-            console.log(c + ' new width with conversion');
-            $(".main-image-container").css('width', c + 'px');
+            // console.log(a + ' current width with conversion');
+            // console.log(b + ' input value with conversion');
+            // console.log(c + ' new width with conversion');
+            $(".main-image-container").css('width', c + 'mm');
             $(".current_leghtn-value").text(c);
-            $(".widhth").text(c);
+            $(".widhth").text(c + 'mm');
         }
     });
 
@@ -2032,11 +2033,6 @@ $('.color-bg').click( function(e){
     $(this).addClass("active");
 })
 
-    $(".widhth").on('DOMSubtreeModified', function () {
-       var current_length_value =  $(this).html();
-       $(".current_leghtn-value").text(current_length_value);
-    });
-
 
 
 
@@ -2070,6 +2066,7 @@ $('.color-bg').click( function(e){
 
 
 //adding the svg with the color
+var price_A_values = 0;
 $(".product-shapes-items li img").click( function(e) {
     e.preventDefault();
     var svg_src = $(this).attr("src");
@@ -2078,26 +2075,66 @@ $(".product-shapes-items li img").click( function(e) {
     $(".img").css({'-webkit-mask-size' : '100% 100%'});
     $(".img").css({'background-color' : '#B17E54'});
 });
+$(".option_list li label").click( function(e) {
+    $(this).toggleClass("checkede")
+    if($(this).hasClass('checkede')) {
+        // console.log($(this).data('value'));
+        price_A_values += $(this).data('value');
+        console.log(price_A_values);
+    } else {
+        price_A_values -= $(this).data('value');
+        console.log(price_A_values);
+    }
+});
 
+// calculating paper price for hangtag
+    var widthcal = 0;
+    var heightcal = 0;
+    $(".widhth").on('DOMSubtreeModified', function () {
+       var current_length_value =  $(this).html();
+       $(".current_leghtn-value").text(current_length_value);
+        var width = $(".current_leghtn-value").text();
+        // console.log( ' width is ', width);
+        return widthcal + width;
+    });
+    console.log(widthcal);
+    $(".heaight").on('DOMSubtreeModified', function () {
+       var current_length_value1 =  $(this).html();
+       $(".current_leghtn-value").text(current_length_value1);
+        var heaight = $(".current_leghtn-value").text();
+        // console.log( ' height is ',heaight);
+        return heightcal + heaight;
+    });
 
+// calculating paper price for hangtag
 
 // calculation starts
 
 
 // pieces for hangtag
 // declaring all the variables for hangtag price calculation formula
-var HangtagA1, HangtagA2, HangtagA3, HangtagA4, HangtagA5, HangtagA6, HangtagA7, HangtagA8, HangtagA9, HangtagA10, HangtagA, HangtagB, HangtagC, HangtagD, HangtagE, Piece;
+var HangtagA1, HangtagA2, HangtagA3, HangtagA4, HangtagA5, HangtagA6, HangtagA7, HangtagA8, HangtagA9, HangtagA10, HangtagA, HangtagB, HangtagC, HangtagD, HangtagE, Piece, paperPrice_hangTag, widthX, heightY;
 // declaring all the variables for hangtag price calculation formula
 // tkaing the sum for value of A
 var HangtagA_sum = HangtagA1 + HangtagA2 + HangtagA3 + HangtagA4 + HangtagA5 + HangtagA6 + HangtagA7 + HangtagA8 + HangtagA9 + HangtagA10;
 // tkaing the sum for value of A
-// assuming the values for the variables
+// assuming and assigning the values for the variables
 HangtagA = 5;
 HangtagB = 6;
 HangtagC = 7;
 HangtagD = 8;
 HangtagE = 9;
+
+widthX = 35 / (widthcal + 1);
+heightY = 50 / (heightcal +1);
+
+console.log('width is ', widthX);
+console.log('height is ',heightY);
 // assuming the values for the variables
+// calculationg the actual price cntainer value
+    PaperPriceZ_hangTag = widthX * heightY;
+    console.log(PaperPriceZ_hangTag);
+// calculationg the actual price cntainer value
 // id's data
 var id_pieces1 = 'zero-thousand'
 var id_pieces2 = 'thousand-two_thousand'
