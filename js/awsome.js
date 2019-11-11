@@ -2081,15 +2081,13 @@ $(".product-shapes-items li img").click( function(e) {
        $(".current_leghtn-value").text(current_length_value);
         widthcal = $(".current_leghtn-value").text();
         // console.log(widthcal);
-        // demo(widthcal);
+        main_function(widthcal);
     });
-    // console.log(widthcal);
     $(".heaight").on('DOMSubtreeModified', function () {
        var current_length_value1 =  $(this).html();
        $(".current_leghtn-value").text(current_length_value1);
         var heightcal = $(".current_leghtn-value").text();
-        // console.log( ' height is ',heaight);
-        // demo(heightcal);
+        main_function(heightcal);
     });
 
 // calculating paper price for hangtag
@@ -2099,13 +2097,13 @@ $(".product-shapes-items li img").click( function(e) {
 
 // pieces for hangtag
 // declaring all the variables for hangtag price calculation formula
-    var HangtagA1, HangtagA2, HangtagA3, HangtagA4, HangtagA5, HangtagA6, HangtagA7, HangtagA8, HangtagA9, HangtagA10, HangtagA10, HangtagB, HangtagC, HangtagD, HangtagE, Piece, paperPrice_hangTag, hangtagwidthX, hangtagheightY, hangtagT, HangTagQuantity;
+    var HangtagA1, HangtagA2, HangtagA3, HangtagA4, HangtagA5, HangtagA6, HangtagA7, HangtagA8, HangtagA9, HangtagA10, HangtagA, HangtagB, HangtagC, HangtagD, HangtagE, Piece, paperPrice_hangTag, hangtagwidthX, hangtagheightY, hangtagT, HangTagQuantity;
 // declaring all the variables for hangtag price calculation formula
 // tkaing the sum for value of A
     var HangtagA_sum = HangtagA1 + HangtagA2 + HangtagA3 + HangtagA4 + HangtagA5 + HangtagA6 + HangtagA7 + HangtagA8 + HangtagA9 + HangtagA10;
 // tkaing the sum for value of A
 // assigning the values for the variables
-    HangtagA = HangtagA_sum;
+    HangtagA = 5;
     HangtagB = (HangtagA * 1.5);
     HangtagC = ( HangtagB + (HangtagA * 0.55 * 1.5) );
     HangtagD = (HangtagC + (HangtagA * 0.45 * 1.5));
@@ -2132,48 +2130,46 @@ $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
     var attribute_id = $(this).find('a').attr('id');
     if (attribute_id == id_pieces1) {
        Piece = (HangtagA * 1.5);
-        // console.log(Piece);
     }
     if (attribute_id == id_pieces2) {
        Piece = ( HangtagB + (HangtagA * 0.55 * 1.5) );
-        // console.log(Piece);
     }
     if (attribute_id == id_pieces3) {
        Piece = (HangtagC + (HangtagA * 0.45 * 1.5));
-        // console.log(Piece);
     }
     if (attribute_id == id_pieces4) {
        Piece = HangtagD + (HangtagA * 0.35 * 1.5);
-        // console.log(Piece);
     }
     if (attribute_id == id_pieces5) {
        Piece = HangtagE + (HangtagA * 0.25 * 1.5);
-        // console.log(Piece);
     }
     // console.log(Piece);
-    demo(Piece);
+    main_function(Piece)
 });
 
 
-function demo(Piece, widthcal, heightcal){
-
-    // hangtagwidthX = 35 / (widthcal + 1);
-    // hangtagheightY = 50 / (heightcal +1);
-    // console.log(hangtagheightY, hangtagwidthX)
-    var oop = Piece;
-    console.log(oop);
-}
-
-var price_A_values;
-
+var price_A_values = 0;
 $(".option_list li label").click( function(e) {
     $(this).toggleClass("checkede")
     if($(this).hasClass('checkede')) {
         // console.log($(this).data('value'));
         price_A_values += $(this).data('value');
-        // demo(price_A_values);
+        // console.log(price_A_values);
     } else {
         price_A_values -= $(this).data('value');
-        // demo(price_A_values);
+        // console.log(price_A_values);
     }
+    // console.log(price_A_values);
+    main_function(price_A_values);
 });
+
+
+function main_function(Piece, price_A_values )
+{
+
+    var oop = Piece;
+    var ooop = price_A_values;
+    // console.log(ooop);
+    // console.log(Piece);
+    alert(Piece);
+}
