@@ -2058,7 +2058,7 @@ $(".product-shapes-items li img").click( function(e) {
        $(".current_leghtn-value").text(current_length_value);
         widthcal = current_length_value;
         // var parseInt_width = parseInt(widthcal);
-        $("#width_value").text(widthcal);
+        // $("#width_value").text(widthcal);
     });
     $(".heaight").on('DOMSubtreeModified', function () {
        var current_length_value1 =  $(this).html();
@@ -2092,8 +2092,10 @@ $(".product-shapes-items li img").click( function(e) {
 // the values for the variables
 // calculating the width x 
     function calculating_width() {
-       var hehe = parseFloat(hangtagwidth);
-        hangtagwidthX = 35 / ( hehe + 1 );
+       var float_terms_width = parseFloat($(".current_leghtn-value").text());
+        hangtagwidthX = 35 / ( float_terms_width + 1 );
+        console.log(hangtagwidthX);
+        // console.log(hangtagwidthX);
     }
 // calculating the width x 
 // calculationg the actual price cntainer value
@@ -2142,13 +2144,16 @@ $(".product-shapes-items li img").click( function(e) {
 // changing the actuall value of the price in the main container header
 
     
-    // $(".hidden_fields input").on('DOMSubtreeModified', function () {
-    //    var prce_actuall = $(this).text();
-    //    $(".container-price").text('$' + prce_actuall);
-    //    var haha =  parseFloat(prce_actuall);
-    //    var hehe = parseFloat(hangtagwidth);
-    //     console.log(hehe + haha);
-
-    // });
+    $(".hidden_fields input").on('DOMSubtreeModified', function (hangtagwidthX) {
+        var prce_actuall = parseFloat($(this).text());
+        var floating = parseFloat($("#width_value").text());
+        var total = floating + prce_actuall;
+        console.log(total);
+        $(".container-price").text('$' + total);
+        // var haha =  parseFloat(prce_actuall);
+        // var hehe = parseFloat(hangtagwidthX);
+        // console.log(hehe + haha);
+        // console.log(hangtagwidthX);
+    });
 
 // changing the actuall value of the price in the main container header
