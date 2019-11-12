@@ -125,7 +125,6 @@ $(".containing_section h2").click( function(e){
                 $(".img img").css({'top' : '+=5px'});
                 top_pos = 0;
                 bottom_pos += 1;
-                console.log(bottom_pos);
             }
         });
         $(".top-position").click( function(e) {
@@ -141,12 +140,10 @@ $(".containing_section h2").click( function(e){
             $(".img img").css({'min-width' : '+=5%'});
             // $(".img img").css({'min-width' : '+=5px'});
             // $(".img img").css({current_leghtn-value});
-            console.log($(".img img").css("width"));
         });
         $('.minus_size').click( function(){
             $(".img img").css({'max-width' : '-=10px'});    
             $(".img img").css({'min-width' : '-=10%'});    
-            console.log($(".img img").css("width"));
         });
 
     $(".text-coding-container").on("input", function(){
@@ -171,9 +168,6 @@ $(".containing_section h2").click( function(e){
             let b = (parseInt(input_val));
             let new_width = b;
             let c = parseInt(new_width);
-            // console.log(a + ' current width with conversion');
-            // console.log(b + ' input value with conversion');
-            // console.log(c + ' new width with conversion');
             $(".main-image-container").css('width', c + 'mm');
             $(".current_leghtn-value").text(c);
             $(".widhth").text(c + 'mm');
@@ -187,17 +181,14 @@ $(".containing_section h2").click( function(e){
             if (text_field <= 4) {
                 $(".hidden_text_field1").css({'display' : 'block'});
                 text_field += 1;
-                console.log(text_field);
             }
             else if (text_field <= 5) {
                 $(".hidden_text_field2").css({'display' : 'block'});
                 text_field += 1;
-                console.log(text_field);
             }
 
         });
         $(".remove").click( function(e) {
-            console.log("i was removed so was parent");
         });
 
     
@@ -230,7 +221,6 @@ $(".containing_section h2").click( function(e){
 
     
         $("#color").on('change', 'input', function() {
-            console.log($(this).css("background-color"));
         })
 
     
@@ -241,7 +231,6 @@ $(".containing_section h2").click( function(e){
             if (click_font_size <= 5) {
                 $('.text-container').css({'font-size' : "-=2px"});
                 click_font_size ++;
-                console.log(click_font_size);
                 click_font_size_plus --;
             }
             else
@@ -253,14 +242,12 @@ $(".containing_section h2").click( function(e){
             e.preventDefault();
             if (click_font_size_plus <= 5 ) {
                 $(".text-container").css({'font-size' : '+=2px'});
-                console.log(click_font_size_plus);
                 click_font_size_plus ++;
                 click_font_size --;
             }
         });
         $(".fonts-family li").click( function(e){
             var font_family = $(this).find("span").css("font-family")
-            console.log(font_family);
             $('.text-container span').css({'font-family' : font_family})
             $('.font-family-container').css({'font-family' : font_family})
         });
@@ -268,8 +255,6 @@ $(".containing_section h2").click( function(e){
 
         $(".color-oicekr").on( 'change', function(e) {
             var bg_image = $(this).css("background");
-            console.log("asd");
-            console.log(bg_image);
         })
 
     
@@ -301,10 +286,8 @@ $(".containing_section h2").click( function(e){
             // media query javascript
             // var width = $("body").css("width");
             var width = parseFloat($("body").css("width"));
-            console.log("mobile-device-with", width);
             if ( width < 767 ) {
                 $(".attribute-selector").addClass("mobile_device_active");
-                console.log("mobile-device-with", width);
                 $('.inner-selector-column nav .nav-link').click( function(e) {
                     e.preventDefault();
                     $('.attribute-selector').removeClass(".mobile_device_active");
@@ -314,7 +297,6 @@ $(".containing_section h2").click( function(e){
                 $(".close-icon-mobile-active").click( function(e) {
                     $('.attribute-selector.mobile_device_active').fadeOut();
                     $("body").css({'overflow' : 'scroll'})
-                    console.log("clicked before item")
                 });
             }
     
@@ -327,7 +309,6 @@ $(".containing_section h2").click( function(e){
         $(".image-container-more-motifis img").click( function(e) {
             e.preventDefault();
             var motifis_images = $(this).attr("src");
-            console.log(motifis_images);
             $(".img img").show();
             $(".img img").attr({'src' : motifis_images});
             $(".polpular-motifis-tab-for-more-icons").fadeOut();
@@ -335,7 +316,6 @@ $(".containing_section h2").click( function(e){
         $("#motifis li").click( function(e) {
             e.preventDefault();
            var tab_id_more_icons = $(this).data("id");
-           console.log(tab_id_more_icons);
             $(".popular-motifis-container-more-icon").css({'display' : 'none'});
             $('#'+tab_id_more_icons).css({'display' : 'block'});
             $(".polpular-motifis-tab-for-more-icons").fadeIn();
@@ -559,7 +539,6 @@ $(".containing_section h2").click( function(e){
         }
         var c, d, u = {};
         u.Util = {}, u.Util.log = function(e) {
-                u.logging && t.console && t.console.log && t.console.log(e)
             }, u.Util.trimText = function(t) {
                 return function(e) {
                     return t ? t.apply(e) : ((e || "") + "").replace(/^\s+|\s+$/g, "")
@@ -2048,7 +2027,6 @@ $('.color-bg').click( function(e){
     //                 b: parseInt(result[3], 16)
     //               } : null;
     //             }
-    //             console.log(hexToRgb("#0033ff").r);
     //         }
     //     });
     // });
@@ -2069,7 +2047,6 @@ $('.color-bg').click( function(e){
 $(".product-shapes-items li img").click( function(e) {
     e.preventDefault();
     var svg_src = $(this).attr("src");
-    console.log('.' + svg_src);
     $(".img").css({'-webkit-mask-image' : 'url(' + '' + svg_src + ')'});
     $(".img").css({'-webkit-mask-size' : '100% 100%'});
     $(".img").css({'background-color' : '#B17E54'});
@@ -2079,15 +2056,14 @@ $(".product-shapes-items li img").click( function(e) {
     $(".widhth").on('DOMSubtreeModified', function () {
        var current_length_value =  $(this).html();
        $(".current_leghtn-value").text(current_length_value);
-        widthcal = $(".current_leghtn-value").text();
-        // console.log(widthcal);
-        main_function(widthcal);
+        widthcal = current_length_value;
+        // var parseInt_width = parseInt(widthcal);
+        $("#width_value").text(widthcal);
     });
     $(".heaight").on('DOMSubtreeModified', function () {
        var current_length_value1 =  $(this).html();
        $(".current_leghtn-value").text(current_length_value1);
         var heightcal = $(".current_leghtn-value").text();
-        main_function(heightcal);
     });
 
 // calculating paper price for hangtag
@@ -2097,7 +2073,7 @@ $(".product-shapes-items li img").click( function(e) {
 
 // pieces for hangtag
 // declaring all the variables for hangtag price calculation formula
-    var HangtagA1, HangtagA2, HangtagA3, HangtagA4, HangtagA5, HangtagA6, HangtagA7, HangtagA8, HangtagA9, HangtagA10, HangtagA, HangtagB, HangtagC, HangtagD, HangtagE, Piece, paperPrice_hangTag, hangtagwidthX, hangtagheightY, hangtagT, HangTagQuantity;
+    var HangtagA1, HangtagA2, HangtagA3, HangtagA4, HangtagA5, HangtagA6, HangtagA7, HangtagA8, HangtagA9, HangtagA10, HangtagA, HangtagB, HangtagC, HangtagD, HangtagE, Piece, paperPrice_hangTag, hangtagwidthX, hangtagheightY, hangtagT, HangTagQuantity, hangtagwidth;
 // declaring all the variables for hangtag price calculation formula
 // tkaing the sum for value of A
     var HangtagA_sum = HangtagA1 + HangtagA2 + HangtagA3 + HangtagA4 + HangtagA5 + HangtagA6 + HangtagA7 + HangtagA8 + HangtagA9 + HangtagA10;
@@ -2108,68 +2084,71 @@ $(".product-shapes-items li img").click( function(e) {
     HangtagC = ( HangtagB + (HangtagA * 0.55 * 1.5) );
     HangtagD = (HangtagC + (HangtagA * 0.45 * 1.5));
     HangtagE = HangtagD + (HangtagA * 0.35 * 1.5);
+
+    $("#width_value").on('DOMSubtreeModified', function () {
+        hangtagwidth = $(this).text();
+        calculating_width();
+    });
 // the values for the variables
+// calculating the width x 
+    function calculating_width() {
+       var hehe = parseFloat(hangtagwidth);
+        hangtagwidthX = 35 / ( hehe + 1 );
+    }
+// calculating the width x 
 // calculationg the actual price cntainer value
     PaperPriceZ_hangTag = hangtagwidthX * hangtagheightY;
     hangtagT = PaperPriceZ_hangTag * 4;
     HangTagPaperPriceFormula = (HangTagQuantity / hangtagT) * 0.8;
 // calculationg the actual price cntainer value
-// id's data
-var id_pieces1 = 'zero-thousand'
-var id_pieces2 = 'thousand-two_thousand'
-var id_pieces3 = 'two_thousand-three_thousand'
-var id_pieces4 = 'three_thousand-four_thousand'
-var id_pieces5 = 'four_thousand-five_thousand';
+
+// quantity formula
+    // id's data
+    var id_pieces1 = 'zero-thousand'
+    var id_pieces2 = 'thousand-two_thousand'
+    var id_pieces3 = 'two_thousand-three_thousand'
+    var id_pieces4 = 'three_thousand-four_thousand'
+    var id_pieces5 = 'four_thousand-five_thousand';
+    // starting the funciton
+    $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
+        e.preventDefault();
+        $('.quatatity-and-price ul li').removeClass("active");
+        $(this).addClass("active");
+        var attribute_id = $(this).find('a').attr('id');
+        if (attribute_id == id_pieces1) {
+           Piece = (HangtagA * 1.5);
+        }
+        if (attribute_id == id_pieces2) {
+           Piece = ( HangtagB + (HangtagA * 0.55 * 1.5) );
+          
+        }
+        if (attribute_id == id_pieces3) {
+           Piece = (HangtagC + (HangtagA * 0.45 * 1.5));
+          
+        }
+        if (attribute_id == id_pieces4) {
+           Piece = HangtagD + (HangtagA * 0.35 * 1.5);
+          
+        }
+        if (attribute_id == id_pieces5) {
+           Piece = HangtagE + (HangtagA * 0.25 * 1.5);
+          
+        }
+        var setter_pieces = $("#getter_data").text(Piece);
+    });
+// quantity formula
 
 
+// changing the actuall value of the price in the main container header
 
-$('.right-sidebar .quatatity-and-price ul li').click( function(e) {
-    e.preventDefault();
-    $('.quatatity-and-price ul li').removeClass("active");
-    $(this).addClass("active");
-    var attribute_id = $(this).find('a').attr('id');
-    if (attribute_id == id_pieces1) {
-       Piece = (HangtagA * 1.5);
-    }
-    if (attribute_id == id_pieces2) {
-       Piece = ( HangtagB + (HangtagA * 0.55 * 1.5) );
-    }
-    if (attribute_id == id_pieces3) {
-       Piece = (HangtagC + (HangtagA * 0.45 * 1.5));
-    }
-    if (attribute_id == id_pieces4) {
-       Piece = HangtagD + (HangtagA * 0.35 * 1.5);
-    }
-    if (attribute_id == id_pieces5) {
-       Piece = HangtagE + (HangtagA * 0.25 * 1.5);
-    }
-    // console.log(Piece);
-    main_function(Piece)
-});
+    
+    // $(".hidden_fields input").on('DOMSubtreeModified', function () {
+    //    var prce_actuall = $(this).text();
+    //    $(".container-price").text('$' + prce_actuall);
+    //    var haha =  parseFloat(prce_actuall);
+    //    var hehe = parseFloat(hangtagwidth);
+    //     console.log(hehe + haha);
 
+    // });
 
-var price_A_values = 0;
-$(".option_list li label").click( function(e) {
-    $(this).toggleClass("checkede")
-    if($(this).hasClass('checkede')) {
-        // console.log($(this).data('value'));
-        price_A_values += $(this).data('value');
-        // console.log(price_A_values);
-    } else {
-        price_A_values -= $(this).data('value');
-        // console.log(price_A_values);
-    }
-    // console.log(price_A_values);
-    main_function(price_A_values);
-});
-
-
-function main_function(Piece, price_A_values )
-{
-
-    var oop = Piece;
-    var ooop = price_A_values;
-    // console.log(ooop);
-    // console.log(Piece);
-    alert(Piece);
-}
+// changing the actuall value of the price in the main container header
