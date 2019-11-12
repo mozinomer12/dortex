@@ -502,12 +502,12 @@
                                                 </div>
                                                 <div class="row">
                                                     <div class="col-md-6">
-                                                        <span class="height-value-laebl height-value-laebl-default active">
+                                                        <span onclick="updateHeight(15)" class="height-value-laebl height-value-laebl-default active">
                                                             15 mm
                                                         </span>
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <span class="height-value-laebl">
+                                                        <span onclick="updateHeight(35)" class="height-value-laebl">
                                                             35 mm
                                                         </span>
                                                     </div>
@@ -530,7 +530,7 @@
                                                         current label length
                                                     </span>
                                                     <span>
-                                                        <input type="number" name="" placeholder="40" id="size_input_custom" /> mm
+                                                        <input type="number" name="" placeholder="40" id="size_input_custom"/> mm
                                                     </span>
                                                     <span class="minimumlenth">
                                                         minimum length 35mm <br>
@@ -1015,9 +1015,13 @@
 </div>
 
 <div class="hidden_fields">
-    <input type="hidden" name="" value="0"  id="getter_data" />
-    <input type="text" name="width_value" value="" id="width_value">
+    <input type="hidden" name="" value="0"  id="label_height" />
+    <input type="hidden" name="" id="pieces_price">
+    <input type="hidden" name="" id="option_price" value="0">
 </div>
+    
+
+
 </body>
 <script src="./assets/color/html5kellycolorpicker.min.js"></script>
 <script type="text/javascript" src="./js/awsome.js"></script>
