@@ -2041,26 +2041,19 @@ $('.color-bg').click( function(e){
     // var target2 = targetNode2[0];
     // observer2.observe(target2, observerConfig2);
 
+// optoins if disabled 
+    // $(".option_list li").click( function() {
+    //     $(".option_list li input").attr("disabled", "disabled");
+    //     $(".option_list li").removeClass("active");
+    //     $(".option_list li").find("label").removeClass("active");
 
-// $(".option_list li").click( function() {
-//     $(".option_list li input").attr("disabled", "disabled");
-//     $(".option_list li").removeClass("active");
-//     $(".option_list li").find("label").removeClass("active");
-
-//     $(this).find("label").addClass("active");
-//     var option_price = ($(this).find("label").data("value"));
-//     $("#option_price").val(option_price);
-//     $(this).find('input').removeAttr("disabled");
-//     $(this).addClass("active");
-// })
-
-$(".option_list li").click( function() {
-    $(this).toggleClass("active")
-    var option_price = parseInt($(".option_list li.active").find("label").data("value"));
-    var current_optionValue = parseInt($("#option_price").val());
-    $("#option_price").val(current_optionValue + option_price);
-    console.log(current_optionValue +  'asd' + option_price);
-})
+    //     $(this).find("label").addClass("active");
+    //     var option_price = ($(this).find("label").data("value"));
+    //     $("#option_price").val(option_price);
+    //     $(this).find('input').removeAttr("disabled");
+    //     $(this).addClass("active");
+    // })
+// optoins if disabled 
 
 
 
@@ -2090,7 +2083,8 @@ $(".option_list li").click( function() {
 // starting the function main for the calculation
     // creating the update length formula
         function updateHeight(value) {
-            $("#label_height").val(value);
+            var length_hieght = $("#label_height").val(value);
+            console.log($("#label_height").val());
         }
     // creating the update length formula
     // quantity formula
@@ -2119,17 +2113,31 @@ $(".option_list li").click( function() {
             }
             if (attribute_id == id_pieces4) {
                Piece = HangtagD + (HangtagA * 0.35 * 1.5);
-              
+                
             }
             if (attribute_id == id_pieces5) {
                Piece = HangtagE + (HangtagA * 0.25 * 1.5);
               
             }
             $("#pieces_price").val(Piece);
-            console.log(Piece);
+            console.log($("#pieces_price").val());
         });
     // quantity formula
     // options calculation
+        $(".option_list li label").click( function(){
+            $(this).toggleClass("active");
+            if($(this).hasClass("active"))
+            {
+                console.log($(this).data("value"));
+                var option_price_value = parseInt($("#option_price").val());
+                var option_proce_value = $(this).data("value");
+                $("#option_price").val(option_price_value + option_proce_value)
+            } else {
+                var option_price_value = parseInt($("#option_price").val());
+                var option_proce_value = $(this).data("value");
+                $("#option_price").val(option_price_value - option_proce_value)
+            }
+        });
     // options calculation
 // starting the function main for the calculation
 
