@@ -588,8 +588,8 @@ span.height-value-laebl.active {
 }
 .labellength .row span.minimumlenth {
     position: absolute;
-    bottom: -50px;
-    font-size: 14px;
+    bottom: -90px;
+    font-size: 13px;
     color: #fff;
     opacity: 0.4;
 }
@@ -1326,12 +1326,12 @@ div#motifis {
     display: flex;
     align-items: center;
     padding: 6px 21px 6px 16px;
-    border-radius: 10px;
+    border-radius: 5px;
     justify-content: flex-start;
     color: #fff;
     float: right;
     position: absolute;
-    right: 0;
+    right: 20px;
     user-select: none;
     cursor: pointer;
 }
@@ -2374,11 +2374,70 @@ span.drop_down_angle
 }
 /*media queries starting*/
 
+@media screen and (max-width: 1400px)
+{
+    .label-hading
+    {
+        height: auto;
+        padding: 5px 20px;
+    }
+    .labellength span,
+    .attribute-selector ul li span
+    {
+        font-size: 11px;
+    }
+    .inner-selector-column nav .nav-link span
+    {
+        font-size: 12px;
+    }
+    .inner-selector-column nav .nav-link span
+    {
+        margin-top: 10px;
+    }
+    .right-sidebar h2
+    {
+        font-size: 13px;
+    }
+    .containing_section h2
+    {
+        margin-bottom: 15px;
+    }
+    .right-sidebar ul
+    {
+        margin-bottom: 20px;
+    }
+    .productioncontainer ul li a {
+        font-size: 13px;
+    }
+    .attribute-selector ul li span
+    {
+        padding: 2px 20px 2px 20px;
+    }
+
+}
 @media screen and (max-width: 1240px)
 {
     .main-selector-column
     {
         display: none;
+    }
+    .height-value-laebl
+    {
+        height: 27px;
+        font-size: 11px;
+    }
+    div#inscription input,
+    .text_logo_container p,
+    .text_logo_container p:first-child
+    {
+        font-size: 11px;
+    }
+    .font-family-container
+    {
+        width: 25%;
+    }
+    .color-pixker {
+        padding: 20px 20px !important;
     }
     .inner-selector-column
     {
@@ -2408,9 +2467,15 @@ span.drop_down_angle
         height: 20px;
     }
     span.top-position,
-    span.bottom-position
+    span.bottom-position,
+    span.right-position, span.left-position
     {
         width: 40px;
+    }
+
+    span.right-position, span.left-position
+    {
+        height: 40px;
     }
     .butt-containers
     {
@@ -2419,8 +2484,8 @@ span.drop_down_angle
     }
     .butotn-scontainer span
     {
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
     }
     .delete_button
     {
@@ -2494,6 +2559,42 @@ span.drop_down_angle
 
 }
 
+@media screen and (max-width: 1040px)
+{
+    .labellength .row {
+        display: block;
+        text-align: center;
+        margin: 20px 0px;
+    }
+    .labellength .row span:nth-child(2)
+    {
+        display: block;
+        text-align: center !important;
+    }
+    .label-hading
+    {
+        text-align: left;
+        font-size: 11px;
+    }
+    .label-height .row .col-md-6 {
+        max-width: 100%;
+        width: 100%;
+    }
+    .label-height .row span {
+        width: 100%;
+        display: flex;
+        flex: 0 100%;
+    }
+    .label-height .row {
+        display: block;
+        width: 100%;
+    }
+    .main-image-container
+    {
+        width: 80mm;
+        height: 40mm;
+    }
+}
 @media screen and (max-width: 767px)
 {
     .main-row-container

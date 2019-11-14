@@ -340,9 +340,9 @@ $(".containing_section h2").click( function(e){
         })
 
     new KellyColorPicker({place : 'picker1', input : 'color1', size : 150});
-    $(".color-bg").click( function(e){
-        $(".img").css({'background-color' : $(this).css("background-color")});
-    });
+    // $(".color-bg").click( function(e){
+    //     $(".img").css({'background-color' : $(this).css("background-color")});
+    // });
     
     var observers = new MutationObserver(function(mutation) {
         mutation.forEach(function(mutationw) {
@@ -358,7 +358,7 @@ $(".containing_section h2").click( function(e){
     };
     var targetNode = $('#color1');
     var target = targetNode[0];
-    // observers.observe(target, observerConfig);
+    observers.observe(target, observerConfig);
 
     $(function() { 
         $(".img").click(function() { 
@@ -2017,30 +2017,6 @@ $('.color-bg').click( function(e){
 
 
 
-
-    // var observer2 = new MutationObserver(function(mutations2) {
-    //     mutations2.forEach(function(mutation2) {
-    //         if (mutation2.attributeName === 'style') {
-    //             let a = $('#color1').css("background-color");
-    //             function hexToRgb(a) {
-    //               var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    //               return result ? {
-    //                 r: parseInt(result[1], 16),
-    //                 g: parseInt(result[2], 16),
-    //                 b: parseInt(result[3], 16)
-    //               } : null;
-    //             }
-    //         }
-    //     });
-    // });
-    // var observerConfig2 = {
-    //     attributes: true,
-    //     attributeFilter: ["style"]
-    // };
-    // var targetNode2 = $('#color1');
-    // var target2 = targetNode2[0];
-    // observer2.observe(target2, observerConfig2);
-
 // optoins if disabled 
     // $(".option_list li").click( function() {
     //     $(".option_list li input").attr("disabled", "disabled");
@@ -2079,30 +2055,22 @@ $(".thickeness_butt").click( function(e) {
     function foo() {
         setTimeout(foo, 500);
         var value_width = parseInt($("#label_height").val());
-        // console.log('value_width =  ' + value_width);
 
         var value_widthPlus = parseInt($("#label_height").val()) + 1;
-        // console.log('value_widthPlus =  ' + value_widthPlus);
 
         var value_widthTOtal = 35 / value_widthPlus;
-        console.log('value_widthTOtal =  ' + value_widthTOtal);
 
         var vlaue_height = parseFloat($(".heaight").text());
-        // console.log('vlaue_height =  ' + vlaue_height);
 
         var value_heightPlus = vlaue_height + 1;
-        // console.log('value_heightPlus =  ' + value_heightPlus);
 
         var value_heightTotal = 50 / value_heightPlus;
-        console.log('value_heightTotal =  ' + value_heightTotal);
 
 
         var HangtagZ = value_heightTotal + value_widthTOtal;
-        console.log('HangtagZ =  ' + HangtagZ);
 
 
         var hangTagT = HangtagZ * 4;
-        // console.log('hangTagT =  ' + hangTagT);
 
         var hangtagQuantity = parseFloat($("#pieces_price").val());
         if (hangtagQuantity <= 0) {
@@ -2115,29 +2083,21 @@ $(".thickeness_butt").click( function(e) {
             var totalIfNotSelected1 = 50 / sumupNotSelected;
             var ttoal_notselected = totalIfNotSelected1 * totalIfNotSelected;
             hangtagQuantity = ttoal_notselected;
-            console.log("hehhe" + hangtagQuantity)
 
         }
-        // console.log('hangtagQuantity =  ' + hangtagQuantity);
 
         var paperPriceFormulaDevision = hangtagQuantity / hangTagT;
-        console.log('paperPriceFormulaDevision =  ' + paperPriceFormulaDevision);
 
 
         var paperPriceFormula = paperPriceFormulaDevision * 0.8;
-        // console.log('paperPriceFormula =  ' + paperPriceFormula);
 
         var optional_price = parseInt($("#option_price").val());
-        // console.log('optional_price =  ' + optional_price);
 
         HangtagA = paperPriceFormula + optional_price;
-        // console.log('HangtagA  =  ' + HangtagA);
 
-        // console.log(HangtagA);
         var total  = HangtagA * 1.5;
 
 
-        console.log(("Value of 'a' outside the function " + total));
         $("#hangtagAPrice").val(total);
         // return HangtagA;
     }
@@ -2158,7 +2118,6 @@ $(".thickeness_butt").click( function(e) {
         $('.right-sidebar .quatatity-and-price ul li').click( function(e, HangtagA) {
             e.preventDefault();
             var HangtagA = $("#hangtagAPrice").val();
-            console.log(HangtagA);
             $('.quatatity-and-price ul li').removeClass("active");
             $(this).addClass("active");
             var attribute_id = $(this).find('a').attr('id');
@@ -2185,7 +2144,6 @@ $(".thickeness_butt").click( function(e) {
               
             }
             $("#pieces_price").val(Piece);
-            // console.log($("#pieces_price").val());
         });
     // quantity formula
     $(".option_list li label").click( function(){
