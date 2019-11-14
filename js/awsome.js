@@ -2055,7 +2055,11 @@ $('.color-bg').click( function(e){
     // })
 // optoins if disabled 
 
-
+$(".thickeness_butt").click( function(e) {
+    e.preventDefault();
+    var thcikness = $(this).parent().find("input").text();
+    console.log(thcikness);
+})
 
 //adding the svg with the color
     $(".product-shapes-items li img").click( function(e) {
@@ -2068,25 +2072,33 @@ $('.color-bg').click( function(e){
 //adding the svg with the color
 
 
-// creating the variable for the formulas
-    // creating the hangtag formulas
-        var width_x, height_y, calculation_z, calculation_T, paperPriceFormula, valaueA, TotalhangtangPrice, HangtagA, HangtagB, HangtagC, HangtagD, HangtagE ;
-    // creating the hangtag formulas
-    // intializing the formulas
-        HangtagA = 5;
-        HangtagB = (HangtagA * 1.5);
-        HangtagC = ( HangtagB + (HangtagA * 0.55 * 1.5) );
-        HangtagD = (HangtagC + (HangtagA * 0.45 * 1.5));
-        HangtagE = HangtagD + (HangtagA * 0.35 * 1.5);
-    // intializing the formulas
-// creating the variable for the formulas
 // starting the function main for the calculation
-    // creating the update length formula
-        function updateHeight(value) {
-            var length_hieght = $("#label_height").val(value);
-            console.log($("#label_height").val());
-        }
-    // creating the update length formula
+    var width_x, height_y, calculation_z, calculation_T, paperPriceFormula, valaueA, TotalhangtangPrice, HangtagB, HangtagC, HangtagD, HangtagE;
+
+    var HangtagA;
+    foo();
+    function foo() {
+        HangtagA = parseInt($("#option_price").val());
+        setTimeout(foo, 5000);
+        var value_size = parseInt($("#label_height").val());
+        var total  = HangtagA + value_size
+        // console.log(("Value of 'a' outside the function " + total));
+        $("#hangtagAPrice").val(HangtagA);
+        // return HangtagA;
+    }
+    HangtagB = (HangtagA * 1.5);
+    HangtagC = ( HangtagB + (HangtagA * 0.55 * 1.5) );
+    HangtagD = (HangtagC + (HangtagA * 0.45 * 1.5));
+    HangtagE = HangtagD + (HangtagA * 0.35 * 1.5);
+
+
+    function updateHeight(value) {
+        var length_hieght = $("#label_height").val(value);
+        var length_heights = parseFloat($("#label_height").val());
+        var pricecsproce = parseFloat($("#pieces_price").val());
+        var optoinproce = parseFloat($("#option_price").val());
+        // console.log(length_heights, pricecsproce, optoinproce, length_heights + pricecsproce + optoinproce);
+    }
     // quantity formula
         // id's data
         var id_pieces1 = 'zero-thousand'
@@ -2095,8 +2107,10 @@ $('.color-bg').click( function(e){
         var id_pieces4 = 'three_thousand-four_thousand'
         var id_pieces5 = 'four_thousand-five_thousand';
         // starting the funciton
-        $('.right-sidebar .quatatity-and-price ul li').click( function(e) {
+        $('.right-sidebar .quatatity-and-price ul li').click( function(e, HangtagA) {
             e.preventDefault();
+            var HangtagA = $("#hangtagAPrice").val();
+            console.log(HangtagA)
             $('.quatatity-and-price ul li').removeClass("active");
             $(this).addClass("active");
             var attribute_id = $(this).find('a').attr('id');
@@ -2123,21 +2137,15 @@ $('.color-bg').click( function(e){
             console.log($("#pieces_price").val());
         });
     // quantity formula
-    // options calculation
-        $(".option_list li label").click( function(){
-            $(this).toggleClass("active");
-            if($(this).hasClass("active"))
-            {
-                console.log($(this).data("value"));
-                var option_price_value = parseInt($("#option_price").val());
-                var option_proce_value = $(this).data("value");
-                $("#option_price").val(option_price_value + option_proce_value)
-            } else {
-                var option_price_value = parseInt($("#option_price").val());
-                var option_proce_value = $(this).data("value");
-                $("#option_price").val(option_price_value - option_proce_value)
-            }
-        });
-    // options calculation
+    $(".option_list li label").click( function(){
+        $(this).toggleClass("active");
+            var option_price_value = parseInt($("#option_price").val());
+            var option_proce_value = $(this).data("value");
+        if($(this).hasClass("active")) {
+            $("#option_price").val(option_price_value + option_proce_value)
+        } else {
+            $("#option_price").val(option_price_value - option_proce_value)
+        }
+        // console.log($("#option_price").val());
+    });
 // starting the function main for the calculation
-
