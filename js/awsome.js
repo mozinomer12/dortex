@@ -2073,17 +2073,71 @@ $(".thickeness_butt").click( function(e) {
 
 
 // starting the function main for the calculation
-    var width_x, height_y, calculation_z, calculation_T, paperPriceFormula, valaueA, TotalhangtangPrice, HangtagB, HangtagC, HangtagD, HangtagE;
+    var width_x, height_y, calculation_z,value_width,value_widthPlus,value_widthTOtal,vlaue_height,value_heightPlus,value_heightTotal, calculation_T, paperPriceFormula, paperPriceFormulaDevision, valaueA, TotalhangtangPrice, HangtagB, HangtagC, HangtagD, HangtagE, total, HangtagZ, hangTagT, hangtagQuantity, HangtagA, optional_price;
 
-    var HangtagA;
     foo();
     function foo() {
-        HangtagA = parseInt($("#option_price").val());
-        setTimeout(foo, 5000);
-        var value_size = parseInt($("#label_height").val());
-        var total  = HangtagA + value_size
-        // console.log(("Value of 'a' outside the function " + total));
-        $("#hangtagAPrice").val(HangtagA);
+        setTimeout(foo, 500);
+        var value_width = parseInt($("#label_height").val());
+        // console.log('value_width =  ' + value_width);
+
+        var value_widthPlus = parseInt($("#label_height").val()) + 1;
+        // console.log('value_widthPlus =  ' + value_widthPlus);
+
+        var value_widthTOtal = 35 / value_widthPlus;
+        console.log('value_widthTOtal =  ' + value_widthTOtal);
+
+        var vlaue_height = parseFloat($(".heaight").text());
+        // console.log('vlaue_height =  ' + vlaue_height);
+
+        var value_heightPlus = vlaue_height + 1;
+        // console.log('value_heightPlus =  ' + value_heightPlus);
+
+        var value_heightTotal = 50 / value_heightPlus;
+        console.log('value_heightTotal =  ' + value_heightTotal);
+
+
+        var HangtagZ = value_heightTotal + value_widthTOtal;
+        console.log('HangtagZ =  ' + HangtagZ);
+
+
+        var hangTagT = HangtagZ * 4;
+        // console.log('hangTagT =  ' + hangTagT);
+
+        var hangtagQuantity = parseFloat($("#pieces_price").val());
+        if (hangtagQuantity <= 0) {
+            var if_quanity_not = parseFloat($(".widhth").text());
+            var sumupNotSelected = if_quanity_not + 1;
+            var totalIfNotSelected = 35 / sumupNotSelected;
+
+            var if_quanity_not1 = parseFloat($(".heaight").text());
+            var sumupNotSelected1 = if_quanity_not + 1;
+            var totalIfNotSelected1 = 50 / sumupNotSelected;
+            var ttoal_notselected = totalIfNotSelected1 * totalIfNotSelected;
+            hangtagQuantity = ttoal_notselected;
+
+        }
+        // console.log('hangtagQuantity =  ' + hangtagQuantity);
+
+        var paperPriceFormulaDevision = hangtagQuantity / hangTagT;
+        console.log('paperPriceFormulaDevision =  ' + paperPriceFormulaDevision);
+
+
+        var paperPriceFormula = paperPriceFormulaDevision * 0.8;
+        // console.log('paperPriceFormula =  ' + paperPriceFormula);
+
+        var optional_price = parseInt($("#option_price").val());
+        // console.log('optional_price =  ' + optional_price);
+
+        HangtagA = paperPriceFormula + optional_price;
+        // console.log('HangtagA  =  ' + HangtagA);
+
+        // console.log(HangtagA);
+        var total  = HangtagA * 1.5;
+
+
+        console.log(("Value of 'a' outside the function " + total));
+        $("#hangtagAPrice").val(total);
         // return HangtagA;
     }
     HangtagB = (HangtagA * 1.5);
@@ -2092,13 +2146,6 @@ $(".thickeness_butt").click( function(e) {
     HangtagE = HangtagD + (HangtagA * 0.35 * 1.5);
 
 
-    function updateHeight(value) {
-        var length_hieght = $("#label_height").val(value);
-        var length_heights = parseFloat($("#label_height").val());
-        var pricecsproce = parseFloat($("#pieces_price").val());
-        var optoinproce = parseFloat($("#option_price").val());
-        // console.log(length_heights, pricecsproce, optoinproce, length_heights + pricecsproce + optoinproce);
-    }
     // quantity formula
         // id's data
         var id_pieces1 = 'zero-thousand'
@@ -2110,12 +2157,15 @@ $(".thickeness_butt").click( function(e) {
         $('.right-sidebar .quatatity-and-price ul li').click( function(e, HangtagA) {
             e.preventDefault();
             var HangtagA = $("#hangtagAPrice").val();
-            console.log(HangtagA)
+            console.log(HangtagA);
             $('.quatatity-and-price ul li').removeClass("active");
             $(this).addClass("active");
             var attribute_id = $(this).find('a').attr('id');
             if (attribute_id == id_pieces1) {
                Piece = (HangtagA * 1.5);
+               $(this).click( function(e) {
+                Piece = Piece; 
+               })
             }
             if (attribute_id == id_pieces2) {
                Piece = ( HangtagB + (HangtagA * 0.55 * 1.5) );
@@ -2134,7 +2184,7 @@ $(".thickeness_butt").click( function(e) {
               
             }
             $("#pieces_price").val(Piece);
-            console.log($("#pieces_price").val());
+            // console.log($("#pieces_price").val());
         });
     // quantity formula
     $(".option_list li label").click( function(){

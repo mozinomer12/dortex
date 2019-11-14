@@ -738,8 +738,8 @@ div#motifis ul li a {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 360px;
-    height: 183px;
+    width: 100mm;
+    height: 50mm;
     max-width: 600px;
     min-height: 110px;
 }
