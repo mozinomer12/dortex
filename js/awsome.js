@@ -2115,6 +2115,7 @@ $(".thickeness_butt").click( function(e) {
             var totalIfNotSelected1 = 50 / sumupNotSelected;
             var ttoal_notselected = totalIfNotSelected1 * totalIfNotSelected;
             hangtagQuantity = ttoal_notselected;
+            console.log("hehhe" + hangtagQuantity)
 
         }
         // console.log('hangtagQuantity =  ' + hangtagQuantity);
