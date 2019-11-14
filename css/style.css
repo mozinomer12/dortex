@@ -1403,8 +1403,8 @@ span.more-motifis-close-icons::before {
     content: "";
     display: block;
     width: 20px;
-    height: 20px;
-    border: 2px solid #fff;
+    height: 17px;
+    border: 3px solid #fff;
     position: absolute;
     top: 11px;
     bottom: 0px;
@@ -1428,10 +1428,10 @@ span.more-motifis-close-icons {
     cursor: pointer;
 }
 span.more-motifis-close-icons::after {
-    content: "";
+content: "";
     width: 20px;
-    height: 20px;
-    border: 2px solid #ffff;
+    height: 16px;
+    border: 3px solid #ffff;
     position: absolute;
     left: 11px;
     right: 0px;
@@ -2340,7 +2340,7 @@ span.drop_down_angle
     position: fixed;
     top: 0;
     z-index: 99999;
-    background: #fdfdfd;
+    background: transparent;
     display: block;
     width: 20px;
     height: 20px;
@@ -2571,10 +2571,19 @@ span.drop_down_angle
         display: block;
         text-align: center !important;
     }
-    .label-hading
+    .label-hading,
+    .unstyled.centered li label
     {
         text-align: left;
         font-size: 11px;
+    }
+    .quatatity-and-price ul li
+    {
+        width: 100%;
+    }
+    .font-size-container
+    {
+        width: 25%;
     }
     .label-height .row .col-md-6 {
         max-width: 100%;
@@ -2584,6 +2593,17 @@ span.drop_down_angle
         width: 100%;
         display: flex;
         flex: 0 100%;
+    }
+    .labellength .row span input {
+        margin: 20px 0px;
+    }
+    .unstyled.centered li
+    {
+        width: 100%;
+    }
+    .unstyled.centered
+    {
+        padding-left: 0px;
     }
     .label-height .row {
         display: block;
@@ -2600,6 +2620,61 @@ span.drop_down_angle
     .main-row-container
     {
         display: block;
+    }
+    .unstyled.centered
+    {
+        padding-left: 20px;
+    }
+    .right-sidebar ul {
+        display: none;
+        padding: 0px 10px;
+    }
+    .attribute-selector .tab-pane {
+        padding: 20px 10px 40px;
+        height: 400px;
+        overflow: auto;
+    }
+    div#logoos h6,
+    div#motifis h6,
+    div#colro_id > h6,
+    div#inscription > h6,
+    div.prodcutc-version-container > h6,
+    div.label-height > .row > h6,
+    div.labellength > .row > h6
+    {
+        position: absolute;
+        top: 0;
+        left: 0px;
+        border-radius: 0px;
+        z-index: 99;
+        background: #316d92;
+        height: 40px;
+        display: flex;
+        align-items: center;
+    }
+    div#logoos,
+    div#colro_id,
+    div#colro_id,
+    div#inscription,
+    div#motifis,
+    div.prodcutc-version-container
+    {
+        padding: 30px 0px;
+    }
+    div.label-height > .row:nth-child(2)
+    {
+        padding-top: 30px;
+    }
+    .right-sidebar h2
+    {
+        border-radius: 0;
+        font-weight: 400;
+    }
+    .right-sidebar ul li
+    {
+        width: -moz-100%;
+        width: -o-100%;
+        width: 100%;
     }
     .custom-row .row
     {
@@ -2774,8 +2849,8 @@ span.drop_down_angle
     }
     span.more-motifis-close-icons
     {
-        top: 33px;
-        right: 16px;
+        top: 7px;
+        right: 7px;
     }
     div.motifis-tab ul {
         display: flex;
@@ -2788,9 +2863,12 @@ span.drop_down_angle
     div#motifis ul li
     {
         margin-bottom: 0px;
+        margin: 0px;
     }
     div#motifis ul li a
     {
+        flex: 0 50%;
+        margin: 0;
         margin-bottom: 7px;
     }
     .product-shapes-items li {
@@ -2847,13 +2925,39 @@ span.drop_down_angle
         z-index: 999;
         /*display: none;*/
         height: 52%;
-        overflow: auto;
+        overflow: hidden;
         bottom: 0px;
         padding-bottom: 20px !important;
+    }
+    .attribute-selector .tab-pane ul
+    {
+        height: 334px;
+        overflow: auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .popular-motifis-container-more-icon > .row > .label-hading {
+        position: absolute;
+        margin-top: 0;
+        top: 10px;
+        border-radius: 0;
+        position: absolute;
+        top: 0;
+        left: 0px;
+        border-radius: 0px;
+        /* z-index: 99; */
+        background: #316d92;
+        height: 40px;
+        display: flex;
+        align-items: center;
     }
     ul.product-version-items {
         display: flex;
         flex-wrap: wrap;
+    }
+    div.popular-motifis-container-more-icon
+    {
+        padding: 20px 0px;
     }
     .attribute-selector ul li {
         position: relative;
@@ -2868,15 +2972,8 @@ span.drop_down_angle
     .right-sidebar ul
     {
         margin-bottom: 20px;
-        display: flex;
         flex-wrap: wrap;
         justify-content: center;
-    }
-    .right-sidebar ul li {
-        width: fit-content;
-        width: -o-fit-content;
-        width: -moz-fit-content;
-        margin: 5px;
     }
     .quatatity-and-price li.active a
     {
@@ -2896,9 +2993,9 @@ span.drop_down_angle
     {
         position: absolute;
         right: 32px;
-        top: 45px;
-        width: 22px;
-        height: 22px;
+        top: 20px;
+        width: auto !important;
+        height: auto;
     }
     .close-icon-mobile-active:hover {
       opacity: 1;
@@ -2907,10 +3004,16 @@ span.drop_down_angle
         position: absolute;
         left: 8px;
         content: ' ';
-        height: 23px;
+        height: 13px;
         width: 3px;
         background-color: #FFF;
-        top: 3px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .label-hading
+    {
+        position: relative;
     }
     .close-icon-mobile-active:before {
       transform: rotate(45deg);
@@ -3060,6 +3163,13 @@ span.drop_down_angle
     .inner-selector-column nav .nav-link.active
     {
         background: #368bbd;
+    }
+    .right-sidebar .configration ul {
+        display: block;
+    }
+    .polpular-motifis-tab-for-more-icons h3
+    {
+        font-size: 11px;
     }
 }
 

@@ -286,23 +286,6 @@ $(".containing_section h2").click( function(e){
             $('#'+id_for_bartop).css({'display' :  'flex'});
         });
 
-            // media query javascript
-            // var width = $("body").css("width");
-            var width = parseFloat($("body").css("width"));
-            if ( width < 767 ) {
-                $(".attribute-selector").addClass("mobile_device_active");
-                $('.inner-selector-column nav .nav-link').click( function(e) {
-                    e.preventDefault();
-                    $('.attribute-selector').removeClass(".mobile_device_active");
-                    $('.attribute-selector.mobile_device_active').fadeIn();
-                    $("body").css({'overflow' : 'hidden'})
-                });
-                $(".close-icon-mobile-active").click( function(e) {
-                    $('.attribute-selector.mobile_device_active').fadeOut();
-                    $("body").css({'overflow' : 'scroll'})
-                });
-            }
-    
         $(".font-family-container").click( function(){
             $(".fonts-family").slideToggle();
             $(this).toggleClass("icon-roate")
@@ -2158,3 +2141,22 @@ $(".thickeness_butt").click( function(e) {
         // console.log($("#option_price").val());
     });
 // starting the function main for the calculation
+
+
+            // media query javascript
+            // var width = $("body").css("width");
+            var width = parseFloat($("body").css("width"));
+            if ( width < 767 ) {
+                $(".attribute-selector").addClass("mobile_device_active");
+                $('.inner-selector-column nav .nav-link').click( function(e) {
+                    e.preventDefault();
+                    $('.attribute-selector').removeClass(".mobile_device_active");
+                    $('.attribute-selector.mobile_device_active').fadeIn();
+                    $("body").css({'overflow' : 'hidden'})
+                });
+                $(".close-icon-mobile-active").click( function(e) {
+                    $('.attribute-selector.mobile_device_active').fadeOut();
+                    $("body").css({'overflow' : 'scroll'})
+                });
+            }
+    
