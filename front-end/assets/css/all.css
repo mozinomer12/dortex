@@ -1043,6 +1043,228 @@ footer {
     margin-bottom: 20px;
     margin-bottom: 25px;
 }
+/*my css*/
+.container-inout-login {
+    width: 30%;
+    margin: 40px auto;
+}
+
+.container-inout-login form {
+    width: 100%;
+}
+
+.input-container-main {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    position: relative;
+}
+
+span.image-container-input {
+    height: 100%;
+    border: 1px solid #cccc;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding:  10px;
+    border: 1px solid #9B9B9B;
+    margin: 0;
+}
+
+.input-container-main input {
+    height: 44px;
+    width: 100%;
+    border: 1px solid #9B9B9B;
+    border-left: 0;
+    padding-left: 10px;
+}
+
+span.pas_how {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+.forget a
+{
+    color: #000;
+    text-align: right;
+    text-transform: capitalize;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+}
+.forget{
+    margin:40px 0px;
+}
+.container-inout-login form button.register-but
+{
+    margin-top: 40px;
+} 
+.container-inout-login form button 
+{
+    background: #316D92;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    /* padding: 20px; */
+    height: 45px;
+    justify-content: center;
+    color: #fff;
+    text-transform: capitalize;
+    border: none;
+    font-size: 14px;
+    margin-bottom: 70px;
+}
+
+.container-inout-login form button img {
+    margin-left: 13px;
+}
+.register__need a
+{   
+    color: #000;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #316D92;
+    font-weight: 600;
+}
+.register__need
+{
+    font-size: 18px;
+}
+.hading
+{
+    margin: 80px 0px 30px;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.headings1 {
+width: 30%;
+}
+
+.headings2 {
+    width: 14%;
+}
+
+.headings3 {
+    width: 10%;
+}
+
+.headings4 {
+    width: 15%
+}
+
+.headings5 {
+    width: 18%
+}
+
+.headings6 {
+    width: 13%
+}
+
+.main_header_trackingTable {
+    background: #F9F9F9;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+.main_header_trackingTable h6 {font-size: 17px;text-transform: capitalize;text-align: left;font-weight: 600;}
+
+.list-items-tracking ul li {
+    display: flex;
+}
+.list-item-tracking-list
+{
+    display: flex;
+}
+.list-item-tracking-list {
+    padding: 30px 0px;
+    border-bottom: 1px solid #cccc;
+}
+.list-item-tracking-list li {
+    color: #666666;
+    font-size: 17px;
+    text-transform: capitalize;
+    font-weight: 400;
+    /* font-family: 'Open Sans', sans-serif; */
+}
+.list-main-tracking
+{
+    margin-bottom: 40px;
+}
+span.completed {
+    background: #0CAA4B;
+    color: #fff;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    justify-content: center;
+    font-size: 14px;
+}
+span.view-order-trcking {
+    width: 70%;
+    border: 2px solid #316D92;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    color: #316D92;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+span.view-order-trcking img {
+    margin-right: 8px;
+    margin-top: 4px;
+}
+.heading-tracking h1 {
+    font-size: 30px;
+    margin: 50px 0px;
+}
+.list-item-tracking-list li span a {
+    color: #316d92;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*************************
        Media Queries
 **************************/
@@ -1272,6 +1494,14 @@ footer {
     .home-banner {
         height: 400px;
     }
+    .list-item-tracking-list
+    {
+        display: block;
+    }
+    .container-inout-login
+    {
+        width: 90%;
+    }
     .banner-link a {
         font-size: 14px;
     }
@@ -1433,6 +1663,117 @@ footer {
     }
     .about-content > p {
         margin-bottom: 20px;
+    }
+    /*new css*/
+    .list-item-tracking-list li {
+        width: 100%;
+    }
+
+    .list-item-tracking-list li span {
+        width: fit-content;
+        padding: 20px 40px;
+        border-radius: 0;
+        margin: auto;
+        margin-top: 58px;
+    }
+
+    .list-item-tracking-list li span.completed {
+        margin-top: 58px;
+        padding: 15px 40px;
+        border-radius: 5px;
+        height: 45px;
+    }
+
+    .list-items-tracking ul li.headings4 {
+        display: none;
+    }
+
+    .list-items-tracking ul li.headings2 {
+        text-align: right;
+        /* float: right; */
+        display: block;
+        font-size: 13px;
+    }
+
+    ul.list-item-tracking-list {
+        position: relative;
+    }
+
+    .list-items-tracking ul li.headings2 {
+        /* position: absolute; */
+        top: 40px;
+        /* order: 3; */
+    }
+
+    .list-items-tracking ul li.headings1 {
+        max-width: 80%;
+        /* order: 1; */
+    }
+
+    .list-items-tracking ul li.headings3 {
+        font-size: 20px;
+        color: #000;
+        margin: 0;
+        font-weight: 700;
+        /* order: 1; */
+        text-align: right;
+        display: block;
+    }
+
+    .list-items-tracking ul li.headings5 {
+        width: 50%;
+        /* float: left; */
+        flex: 0 50%;
+        /* order: 5; */
+    }
+
+    .list-items-tracking ul li.headings6 {
+        width: 50%;
+        /* float: left; */
+        /* order: 6; */
+    }
+
+    ul.list-item-tracking-list {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    ul.list-item-tracking-list li {
+        width: 100%;
+        flex: 0 100%;
+        flex: 0 31%;
+    }
+    .row.main_header_trackingTable {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .row.main_header_trackingTable .headings {
+        display: none;
+    }
+
+    .row.main_header_trackingTable .headings.headings1 {
+        display: flex;
+        width: 42%;
+        align-items: center;
+    }
+
+    .row.main_header_trackingTable .headings.headings2 {
+        display: flex;
+        width: 36%;
+        align-items: center;
+    }
+
+    .row.main_header_trackingTable .headings.headings4 {
+        display: flex;
+        text-align: right;
+        width: 20%;
+        align-items: center;
+    }
+
+    .main_header_trackingTable h6 {
+        font-size: 15px;
     }
 }
 @media screen and (max-width: 479px) {
