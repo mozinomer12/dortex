@@ -1231,13 +1231,166 @@ span.view-order-trcking img {
 
 
 
+.hading_row {
+    margin: 0px;
+    background: #F9F9F9;
+    padding: 10px 40px;
+    border-radius: 50px;
+}
 
+.hading_row h6 {
+    background: #F9F9F9;
+    /* width: 100%; */
+    padding: 0px;
+    margin: 0px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #000;
+    font-size: 18px;
+}
 
+ul.text0-cintaienr-list {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+}
 
+ul.text0-cintaienr-list li {
+    margin: auto;
+}
 
+.row.order-status-row {
+    display: block;
+    margin: 40px 0px;
+}
 
+ul.icon_container_order_status {
+    display: flex;
+    align-items: center;
+}
 
+ul.icon_container_order_status li {
+    margin: auto;
+}
 
+ul.icon_container_order_status span {
+    width: 60px;
+    height: 60px;
+    display: block;
+    border-radius: 50%;
+    background: #316d92;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 11px;
+    position: relative;
+}
+
+ul.icon_container_order_status span.first-circe {
+    display: block;
+    width: 70px;
+    position: absolute;
+    height: 70px;
+    background: none;
+    border: 1px solid #316d92;
+}
+ul.text0-cintaienr-list li {
+    margin: 0px auto 30px;
+    color: #666666;
+    text-transform: capitalize;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+ul.icon_container_order_status
+{
+    position: relative;
+}
+ul.icon_container_order_status::before {
+    content: "";
+    display: block;
+    width: 70%;
+    height: 1px;
+    border: 1px solid #316d92;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+.items3 {
+    width: 20%;
+}
+
+.items2 {
+    width: 20%;
+}
+.items1 {
+    width: 60%;
+    float: left;
+}
+.order-otemcontainer li {
+    display: flex;
+    padding: 40px 0px;
+    border-bottom: 1px solid #8C8C8C;
+}
+.order-otemcontainer {
+    margin: 0px 35px;
+}
+.lat-row h5
+{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 30px 0px 20px;
+}
+.lat-row p,
+.lat-row p a
+{
+    color: #666666;
+    font-size: 14px;    
+    display: flex;
+    align-items: center;
+}
+.lat-row p
+{
+    width: 70%;
+    margin-bottom: 15px;
+}
+.lat-row p img
+{
+    margin-right: 10px;
+}
+.lat-row {
+    margin: 0px 25px;
+}
+.order-otemcontainer li:last-child {
+    margin-bottom: 40px;
+}
+.headign-oTrack {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    margin-left: 15px;
+}
+.container-detail
+{
+    margin: 0px 15px 30px;
+}
+.container-detail span
+{
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+}
+.container-detail span img
+{
+    margin-right: 10px;
+}
 
 
 
